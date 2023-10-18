@@ -2,5 +2,29 @@
 import Layout from "../layouts/Layout.astro";
 ---
 <Layout title=".d/rr home">
-	<h1>Index</h1>
+	<section class="container mx-auto">
+		<div class:list={['window hover:resize']}>
+			<div class="title-bar">
+				<button aria-label="Close" class="close"></button>
+				<h1 class="title">WELCOME</h1>
+				<button aria-label="Resize" class="resize-btn"></button>
+			</div>
+			<div class="separator"></div>
+
+			<div class="window-pane">
+				<p>Welcome to the .dungeon//remastered BETA avatar manager and SRD.</p>
+				<p>Some quick links to pages that probably mostly work most of the time.</p>
+				<ul>
+					<li><a href="/tables/weather">Weather Table</a></li>
+					<li><a href="/tables/npcs/">NPC Generator</a></li>
+					<li><a href="/bestiary">Bestiary</a></li>
+					<li><a href="/appendix/magic">Appendix: Magic</a></li>
+					<li><a href="/appendix/skills">Appendix: Skills</a></li>
+					<li><a href="/appendix/statuses">Appendix: Statuses</a></li>
+				</ul>
+				TODO: Avatar Manager v0.2, more tables/generators, UI interaction upgrades
+				<p>Some of these pages have gotten relatively little love and may be re-organized. Quality of life improvements will be made as time allows and generally after all items are feature complete.
+			</div>
+		</div>
+	</section>
 </Layout>

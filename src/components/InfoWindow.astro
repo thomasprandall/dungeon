@@ -13,6 +13,6 @@ const { title, listData, classes } = Astro.props;
   <div class="separator"></div>
 
   <div class="window-pane text-sm">
-      {listData.map((item) => <div class=""><h2 id={item.name}>{item.name}</h2><p>{item.effect}</p></div>)}
+      {listData.map((item) => <div class=""><h1 id={item.name}>{item.name}</h1><p>{item.effect}</p></div>)}
   </div>
 </div>
