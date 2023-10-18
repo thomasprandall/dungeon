@@ -2,6 +2,8 @@
 import Navigation from "./Navigation.astro";
 
 const { title } = Astro.props
+
+import '/src/styles/system.css';
 ---
 <html lang="en" class="scroll-smooth">
   <head>
@@ -9,7 +11,6 @@ const { title } = Astro.props
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content={Astro.generator} />
     <title>.d//re | { title } </title>
-    <link rel="stylesheet" href="/src/styles/system.css" />
   </head>
   <body>
     <Navigation />
