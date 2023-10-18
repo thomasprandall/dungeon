@@ -1,0 +1,1009 @@
+{
+    "monsters": [
+        {
+            "name": "Arya",
+            "description": "The Queen of the Wode. A gargantuan fox who converses with her all-seeing children (the Palims) through hidden strings of code. If you find her, perform a /bow and offer anything of value. She can guide you where you need to go",
+            "number": 1,
+            "dice": [
+                "3d6",
+                "3d6",
+                "3d6",
+                "3d6",
+                "3d6"
+            ],
+            "bonus": 4,
+            "initiative": 20,
+            "morale": 20,
+            "immune": [
+                "solar",
+                "shadow",
+                "neon"
+            ],
+            "weakness": [
+                "gun"
+            ],
+            "special": [
+                {
+                    "name": "Arya's Shroud",
+                    "effect": "On her initiative, Arya drags a single player into her shroud, a foggy one-on-one arena. They leave at the beginning of Arya's next turn if she chooses a new victim."
+                }
+            ],
+            "drops": [
+                {
+                    "name": "Arya's Cloak",
+                    "effect": "Legendary Item. The wearer gains a +5 bonus to Lore roles if they are wearing green IRL."
+                }
+            ],
+            "tags": []
+        },
+        {
+            "name": "Beam Lords",
+            "description": "The floating eyes of Annwn, grown agitated in their disconnected life.",
+            "number": "d4",
+            "dice": [
+                "d12"
+            ],
+            "bonus": 2,
+            "initiative": 6,
+            "morale": 6,
+            "immune": [
+                "neon"
+            ],
+            "weakness": [
+                "shadow",
+                "solar"
+            ],
+            "special": [
+                {
+                    "name": "Status Beam",
+                    "effect": "Target player is hit with a random status at the start of the Beam Lord's turn. These can stack if hit more than once."
+                }
+            ],
+            "drops": [
+                {
+                    "name": "standard",
+                    "effect": "Roll RNG on Universal Drops table"
+                }
+            ],
+            "tags": []
+        },
+        {
+            "name": "Black Hounds",
+            "description": "The Drowned King's spectral hounds. Designed like polygonal anubis hounds, each with an array of floating orbs around their neck denoting the number of avatars they've eaten",
+            "number": "d6",
+            "dice": [
+                "4d6"
+            ],
+            "bonus": 4,
+            "initiative": 20,
+            "morale": 1,
+            "immune": [
+                "magic",
+                "shadow"
+            ],
+            "weakness": [],
+            "special": [
+                {
+                    "name": "Drown",
+                    "effect": "Target player is grappled by the Black Hound and is treated as if they are drowning."
+                }
+            ],
+            "drops": [
+                {
+                    "name": "Castle Invite",
+                    "effect": "Invitation to the Drowned King's Castle"
+                }
+            ],
+            "tags": []
+        },
+        {
+            "name": "Brainwurms",
+            "description": "Tangled cords of brain fold, writhing around their prey to swallow them whole.",
+            "number": "1",
+            "dice": [
+                "2d10",
+                "d10",
+                "d10",
+                "d10",
+                "d10",
+                "d10"
+            ],
+            "bonus": 4,
+            "initiative": 6,
+            "morale": 8,
+            "immune": [],
+            "weakness": [],
+            "special": [
+                {
+                    "name": "Bleed",
+                    "effect": "Target player is given the bleed status effect at the start of the Brainwurm's turn."
+                }
+            ],
+            "drops": [
+                {
+                    "name": "standard",
+                    "effect": "Roll RNG on Universal Drops table"
+                }
+            ],
+            "tags": []
+        },
+        {
+            "name": "Brutalizers",
+            "description": "Disembodied hands, each with eight fingers. They come in pairs, using teamwork to grab avatars and pull them apart, limb from limb",
+            "number": "2",
+            "dice": [
+                "d12",
+                "d12",
+                "d12",
+                "d12",
+                "d12"
+            ],
+            "bonus": 2,
+            "initiative": 5,
+            "morale": 4,
+            "immune": [],
+            "weakness": [
+                "piercing"
+            ],
+            "special": [
+                {
+                    "name": "Copycat",
+                    "effect": "The Brutalizer's next attack deals the same damage type as was last done to them."
+                }
+            ],
+            "drops": [
+                {
+                    "name": "standard",
+                    "effect": "Roll RNG on Universal Drops table"
+                }
+            ],
+            "tags": []
+        },
+        {
+            "name": "Constructs",
+            "description": "Polyhedral bits and bobbles that have collided, clipped, and meshed together. They constantly destroy and build off one another.",
+            "number": "d6",
+            "dice": [
+                "2d8"
+            ],
+            "bonus": 2,
+            "initiative": 6,
+            "morale": 4,
+            "immune": [
+                "gun"
+            ],
+            "weakness": [],
+            "special": [
+                {
+                    "name": "Rebuild",
+                    "effect": "At the beginning of their turn, a Construct can build onto itself using the remains of its companions. The dice that are defeated can be reclaimed at a rate of one per turn."
+                }
+            ],
+            "drops": [
+                {
+                    "name": "d10 Materials",
+                    "effect": ""
+                }
+            ],
+            "tags": []
+        },
+        {
+            "name": "Dragons",
+            "description": "Children of Annwn that explode from her body and conquer the hex of their birth. Stylized after the lung Dragons.",
+            "number": "1",
+            "dice": [
+                "3d6",
+                "3d6",
+                "3d6",
+                "3d6",
+                "2d6",
+                "2d6",
+                "d20"
+            ],
+            "bonus": 6,
+            "initiative": 20,
+            "morale": 2,
+            "immune": [
+                "piercing",
+                "slashing",
+                "smashing"
+            ],
+            "weakness": [
+                "gun",
+                "neon"
+            ],
+            "special": [
+                {
+                    "name": "Breath Weapon",
+                    "effect": "At the end of the round, the Dragon breathes its fire onto the battlefield, forcing everyone to make a contest against its current dice."
+                }
+            ],
+            "drops": [
+                {
+                    "name": "Dragon Materials",
+                    "effect": ""
+                }
+            ],
+            "tags": []
+        },
+        {
+            "name": "Dreamer",
+            "description": "Sleeping giants with egg-like heads, cracked and open to reveal a hollowness inside.",
+            "number": "1",
+            "dice": [
+                "d20",
+                "d20"
+            ],
+            "bonus": 2,
+            "initiative": 12,
+            "morale": 4,
+            "immune": [
+                "neon"
+            ],
+            "weakness": [],
+            "special": [
+                {
+                    "name": "Dream",
+                    "effect": "At the end of each round, more and more Dream Jellies crawl from the Dreamer's head to join combat. First one, then two, then three, and so on."
+                }
+            ],
+            "drops": [
+                {
+                    "name": "standard",
+                    "effect": "Roll RNG on Universal Drops table"
+                }
+            ],
+            "tags": [
+                "dream"
+            ]
+        },
+        {
+            "name": "Dregs",
+            "description": "Feathered velociraptor creatures that travel quickly across all terrains and hunt solo players in packs.",
+            "number": "d6",
+            "dice": [
+                "d10"
+            ],
+            "bonus": 1,
+            "initiative": 12,
+            "morale": 12,
+            "immune": [],
+            "weakness": [
+                "gun"
+            ],
+            "special": [
+                {
+                    "name": "Overwhelm",
+                    "effect": "Each individual dreg rolls a dice during their turn and deals that damage directly to Sync."
+                }
+            ],
+            "drops": [
+                {
+                    "name": "standard",
+                    "effect": "Roll RNG on Universal Drops table"
+                }
+            ],
+            "tags": []
+        },
+        {
+            "name": "Giant Bats",
+            "description": "Big furry beasts with bat wings and human-like appendages. They carry machine guns.",
+            "number": "d8",
+            "dice": [
+                "d8"
+            ],
+            "bonus": 4,
+            "initiative": 10,
+            "morale": 6,
+            "immune": [],
+            "weakness": [],
+            "special": [
+                {
+                    "name": "Flight",
+                    "effect": "Giant Bats hover above the battlefield, always keeping themselves at range from groundborn opponents."
+                }
+            ],
+            "drops": [
+                {
+                    "name": "standard",
+                    "effect": "Roll RNG on Universal Drops table"
+                }
+            ],
+            "tags": []
+        },
+        {
+            "name": "Goblins",
+            "description": "Little critters. Mischievous folks. Dastardly pals.",
+            "number": "2d6",
+            "dice": [
+                "d4"
+            ],
+            "bonus": 0,
+            "initiative": 4,
+            "morale": 6,
+            "immune": [],
+            "weakness": [],
+            "special": [
+                {
+                    "name": "Snatch",
+                    "effect": "Goblins will forgo doing damage to grapple, hog-tie, and haul players away toward the nearest Dragon."
+                }
+            ],
+            "drops": [
+                {
+                    "name": "standard",
+                    "effect": "Roll RNG on Universal Drops table"
+                }
+            ],
+            "tags": []
+        },
+        {
+            "name": "Dream Jelly",
+            "description": "Gelatinous lumps. Oozes and the sort. Each with their own elemental affinity. They split down the dice chain as they are attacked.",
+            "number": "d4",
+            "dice": [
+                "d8/"
+            ],
+            "bonus": 4,
+            "initiative": 10,
+            "morale": 2,
+            "immune": [
+                "magic",
+                "gun"
+            ],
+            "weakness": [
+                "neon"
+            ],
+            "special": [],
+            "drops": [
+                {
+                    "name": "Dream Materials",
+                    "effect": ""
+                }
+            ],
+            "tags": [
+                "dream",
+                "jelly"
+            ]
+        },
+        {
+            "name": "Neon Jelly",
+            "description": "Gelatinous lumps. Oozes and the sort. Each with their own elemental affinity. They split down the dice chain as they are attacked.",
+            "number": "d4",
+            "dice": [
+                "d12/"
+            ],
+            "bonus": 2,
+            "initiative": 8,
+            "morale": 4,
+            "immune": [
+                "neon",
+                "gun"
+            ],
+            "weakness": [],
+            "special": [
+                {
+                    "name": "City",
+                    "effect": "Neon Jellies get an extra +1 against people who live in big cities."
+                }
+            ],
+            "drops": [
+                {
+                    "name": "d4 Cells",
+                    "effect": ""
+                }
+            ],
+            "tags": [
+                "neon",
+                "jelly"
+            ]
+        },
+        {
+            "name": "Shadow Jelly",
+            "description": "Gelatinous lumps. Oozes and the sort. Each with their own elemental affinity. They split down the dice chain as they are attacked.",
+            "number": "d4",
+            "dice": [
+                "d8/"
+            ],
+            "bonus": 2,
+            "initiative": 5,
+            "morale": 4,
+            "immune": [
+                "shadow",
+                "gun"
+            ],
+            "weakness": [
+                "solar"
+            ],
+            "special": [
+                {
+                    "name": "Darkness",
+                    "effect": "Shadow Jellies get an extra +1 when the sun is down."
+                }
+            ],
+            "drops": [
+                {
+                    "name": "Shadow Foil",
+                    "effect": ""
+                }
+            ],
+            "tags": [
+                "shadow",
+                "jelly"
+            ]
+        },
+        {
+            "name": "Solar Jelly",
+            "description": "Gelatinous lumps. Oozes and the sort. Each with their own elemental affinity. They split down the dice chain as they are attacked.",
+            "number": "d4",
+            "dice": [
+                "d6/"
+            ],
+            "bonus": 1,
+            "initiative": 4,
+            "morale": 4,
+            "immune": [
+                "solar",
+                "gun"
+            ],
+            "weakness": [
+                "shadow"
+            ],
+            "special": [
+                {
+                    "name": "Sunlight",
+                    "effect": "Solar Jellies get an extra +1 while the sun is out."
+                }
+            ],
+            "drops": [
+                {
+                    "name": "Solar Foil",
+                    "effect": ""
+                }
+            ],
+            "tags": [
+                "solar",
+                "jelly"
+            ]
+        },
+        {
+            "name": "Manticores",
+            "description": "Wizard hunters, spell learners, and chimeric beasts. Tiger claws and body, snake for a tail, and a crow's beaked head.",
+            "number": "2",
+            "dice": [
+                "2d10",
+                "2d8",
+                "2d6"
+            ],
+            "bonus": 4,
+            "initiative": 12,
+            "morale": 8,
+            "immune": [
+                "solar",
+                "shadow"
+            ],
+            "weakness": [],
+            "special": [
+                {
+                    "name": "Overwhelm",
+                    "effect": "On its turn, the Manticore rolls all of its remaining dice and deals that damage to Sync."
+                }
+            ],
+            "drops": [
+                {
+                    "name": "standard",
+                    "effect": "Roll RNG on Universal Drops table"
+                }
+            ],
+            "tags": []
+        },
+        {
+            "name": "Palims",
+            "description": "Little forest critters. The children of the forest. They look dopey in the cutest way possible, fumbling and tumbling around with their clumsy movements.",
+            "number": "1",
+            "dice": [
+                "d4"
+            ],
+            "bonus": 0,
+            "initiative": 2,
+            "morale": 20,
+            "immune": [],
+            "weakness": [],
+            "special": [
+                {
+                    "name": "Blessing",
+                    "effect": "If you're nice to them, they'll give you a d10 you can add to any contest you want."
+                }
+            ],
+            "drops": [
+                {
+                    "name": "Spirit Token",
+                    "effect": ""
+                }
+            ],
+            "tags": []
+        },
+        {
+            "name": "Princesses",
+            "description": "Weird, floating, Alice-in-Wonderland person. Always spins a parasol and giggles incessantly.",
+            "number": "1",
+            "dice": [
+                "2d12",
+                "2d12",
+                "2d12"
+            ],
+            "bonus": 2,
+            "initiative": 6,
+            "morale": 12,
+            "immune": [],
+            "weakness": [
+                "gun"
+            ],
+            "special": [
+                {
+                    "name": "Knighty Knight",
+                    "effect": "At the beginning of her turn, summons a d12 Knight to protect her."
+                }
+            ],
+            "drops": [
+                {
+                    "name": "6d10 Bytes",
+                    "effect": ""
+                }
+            ],
+            "tags": []
+        },
+        {
+            "name": "PUG Template",
+            "description": "Players Unknown. The other people playing this game with you. Roll on the PUG tables to figure out who they are. Give them an aspect too!",
+            "number": "1",
+            "dice": [
+                "3d6"
+            ],
+            "bonus": 2,
+            "initiative": 8,
+            "morale": 8,
+            "immune": [
+                "Random Damage Type"
+            ],
+            "weakness": [
+                "Random Damage Type"
+            ],
+            "special": [
+                {
+                    "name": "Aspect",
+                    "effect": ""
+                }
+            ],
+            "drops": [
+                {
+                    "name": "standard",
+                    "effect": "Roll RNG on Universal Drops table"
+                }
+            ],
+            "tags": [
+                "pug"
+            ]
+        },
+        {
+            "name": "PUG Moderator",
+            "description": "Players Unknown. The other people playing this game with you. Roll on the PUG tables to figure out who they are. Give them an aspect too!",
+            "number": "2",
+            "dice": [
+                "4d6"
+            ],
+            "bonus": 6,
+            "initiative": 20,
+            "morale": 8,
+            "immune": [
+                "All"
+            ],
+            "weakness": [],
+            "special": [
+                {
+                    "name": "Moderator",
+                    "effect": ""
+                }
+            ],
+            "drops": [
+                {
+                    "name": "Ban",
+                    "effect": ""
+                }
+            ],
+            "tags": [
+                "pug"
+            ]
+        },
+        {
+            "name": "PUG (PVP)",
+            "description": "Players Unknown. The other people playing this game with you. Roll on the PUG tables to figure out who they are. Give them an aspect too!",
+            "number": "1",
+            "dice": [
+                "3d6"
+            ],
+            "bonus": 2,
+            "initiative": 10,
+            "morale": 2,
+            "immune": [],
+            "weakness": [],
+            "special": [
+                {
+                    "name": "Aspect",
+                    "effect": ""
+                }
+            ],
+            "drops": [
+                {
+                    "name": "Summon Sign",
+                    "effect": ""
+                }
+            ],
+            "tags": [
+                "pug"
+            ]
+        },
+        {
+            "name": "Sagas",
+            "description": "Imagine a cat standing on its hind legs with its torso stretched all the way out. They wear capes and their eyes glow.",
+            "number": "d10",
+            "dice": [
+                "2d6"
+            ],
+            "bonus": 0,
+            "initiative": 5,
+            "morale": 8,
+            "immune": [],
+            "weakness": [],
+            "special": [
+                {
+                    "name": "Hypnosis",
+                    "effect": "Target player is charmed by the Saga."
+                }
+            ],
+            "drops": [
+                {
+                    "name": "standard",
+                    "effect": "Roll RNG on Universal Drops table"
+                }
+            ],
+            "tags": [
+                "saga"
+            ]
+        },
+        {
+            "name": "Saga Princes",
+            "description": "They come from storm clouds. The envoys of the Cat Queen herself.",
+            "number": "1",
+            "dice": [
+                "2d10",
+                "2d10",
+                "2d10",
+                "2d10",
+                "2d10"
+            ],
+            "bonus": 4,
+            "initiative": 12,
+            "morale": 8,
+            "immune": [
+                "gun"
+            ],
+            "weakness": [],
+            "special": [
+                {
+                    "name": "Theron",
+                    "effect": "Can summon the Theron (a big liger) to help them in combat. Fights with 3d6."
+                }
+            ],
+            "drops": [
+                {
+                    "name": "standard",
+                    "effect": "Roll RNG on Universal Drops table"
+                }
+            ],
+            "tags": [
+                "saga"
+            ]
+        },
+        {
+            "name": "Scarecrows",
+            "description": "Little puffy crows that explode when attacked.",
+            "number": "2d10",
+            "dice": [
+                "d4"
+            ],
+            "bonus": 0,
+            "initiative": 2,
+            "morale": 10,
+            "immune": [],
+            "weakness": [],
+            "special": [
+                {
+                    "name": "Pop",
+                    "effect": "If destroyed in melee, roll their dice as damage as they explode."
+                }
+            ],
+            "drops": [
+                {
+                    "name": "standard",
+                    "effect": "Roll RNG on Universal Drops table"
+                }
+            ],
+            "tags": []
+        },
+        {
+            "name": "Skeletons",
+            "description": "Those boney boys. The remnants of old NPCs and abandoned accounts",
+            "number": "d6",
+            "dice": [
+                "d6"
+            ],
+            "bonus": 1,
+            "initiative": 4,
+            "morale": 2,
+            "immune": [
+                "slashing",
+                "piercing"
+            ],
+            "weakness": [
+                "smashing"
+            ],
+            "special": [
+                {
+                    "name": "Reassemble",
+                    "effect": "A Skeleton will reassemble itself in a day if not destroyed with a solar weapon."
+                }
+            ],
+            "drops": [
+                {
+                    "name": "standard",
+                    "effect": "Roll RNG on Universal Drops table"
+                }
+            ],
+            "tags": [
+                "skeleton"
+            ]
+        },
+        {
+            "name": "Shadow Skeletons",
+            "description": "Only the oldest accounts create Shadow Skeletons when they're abandoned.",
+            "number": "d6",
+            "dice": [
+                "3d6"
+            ],
+            "bonus": 3,
+            "initiative": 10,
+            "morale": 1,
+            "immune": [
+                "slashing",
+                "piercing",
+                "shadow"
+            ],
+            "weakness": [
+                "smashing",
+                "solar"
+            ],
+            "special": [
+                {
+                    "name": "Thorns",
+                    "effect": "You take 1 Sync damage when rolling a contest against a Shadow Skeleton, on account of them being full of thorny roses."
+                }
+            ],
+            "drops": [
+                {
+                    "name": "Shadow Foil",
+                    "effect": ""
+                }
+            ],
+            "tags": [
+                "skeleton",
+                "shadow"
+            ]
+        },
+        {
+            "name": "Snakes",
+            "description": "Big snakes. You've heard of them.",
+            "number": "d6",
+            "dice": [
+                "d10"
+            ],
+            "bonus": 2,
+            "initiative": 10,
+            "morale": 5,
+            "immune": [
+                "magic"
+            ],
+            "weakness": [],
+            "special": [
+                {
+                    "name": "Absorb",
+                    "effect": "Snakes absorb spells that are cast in combat, giving them an extra d10 to their next contest or damage roll."
+                },
+                {
+                    "name": "Halfgan's Snake",
+                    "effect": "Starts with 5d10"
+                }
+            ],
+            "drops": [
+                {
+                    "name": "Dragon Materials",
+                    "effect": ""
+                }
+            ],
+            "tags": [
+                "snake"
+            ]
+        },
+        {
+            "name": "Spiders",
+            "description": "They're friendly if you don't attack them. Toggling arachnophobia in the Help Menu replaces them with dogs.",
+            "number": "d20",
+            "dice": [
+                "d4"
+            ],
+            "bonus": 0,
+            "initiative": 20,
+            "morale": 12,
+            "immune": [],
+            "weakness": [],
+            "special": [
+                {
+                    "name": "Web",
+                    "effect": "Target player is webbed and given the paralyzed status."
+                }
+            ],
+            "drops": [
+                {
+                    "name": "standard",
+                    "effect": "Roll RNG on Universal Drops table"
+                }
+            ],
+            "tags": [
+                "spiders"
+            ]
+        },
+        {
+            "name": "Spider Priests",
+            "description": "Brutalizers that walk on two fingers, dressed in horrifying robes. They are forever searching for their god.",
+            "number": "d4",
+            "dice": [
+                "d10"
+            ],
+            "bonus": 5,
+            "initiative": 6,
+            "morale": 12,
+            "immune": [],
+            "weakness": [
+                "gun"
+            ],
+            "special": [
+                {
+                    "name": "Summon",
+                    "effect": "At the end of the round, each spider priest summons a Spider."
+                }
+            ],
+            "drops": [
+                {
+                    "name": "standard",
+                    "effect": "Roll RNG on Universal Drops table"
+                }
+            ],
+            "tags": [
+                "spiders"
+            ]
+        },
+        {
+            "name": "Vorths",
+            "description": "Disembodied mouths, each with their own uniquely generated lips and teeth.",
+            "number": "d4",
+            "dice": [
+                "4d6"
+            ],
+            "bonus": 4,
+            "initiative": 8,
+            "morale": 5,
+            "immune": [
+                "solar"
+            ],
+            "weakness": [],
+            "special": [
+                {
+                    "name": "Swallow",
+                    "effect": "Target is swallowed and given the grappled status."
+                }
+            ],
+            "drops": [
+                {
+                    "name": "standard",
+                    "effect": "Roll RNG on Universal Drops table"
+                }
+            ],
+            "tags": []
+        },
+        {
+            "name": "Walls of Flesh",
+            "description": "A red and pink mass of flesh covered in eyes, arms, and mouths.",
+            "number": "1",
+            "dice": [
+                "d20"
+            ],
+            "bonus": 5,
+            "initiative": 12,
+            "morale": 2,
+            "immune": [],
+            "weakness": [
+                "piercing",
+                "slashing"
+            ],
+            "special": [
+                {
+                    "name": "Everywhere",
+                    "effect": "While in combat, a Wall of Flesh counts as being within range of everything."
+                }
+            ],
+            "drops": [
+                {
+                    "name": "standard",
+                    "effect": "Roll RNG on Universal Drops table"
+                }
+            ],
+            "tags": []
+        },
+        {
+            "name": "Wolves",
+            "description": "Ancient beings who know the human tongue.",
+            "number": "d6",
+            "dice": [
+                "d8"
+            ],
+            "bonus": 1,
+            "initiative": 8,
+            "morale": 2,
+            "immune": [],
+            "weakness": [
+                "gun"
+            ],
+            "special": [
+                {
+                    "name": "Pack Tactics",
+                    "effect": "A Wolf's bonus is equal to the number of Wolves present."
+                }
+            ],
+            "drops": [
+                {
+                    "name": "Fashion Materials",
+                    "effect": ""
+                }
+            ],
+            "tags": []
+        },
+        {
+            "name": "Zombies",
+            "description": "Decaying undead. Generated whenever a player is forced to respawn.",
+            "number": "d20",
+            "dice": [
+                "d6"
+            ],
+            "bonus": 0,
+            "initiative": 2,
+            "morale": 1,
+            "immune": [],
+            "weakness": [
+                "gun"
+            ],
+            "special": [
+                {
+                    "name": "Attraction",
+                    "effect": "At the end of each round, d4 more Zombies enter combat."
+                }
+            ],
+            "drops": [
+                {
+                    "name": "standard",
+                    "effect": "Roll RNG on Universal Drops table"
+                }
+            ],
+            "tags": []
+        }
+    ]
+}

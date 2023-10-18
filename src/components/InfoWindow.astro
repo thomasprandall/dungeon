@@ -1,0 +1,18 @@
+---
+// Component Script (JavaScript)
+const { title, listData, classes } = Astro.props;
+---
+
+<!-- Component Template (HTML + JS Expressions) -->
+<div class:list={['window hover:resize ', classes]}>
+  <div class="title-bar">
+    <button aria-label="Close" class="close"></button>
+    <h1 class="title">{title}</h1>
+    <button aria-label="Resize" class="resize-btn"></button>
+  </div>
+  <div class="separator"></div>
+
+  <div class="window-pane text-sm">
+      {listData.map((item) => <div class=""><h2 id={item.name}>{item.name}</h2><p>{item.effect}</p></div>)}
+  </div>
+</div>

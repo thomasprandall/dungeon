@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SpellWindow from '../../components/SpellWindow.astro';
+import InfoWindow from '../../components/InfoWindow.astro';
+import TermWindow from '../../components/TermWindow.astro';
+
+import * as data from '../../data/magic.json';
+
+const {learning, introduction, accessibility, spells, terms} = data;
+---
+
+<!-- 
+    TODO
+    Collapsible windows
+-->
+<Layout title="Appendix: Magic">
+  <div class="hidden md:block md:w-36 fixed left-0 top-12 pl-2">
+      <ul>
+          <li class="uppercase font-bold">Spells</li>
+          {spells.map((spell) => <li><a href={"#"+spell.name.replaceAll(' ','')}>{spell.name}</a></li>)}
+      </ul>
+  </div>
+  <section class="clear-both flex flex-wrap justify-around">
+    <InfoWindow title="Magic" listData={[{"name": "Introduction", "effect": [introduction]}, {"name": "Learning Spells", "effect": [learning]}, {"name": "Accessibility", "effect": [accessibility]}]} classes="md:ml-36 md:w-5/12" />
+    <TermWindow title="Terms" listData={terms} classes="md:w-5/12" />
+    <div class="flex flex-wrap justify-center md:ml-36">
+        {spells.map((spell) => <SpellWindow title={spell.name} spell={ spell } />)}
+    </div>
+  </section>
+</Layout>
+
+<script></script>

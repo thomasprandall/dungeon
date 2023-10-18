@@ -1,0 +1,29 @@
+---
+// Component Script (JavaScript)
+const { title, tableData } = Astro.props;
+---
+
+<!-- Component Template (HTML + JS Expressions) -->
+<div class="window md:basis-4/5 hover:resize">
+  <div class="title-bar">
+    <button aria-label="Close" class="close"></button>
+    <h1 class="title">{title}</h1>
+    <button aria-label="Resize" class="resize-btn"></button>
+  </div>
+  <div class="separator"></div>
+
+  <div class="window-pane">
+    <table class="table-auto">
+        <thead>
+            <tr class="bg-slate-200">
+                <th>#</th>
+                <th>Weather</th>
+                <th>Effect</th>
+            </tr>
+        </thead>
+        <tbody>
+            {tableData.map((row) => <tr class="border-b-2 border-dashed even:bg-slate-100 hover:bg-yellow-50"><td class="p-2">{ row.result }</td><td class="p-2">{ row.name }</td><td class="p-2">{ row.description }</td></tr>)}
+        </tbody>
+    </table>
+  </div>
+</div>

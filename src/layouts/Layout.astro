@@ -1,0 +1,21 @@
+---
+import Navigation from "./Navigation.astro";
+
+const { title } = Astro.props
+---
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content={Astro.generator} />
+    <title>.d//re | { title } </title>
+    <link rel="stylesheet" href="/src/styles/system.css" />
+  </head>
+  <body>
+    <Navigation />
+    <div class="">
+        <h1 class="text-right pr-3">{ title }</h1>
+        <slot /> 
+    </div>
+  </body>
+</html>

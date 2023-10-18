@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import InfoWindow from '../../components/InfoWindow.astro';
+
+import * as data from '../../data/appendix.json';
+
+const skills = data.skills;
+---
+
+<!-- 
+    TODO
+    Collapsible windows
+-->
+<Layout title="Appendix: Skills">
+  <section class="clear-both flex flex-wrap justify-around">
+    <InfoWindow title="Build" listData={skills.build} classes="md:basis-3/12" />
+    <InfoWindow title="Hands" listData={skills.hands} classes="md:basis-3/12" />
+    <InfoWindow title="Presence" listData={skills.presence} classes="md:basis-3/12" />
+    <InfoWindow title="Meta" listData={skills.meta} classes="md:basis-3/12" />
+  </section>
+</Layout>
+
+<script>
+  
+</script>

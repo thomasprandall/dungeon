@@ -1,0 +1,59 @@
+{
+    "weather": [
+        {
+            "result": 2,
+            "name": "Lightning Storm",
+            "description": "Heavy thunder rumbles through the clouds, blocking the sun from gazing upon Annwn's body. In combat, there's a 10% chance of a lightning bolt striking someone at random each round. When rolling random encounters, a 12 means that a lightning strike brings a Saga Prince. This is the only way to encounter a Saga Prince and get their unique drops."
+        },
+        {
+            "result": 3,
+            "name": "Rain",
+            "description": "Flat, static-gray clouds with the dull sizzle of rain on every surface. Pets hide under their owners and NPCs gather in taverns. The world sleeps for the storm"
+        },
+        {
+            "result": 4,
+            "name": "Rain",
+            "description": "Flat, static-gray clouds with the dull sizzle of rain on every surface. Pets hide under their owners and NPCs gather in taverns. The world sleeps for the storm"
+        },
+        {
+            "result": 5,
+            "name": "Rain",
+            "description": "Flat, static-gray clouds with the dull sizzle of rain on every surface. Pets hide under their owners and NPCs gather in taverns. The world sleeps for the storm"
+        },
+        {
+            "result": 6,
+            "name": "Clear",
+            "description": "The eye of the sad god watches."
+        },
+        {
+            "result": 7,
+            "name": "Clear",
+            "description": "The eye of the sad god watches."
+        },
+        {
+            "result": 8,
+            "name": "Clear",
+            "description": "The eye of the sad god watches."
+        },
+        {
+            "result": 9,
+            "name": "Fog",
+            "description": "The thick liminality of static-fog. A pleasing film grain tinted by the glare of the sad god."
+        },
+        {
+            "result": 10,
+            "name": "Fog",
+            "description": "The thick liminality of static-fog. A pleasing film grain tinted by the glare of the sad god."
+        },
+        {
+            "result": 11,
+            "name": "Fog",
+            "description": "The thick liminality of static-fog. A pleasing film grain tinted by the glare of the sad god."
+        },
+        {
+            "result": 12,
+            "name": "Snow",
+            "description": "Flakes fall from the atmosphere, freezing bodies of water into slick surfaces and coating the world in a blanket of soft crunch. Dragons sing their sacred song. If you're close enough, you can give up 10 Bytes to learn the song. ADD DRAGON SONG"
+        }
+    ]
+}

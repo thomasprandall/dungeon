@@ -1,0 +1,20 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import InfoWindow from '../../components/InfoWindow.astro';
+
+import * as data from '../../data/appendix.json';
+
+const statuses = data.statuses;
+---
+
+<!-- 
+    TODO
+    Collapsible windows
+-->
+<Layout title="Appendix: Statuses">
+  <section class="clear-both flex flex-wrap justify-around">
+    <InfoWindow title="Statuses" listData={statuses} size="w-11/12" />
+  </section>
+</Layout>
+
+<script></script>

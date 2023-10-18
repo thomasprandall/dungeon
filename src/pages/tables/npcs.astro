@@ -1,0 +1,80 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ListWindow from '../../components/ListWindow.astro';
+
+import * as data from '../../data/npcs.json';
+
+const names = data.name;
+const personalities = data.personality;
+---
+<!-- 
+    TODO
+    Resize/Close button event handling
+    Double loading data? Can I pass it from astro template to client side instead of importing again?
+    Implement NPC History list
+    Tinker more with .resize and overall layout for "windows"
+    X Convert tables to component
+-->
+
+<Layout title="NPC Appendix">
+    <section class="flex flex-wrap sm:basis-1/12 justify-center md:justify-around">
+        <div class="window flex-shrink hover:resize">
+            <div class="title-bar align-middle"> 
+                <button aria-label="Close" class="close"></button>
+                <h1 class="title">Generate</h1>
+                <button aria-label="Resize" class="resize-btn"></button>
+            </div>
+            <div class="separator"></div>
+            
+            <div class="window-pane text-center">
+                <button class="btn large" id="generate-npc">Generate NPC</button>
+            </div>
+        </div>
+        <div class="md:basis-2/5 flex-shrink standard-dialog center mx-2">
+            <h1 class="dialog-text">Generated NPC Details <button class="btn text-xs float-right mx-2">View NPC History</button></h1>
+            <p class="dialog-text">Name: <span id="npc-name"></span></p>
+            <p class="dialog-text">Personality Traits: <span id="npc-personality"></span></p>
+            <p class="dialog-text">Type: <span id="npc-type"></span></p>
+            <p class="dialog-text"><span id="npc-type-description"></span></p>
+        </div>
+    </section>
+    <section class="clear-both flex flex-wrap justify-around">
+        <ListWindow title="Names" listData = {names} />
+        <ListWindow title="Personalities (Roll Twice)" listData={personalities} />
+    </section>
+</Layout>
+
+<script>
+    import * as data from '../../data/npcs.json';
+
+    const names = data.name;
+    const personalities = data.personality;
+    const types = data.type;
+    let random = [];
+
+    function generateNPC() {
+        random.unshift(
+            [
+                Math.floor(Math.random() * names.length+1),
+                Math.floor(Math.random() * personalities.length+1),
+                Math.floor(Math.random() * personalities.length+1),
+                Math.floor(Math.random() * types.length)
+            ]
+        );
+
+        let generated = {
+            name: names[random[0][0]],
+            personality: personalities[random[0][1]] + ', ' + personalities[random[0][2]],
+            type: types[random[0][3]]
+        }
+
+        document.getElementById("npc-name").innerText = generated.name;
+        document.getElementById("npc-personality").innerText = generated.personality;
+        document.getElementById("npc-type").innerText = generated.type.name;
+        document.getElementById("npc-type-description").innerText = generated.type.benefit;
+    }
+
+    document.getElementById("generate-npc").addEventListener("click", () => {
+        generateNPC();
+    });
+</script>

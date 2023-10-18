@@ -1,0 +1,176 @@
+{
+    "statuses": [
+        {
+            "name": "Bleeding",
+            "effect": "Take 1 Sync damage at the start of each of your turns until the bleeding is stopped."
+        },
+        {
+            "name": "Blinded",
+            "effect": "All navigation or targeting requires a successful Luck roll."
+        },
+        {
+            "name": "Burning",
+            "effect": "Take d6 Sync damage at the start of your turn."
+        },
+        {
+            "name": "Charmed",
+            "effect": "Act on the charmer's turn and add your dice to their damage."
+        },
+        {
+            "name": "Confused",
+            "effect": "All failed rolls are considered fumbles."
+        },
+        {
+            "name": "Deafened",
+            "effect": "You can't hear any voice communications or game sounds. You may need to cover your ears, leave the room, or deafen your headset."
+        },
+        {
+            "name": "Drowning",
+            "effect": "You've failed your swimming roll and are now drowning. Roll Tilt at the start of your turn until someone saves you or you are forced to respawn."
+        },
+        {
+            "name": "Frightened",
+            "effect": "You must move as far as possible from the thing that frightened you. You can't take actions that harm the thing that frightened yo"
+        },
+        {
+            "name": "Grappled",
+            "effect": "You can't move but can still take your action"
+        },
+        {
+            "name": "Invisible",
+            "effect": "Make an RNG roll to be able to spot an invisible target. All combat rolls must be made using RNG as well. Hitting an invisible target makes them visible."
+        },
+        {
+            "name": "Lost",
+            "effect": "If you are afflicted with this status, all navigation requires a successful Luck roll. Failure means the Server Host chooses where you go."
+        },
+        {
+            "name": "Paralyzed",
+            "effect": "You can't move or take an action on your turn. All damage you take is doubled"
+        },
+        {
+            "name": "Poisoned",
+            "effect": "You make all rolls using your Tilt dice. Failure marks a respawn. Respawning removes this status."
+        },
+        {
+            "name": "Rage",
+            "effect": "You must attack the person or creature nearest to you."
+        },
+        {
+            "name": "Sickened",
+            "effect": "You make all rolls with -1."
+        },
+        {
+            "name": "Silenced",
+            "effect": "Cannot cast songs and voice communication doesn't work. Cover your mouth or mute your microphone."
+        },
+        {
+            "name": "Sleeping",
+            "effect": "All attacks auto-hit and deal twice as much damage. If attacking a sleeping mob, the attack removes two dice."
+        },
+        {
+            "name": "Slowed",
+            "effect": "You go at the end of initiative and can only move or only take an action on your turn. Not both"
+        },
+        {
+            "name": "Stunned",
+            "effect": "Your turn is skipped this round of initiative."
+        },
+        {
+            "name": "Tripped",
+            "effect": "Melee attacks against you count as crits if they hit. Ranged attacks treat you as behind partial cover. You can end this status at the end of your turn. No roll needed."
+        }
+    ],
+    "skills" : {
+        "build" : [
+            {
+                "name": "Defense",
+                "effect": "Instead of armor, characters have a base defense that acts as damage reduction. Training in defense gives you 1dr, and Expertise gives you 2dr. Some clothes and armor may offer more damage reduction."
+            },
+            {
+                "name": "Magic",
+                "effect": "Training in magic lets you cast spells. Without training, you might be able to read the spells but their magic is lost on you. Expertise allows you to identify who cast a particular spell and detect magic in the area."
+            },
+            {
+                "name": "Melee",
+                "effect": "Training in melee allows you to use big melee weapons. Expertise allows you a unique “stance” with your weapon of choice. Whether you're swinging a sword or punch, add your training when making attacks against opponents."
+            },
+            {
+                "name": "Platforming",
+                "effect": "Acrobatic leaps, climbing, and navigating dangerous terrain. Training in platforming gives you tighter control over your Avatar's movements. Expertise gives you a double jump."
+            },
+            {
+                "name": "Strength",
+                "effect": "Knocking things over, pushing things out of the way, and general, hand-made destruction. Training in strength makes objects weigh less to your character. Expertise lets you throw large objects."
+            }
+        ],
+        "meta": [
+            {
+                "name": "Alchemy",
+                "effect": "Creating and identifying foils. Training in alchemy allows your character to craft lesser foils out of Materials. Expertise lets you craft greater foils."
+            },
+            {
+                "name": "Arcanum",
+                "effect": "The knowledge of and training to use magic items and sci-fi tech. Training in arcanum allows you to use neon weapons. Expertise gives you basic information about magic items that are within your line of sight."
+            },
+            {
+                "name": "Dreams",
+                "effect": "Considered a hidden skill of the game, because it is not clearly defined on the wiki. Training in dreams allows you to make pacts with the pantheon of .dungeon. Expertise in it allows you to open yourself to the world of Annwn and receive messages from it. Often cryptic or prophetic. [Call to action! The .dungeon wiki is open for new contributors who know more about this skill.]"
+            },
+            {
+                "name": "Lore",
+                "effect": "Training in lore means the game expands descriptive text. Expertise means the game might butt in to give you information, even when you didn't ask for it."
+            },
+            {
+                "name": "Travel",
+                "effect": "Training in navigation improves your HUD radar and quest markers. Expertise gives you active hints to help you search and travel."
+            }
+        ],
+        "presence": [
+            {
+                "name": "Animal Handling",
+                "effect": "Training in animal handling allows you to take on animals (and some monsters) as pets. Expertise in animal handling lets you reroll animal reactions to you, and take on a mount."
+            },
+            {
+                "name": "Perception",
+                "effect": "Training in perception improves colors, sounds, and smells to enhance your senses. Expertise in perception does this even more and also adds faint outlines to things of interest. The invisible hands of the game like you."
+            },
+            {
+                "name": "Sneak",
+                "effect": "Training in sneak reduces the ambient and active sounds of your Avatar. Expertise makes you completely silent while crouched."
+            },
+            {
+                "name": "Speech",
+                "effect": "Training in speech improves NPC reactions to you. Expertise in speech rerolls reaction rolls, even in dangerous situations."
+            },
+            {
+                "name": "Vibes",
+                "effect": "Training in vibes improves the haptic feedback of your VR rig, giving you subtle signals when things are off. Expertise improves this even more and makes NPCs more readable."
+            }
+        ],
+        "hands": [
+            {
+                "name": "Accuracy",
+                "effect": "Training in accuracy reduces arrow and bullet drop and other things that affect the trajectory of ranged attacks. Expertise subtly slows aiming down to give you greater control."
+            },
+            {
+                "name": "Crafting",
+                "effect": "Training in crafting allows you to create lesser versions of items as long as you have the supplies. Expertise allows you to create greater versions."
+            },
+            {
+                "name": "Engineering",
+                "effect": "Training in engineering aids you in repairing vehicles and other machinery in the world. Expertise aids you further by reducing repair costs."
+            },
+            {
+                "name": "Explosives",
+                "effect": "Training in explosives allows you more wiggle room for failure while using them in combat, and aids you in building and disarming explosives. Expertise allows you to disarm explosives without destroying them."
+            },
+            {
+                "name": "Piloting",
+                "effect": "Training in piloting improves vehicle responsiveness and makes them easier to control. Expertise allows for a semi-auto-pilot so you can take on simple tasks while also piloting."
+            }
+        ]
+
+    }
+    
+}

@@ -1,0 +1,360 @@
+{
+    "name": [
+        "Alden",
+        "Alf",
+        "Ashlee",
+        "Bailee",
+        "Batilda",
+        "Benton",
+        "Byron",
+        "Camdyn",
+        "Carlton",
+        "Chelsea",
+        "Coleen",
+        "Dayna",
+        "Dwight",
+        "Denver",
+        "Drake",
+        "Earline",
+        "Easton",
+        "Edgardo",
+        "Edith",
+        "Fay",
+        "Ford",
+        "Freda",
+        "Frank",
+        "Gage",
+        "Gibson",
+        "Graysen",
+        "Graham",
+        "Hadlee",
+        "Haley",
+        "Harlan",
+        "Huxley",
+        "Jagger",
+        "Justice",
+        "Karter",
+        "Keaton",
+        "Kelsea",
+        "Kimberlee",
+        "Kole",
+        "Landon",
+        "Lawley",
+        "Leigh",
+        "Lilla",
+        "Lindsee",
+        "Macee",
+        "Meadow",
+        "Millard]",
+        "Milton",
+        "Neil",
+        "Nixon",
+        "Oakley",
+        "Oswin",
+        "Paxton",
+        "Peyton",
+        "Princeton",
+        "Ramsey",
+        "Raylee",
+        "Reid",
+        "Remy",
+        "Rowena",
+        "Rovena",
+        "Rohesia",
+        "Ryder",
+        "Rylee",
+        "Sawyer",
+        "Scarlet",
+        "Sheldon",
+        "Shelly",
+        "Sterling",
+        "Sunniva",
+        "Tatum",
+        "Tanner",
+        "Thatcher",
+        "Tucker",
+        "Tyson",
+        "Uesli",
+        "Van",
+        "Vance",
+        "Villads",
+        "Wade",
+        "Walker,",
+        "Wayne",
+        "Wesley",
+        "Weston",
+        "Willbroad",
+        "Willis",
+        "Wilson",
+        "Winston",
+        "Wynton",
+        "Yvonne",
+        "Yvette",
+        "Yolanda",
+        "Yesenia",
+        "Yasmin",
+        "Yara",
+        "Ysabel",
+        "Yoana",
+        "Zoey",
+        "Zachary",
+        "Zander",
+        "Zelda"
+    ],
+    "personality": [
+        "Charming",
+        "Stoic",
+        "Innocent",
+        "Attentive",
+        "Loyal",
+        "Romantic",
+        "Meticulous",
+        "Calm",
+        "Cheery",
+        "Affectionate",
+        "Sly",
+        "Cute",
+        "Crafty",
+        "Compassionate",
+        "Honest",
+        "Respectful",
+        "Humble",
+        "Forgiving",
+        "Courageous",
+        "Persevering",
+        "Generous",
+        "Polite",
+        "Loving",
+        "Optimistic",
+        "Disciplined",
+        "Observant",
+        "Independent",
+        "Forceful",
+        "Flexible",
+        "Firm",
+        "Humorous",
+        "Idealistic",
+        "Modest",
+        "Objective",
+        "Patriotic",
+        "Reflective",
+        "Scholarly",
+        "Sentimental",
+        "Sweet",
+        "Suave",
+        "Venturesome",
+        "Wise",
+        "Sociable",
+        "Creative",
+        "Alert",
+        "Active",
+        "Gallan",
+        "Heroic",
+        "Leisurely",
+        "Mature",
+        "Grumpy",
+        "Tired",
+        "Jaded",
+        "Memer",
+        "Condescending",
+        "Liar",
+        "Gluttonous",
+        "Lustful",
+        "Agitated",
+        "Harmful",
+        "Depressive",
+        "Obsessive",
+        "Overwhelmed",
+        "Anxious",
+        "Explosive",
+        "Lazy",
+        "Destructive",
+        "Rude",
+        "Unreliable",
+        "Clueless",
+        "Forgetful",
+        "Absentminded",
+        "Abrupt",
+        "Agonizing",
+        "Aloof",
+        "Apathetic",
+        "Bizarre",
+        "Bland",
+        "Blunt",
+        "Cantankerous",
+        "Careless",
+        "Childish",
+        "Clumsy",
+        "Shy",
+        "Regretful",
+        "Passive",
+        "Melancholic",
+        "Irrational",
+        "Grim",
+        "Foolish",
+        "Fearful",
+        "Extreme",
+        "Envious",
+        "Egocentric",
+        "Dependent",
+        "Delicate",
+        "Demanding",
+        "Compulsive",
+        "Asocial",
+        "Roll 2x more"
+    ],
+    "type": [
+        {
+            "name": "Adventurer",
+            "benefit": "Sleeps outside of the settlement. Protects the yearly settlement caravan, raising the return chance to 35%."
+        },
+        {
+            "name": "Armorer",
+            "benefit": "Creates a workshop in the settlement. Allows the settlement to sell and repair armor."
+        },
+        {
+            "name": "Artist",
+            "benefit": "Will only stay in the settlement if there's an Inn. Has a 3% chance of creating their magnum opus each week, which sells for d100x2d10 Bytes."
+        },
+        {
+            "name": "Bartender",
+            "benefit": "Creates a tavern in the settlement. Gives the settlement's NPCs a place to unwind and get to know each other."
+        },
+        {
+            "name": "Beastlord",
+            "benefit": "Will only stay in the settlement if it's in a forest. Sleeps outside of the settlement in the woods. Allows mounts to be sold within the settlement."
+        },
+        {
+            "name": "Butcher",
+            "benefit": "Creates a butchershop in the settlement. Every year it generates enough resources to bring in another random NPC."
+        },
+        {
+            "name": "Cartographer",
+            "benefit": "Creates an observatory in the settlement. Cartographers sell information on surrounding hexes for 5 Bytes. Cartographers have a 5% chance of creating a map to a legendary item every month."
+        },
+        {
+            "name": "Chaos Mage",
+            "benefit": "Will only stay in town if there's a wizard tower but not a sage or a stormlord. Generates a lightning rod on the wizard tower that has a 5% chance of capturing a lightning bolt every month. A chaos mage will sell Bottled Lightning for 25 Bytes. When used, Bottled Lightning adds +20 to one Contest of your choic"
+        },
+        {
+            "name": "Cleric",
+            "benefit": "Creates a temple in the settlement. Temples celebrate the calendar's holidays, bringing their benefits to the settlement."
+        },
+        {
+            "name": "Diabolist",
+            "benefit": "Will not stay in the settlement if there's a temple. Serves a random Archbug. Has a 10% chance of converting another NPC into a diabolist every week. If three diabolists live in a settlement, they create a temple to their Archbug, increasing the weekly conversion chance to 25%. If ten diabolists live in a settlement, their Archbug will arrive to convert the rest and corrupt the town, turning it into Glitch terrain."
+        },
+        {
+            "name": "Elementalist",
+            "benefit": "Will only stay in the settlement if there's a wizard tower with a lightning rod. Increases the chance of catching a lightning bolt to 7%. Elementalists can convert captured lightning into a solar orb, which can cause an eclipse that day, even if there's already been one this month."
+        },
+        {
+            "name": "Enchanter",
+            "benefit": "Creates a card shop in the settlement. Allows the settlement to sell foils."
+        },
+        {
+            "name": "Farmer",
+            "benefit": "Creates a farm and a farmhouse in the settlement. Gives the settlement something to trade with nearby settlements. Every year there will be a caravan that goes out. There's a 25% chance it returns. If paired with a mine, increase the chance to 35%."
+        },
+        {
+            "name": "Fisherman",
+            "benefit": "Creates a fishing hole and a shack on the outskirts of the settlement."
+        },
+        {
+            "name": "Healer",
+            "benefit": "Will only stay in town if there's a temple. Heals status effects for 4 Bytes each. Heals injured NPCs over the course of a week"
+        },
+        {
+            "name": "Innkeeper",
+            "benefit": "Creates an Inn in the settlement. Roll on the traveling NPC table once each month."
+        },
+        {
+            "name": "Justicar",
+            "benefit": "Will only stay in town if there's a temple and a healer. They will kill any diabolist in town. Justicars upgrade the temple to a Holy Monument which converts every NPC in the settlement to the same religion. Justicars defend towns from undead, making them immune to Zombie raids."
+        },
+        {
+            "name": "Knight",
+            "benefit": "Creates a fort in the settlement and generates a knight NPC every month until there are six. When there are six knights, they generate a unique rare sword every month and offer it as a reward in the colosseum."
+        },
+        {
+            "name": "Leatherworker",
+            "benefit": "Creates a tannery in the settlement. Every year it generates enough resources to bring in another random NPC."
+        },
+        {
+            "name": "Librarian",
+            "benefit": "Creates a library in the settlement. Allows research to be done. If paired with a wizard tower, the research dice is increased to a d6."
+        },
+        {
+            "name": "Loremaster",
+            "benefit": "Creates a wizard tower in the settlement. Allows research to be done. If paired with a library, the research dice is increased to a d6."
+        },
+        {
+            "name": "Mason",
+            "benefit": "Creates a stonecutter's shop in the settlement. Cuts future construction times in half."
+        },
+        {
+            "name": "Mindmelder",
+            "benefit": "Creates a reliquary unique to the settlement. Leaves after a month. If the reliquary is taken into a mine within the same settlement, it will reveal a dungeon entrance that holds a legendary item."
+        },
+        {
+            "name": "Miner",
+            "benefit": "Creates a mine in the settlement. Gives the settlement something to trade with nearby settlements. Every year there will be a caravan that goes out. There's a 25% chance it returns. If paired with a farm, increase the chance to 35%"
+        },
+        {
+            "name": "Necromancer",
+            "benefit": "Will only stay in the settlement if there's a temple. Grants +3 to all rolls against undead while in the settlement. Has a 1% chance of resurrecting any NPC that dies in the settlement."
+        },
+        {
+            "name": "Ranger",
+            "benefit": "Will not stay in the settlement unless there's a defense tower. Increase all fishing rolls by +1. For every Ranger in a settlement, there's a 10% chance a legendary animal spawns in an adjacent hex."
+        },
+        {
+            "name": "Reaver",
+            "benefit": "Will only stay in the settlement if it's on a coast, or adjacent to a river. Adds a dock and a pirate ship to the settlement. Pirate ships allow pets to be sold at settlements."
+        },
+        {
+            "name": "Sage",
+            "benefit": "Will only stay in town if there's a wizard tower but not a Chaos Mage or a Storm Lord. Can identify magic items and will buy magic items if negotiated with. Can also recharge teleportation circles."
+        },
+        {
+            "name": "Shadow Priest",
+            "benefit": "Will only stay in the settlement if it's adjacent to a forest hex. All adjacent forest hexes are turned into Black Forest. Only one Black Forest can exist on Annwn at a time. Black Forests spawn Shadow Skeletons and hold a legendary item."
+        },
+        {
+            "name": "Shepherd",
+            "benefit": "Creates a farmhouse in the settlement. Every year it generates enough resources to bring in another random NPC."
+        },
+        {
+            "name": "Soldier",
+            "benefit": "Grants +1 to all combat rolls against hostile mobs inside of a settlement."
+        },
+        {
+            "name": "Spirit Warden",
+            "benefit": "Will only stay in town if there's a card shop in the settlement. Offers tarot readings once a week. Roll d6 to see your fortune: <br /> 1-2. Castle - “You will defend yourself against all odds.” +1 to your Defense for the week.<br /> 3-4. Spider - “You will go where you please, even where you aren't wanted.” +2 to Stealth for the week.<br />5-6. Joker - “There is great fortune in your near future.” Gain twice as many Bytes for the rest of the day."
+        },
+        {
+            "name": "Stormlord",
+            "benefit": "Will only stay in the settlement if there is a wizard tower but there isn't a Chaos Mage. Generates a lightning rod on the wizard tower that has a 5% chance of capturing a lightning bolt each month. The stormlord crafts them into arrows of slaying, which they sell for 50 Bytes each. Arrows of Slaying auto-destroy the rest of their target's dice if they lose the Contest."
+        },
+        {
+            "name": "Toolsmith",
+            "benefit": "Creates a hardware store in the settlement. Allows the settlement to sell equipment"
+        },
+        {
+            "name": "Town Guard",
+            "benefit": "Creates a warden's office in the settlement. Has a 10% chance of having a traveling NPC in the barracks every month"
+        },
+        {
+            "name": "Unemployed",
+            "benefit": "Can be trained and taken as apprentices to other jobs. Unemployed NPCs will also adventure with Player Characters for 2 Bytes per day. NPCs who go on adventures have a 10% chance at becoming adventurers themselves, though that means they'll leave the settlement."
+        },
+        {
+            "name": "Warlord",
+            "benefit": "Will only stay in town if there are four defense towers. Generates a soldier NPC every month."
+        },
+        {
+            "name": "Weaponsmith",
+            "benefit": "Creates a blacksmith in the settlement. Allows the settlement to sell weapons."
+        }
+    ]
+}

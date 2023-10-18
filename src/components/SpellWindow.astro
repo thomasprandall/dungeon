@@ -1,0 +1,22 @@
+---
+// Component Script (JavaScript)
+const { title, spell, classes } = Astro.props;
+---
+
+<!-- Component Template (HTML + JS Expressions) -->
+<div class:list={['window hover:resize md:basis-1/5', classes]}>
+  <div class="title-bar">
+    <button aria-label="Close" class="close"></button>
+    <h1 class="title" id={spell.name.replaceAll(' ', '')}>{title}</h1>
+    <button aria-label="Resize" class="resize-btn"></button>
+  </div>
+  <div class="separator"></div>
+  <div class="details-bar text-xs text-right">
+    skill: {spell.skill}; cost: {spell.cost}
+  </div>
+  <div class="window-pane">
+    <div class="my-2">
+      <span class="mr-3">{spell.name}</span> {spell.description}
+    </div>
+  </div>
+</div>

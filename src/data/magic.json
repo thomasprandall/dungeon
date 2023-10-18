@@ -1,0 +1,157 @@
+{
+    "spells": [
+        {
+            "name": "Angel's Fury",
+            "description": "You enshrine a party member’s head with a fiery crown, allowing them to auto-destroy a single mob up to a d10.",
+            "skill": "Magic",
+            "cost": 5
+        },
+        {
+            "name": "Black Pool",
+            "description": "You cast unholy light onto the bottom of the dungeon steps, flooding it with magical, black ichor. From its murky depths, Darkroot, the Skeleton Prince, crawls forth to answer a single question about the dungeon you’re in.",
+            "skill": "Dream",
+            "cost": 7
+        },
+        {
+            "name": "Bubble",
+            "description": "Create a circle with your hand to encase one target in a bubble that floats above the battlefield. The target may roll Tilt to end this effect. Any damage to the bubble pops it. A falling target is stunned until their next turn.",
+            "skill": "Magic",
+            "cost": 5
+        },
+        {
+            "name": "Buff",
+            "description": "The magic of the elk hand sign grants each party member a d8 to add to their next roll.",
+            "skill": "Dream",
+            "cost": 4
+        },
+        {
+            "name": "Cellar Door",
+            "description": "A surface becomes an entrance into a liminal cellar big enough to hold five party members. If the door is shut from the inside, the space is impenetrable. It lasts for up to thirty minutes.",
+            "skill": "Magic",
+            "cost": 7
+        },
+        {
+            "name": "Circle of Protection",
+            "description": "Draw a space around two targets. For one encounter, all damage inside or from outside the circle is voided. Entities inside can’t attack anyone outside without breaking the circle.",
+            "skill": "Magic",
+            "cost": 7
+        },
+        {
+            "name": "Dark Tendril",
+            "description": "Shadow tentacles rise from the surrounding surfaces, grappling up to four entities of d6 dice or lower.",
+            "skill": "Magic",
+            "cost": 5
+        },
+        {
+            "name": "Disguise Self",
+            "description": "Transform your avatar into an entity matching the environment, like a vase, chest, or plant. This illusion stays until you are attacked or make an attack.",
+            "skill": "Magic",
+            "cost": 4
+        },
+        {
+            "name": "Heal",
+            "description": "Heal wounds, young and old, by soothing the energy around you. Regain d10 Sync.",
+            "skill": "Magic",
+            "cost": 7
+        },
+        {
+            "name": "Liminalis",
+            "description": "Draw the essence of another door upon the door in front of you. They are now linked forever for you and your party members.",
+            "skill": "Dream",
+            "cost": 25
+        },
+        {
+            "name": "Meteor",
+            "description": "Reach into Detritus and pull something free. Choose two entities in addition to yourself to survive. Destroy all other entities in the area.",
+            "skill": "Magic",
+            "cost": 25
+        },
+        {
+            "name": "Mimicry",
+            "description": "Split a copy off of yourself. You can puppet them through hand signs, but they still move and act when you aren’t controlling them.",
+            "skill": "Magic",
+            "cost": 10
+        },
+        {
+            "name": "Obliterate",
+            "description": "Encase a hostile entity in your hand and permanently remove it from the field of battle.",
+            "skill": "Magic",
+            "cost": 25
+        },
+        {
+            "name": "Omega",
+            "description": "Can only be cast when you reach 0 Sync. Sacrifice your avatar and your influence over Annwn to give the party 20 Sync.",
+            "skill": "Magic",
+            "cost": 15
+        },
+        {
+            "name": "Polymorph",
+            "description": "With a few quick motions, turn one hostile entity into a chicken. This lasts until they are attacked",
+            "skill": "Magic",
+            "cost": 10
+        },
+        {
+            "name": "Solar Flare",
+            "description": "Eclipse the sun with your hand. The halo of light auto-destroys d4 entities in the field of battle.",
+            "skill": "Magic",
+            "cost": 8
+        },
+        {
+            "name": "Summon Fallminx",
+            "description": "Create an area for Fallminx to land. Fallminx counts as a d20x2, looks like a gargantuan gargoyle, and wields a mighty scythe.",
+            "skill": "Dream",
+            "cost": 10
+        },
+        {
+            "name": "Teleport",
+            "description": "Escape through velvet curtains, returning to the last settlement you visited.",
+            "skill": "Magic",
+            "cost": 8
+        },
+        {
+            "name": "Vanishment",
+            "description": "Hide a single entity from all eyes.",
+            "skill": "Magic",
+            "cost": 7
+        },
+        {
+            "name": "Wall",
+            "description": "Add to the dungeon, change the architecture. A new wall is created from surrounding material, connecting two nearby walls of your choice.",
+            "skill": "Dream",
+            "cost": 10
+        }
+    ],
+    "terms": [
+        {
+            "name":"Target",
+            "definition":"Any single entity, player character, or PUG that is on the field of battle, including the caster."
+        },
+        {
+            "name": "Caster",
+            "definition": "The entity casting the spell."
+        },
+        {
+            "name": "Field of Battle",
+            "definition": "Everything considered to be in combat at the time, in melee and range. If something is nearby but not present in the combat, it is not considered to be \"in the field of battle.\""
+        },
+        {
+            "name": "Auto-Destroy",
+            "definition": "Removes the target’s current dice without a contest roll. If a mob is made of more than one dice, only the current dice is destroyed."
+        },
+        {
+            "name": ".Area",
+            "definition": "All entities and space that is within melee range of the target."
+        },
+        {
+            "name": "Interrupt",
+            "definition": "Magic that can be cast out of turn order. Using a spell to interrupt costs 3 extra Bytes and counts as your next up-coming turn. If the spell cancels an action that is being performed, or changes the conditions for whoever’s turn it is, that person gains another movement to use immediately."
+        },
+        {
+            "name": "Skill",
+            "definition": "If a spell calls for a dice roll, use the listed Skill."
+        }
+    ],
+    "introduction": "The game’s current patch uses shadow magic, a magical art created by Annwn herself. By combining Bytes with hand signs that either do or don’t cast a shadow, you can create strange and sometimes helpful effects. Spells are discovered on scrolls, inside of tomes, and carved on dungeon walls. There is no centralized school of magic or a way to begin the game as a spellcaster anymore.",
+    "learning": "To learn these spells you must find a scroll, book, or carving that demonstrates the hand signs. Some PUGs are kind enough to pass on spells they've learned to others, but they have to be demonstrated in-game. Following a diagram on the wiki can teach you the hand signs, but your character won't know the spell until they study it or are taught it. PUGs usually charge upwards of 50 Bytes to teach you one of their spells.",
+    "accessibility": ".dungeon's options menu lets players toggle off spellcasting's extensive hand movements. Some players prefer voice commands or the spellcasting menu where you simply use buttons to input the proper hand signs in the correct order."
+}

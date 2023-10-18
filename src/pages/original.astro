@@ -1,0 +1,147 @@
+---
+
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>.dungeon//remastered avatar manager</title>
+		<style type="text/css">
+			.text-vertical{
+				writing-mode: vertical-rl;
+				text-orientation: upright;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="md:container md:mx-auto p-2">
+			<nav class="my-1">
+				<h1 class="font-mono uppercase text-2xl font-bold float-left">.dungeon//<span class="lowercase">remastered</span></h1>
+				<ul class="float-right">
+					<li class="inline mx-2"><a>Avatars</a></li>
+					<li class="inline mx-2"><a>Help</a></li>
+				</ul>
+			</nav>
+			<div class="clear-both">
+				<div class="float-right">
+					<label for="name" class="font-mono mr-2 uppercase">Name</label>
+					<input type="text" name="name" id="name" class="border-2 border-dashed" />
+				</div>
+			</div>
+			<section class="clear-right">
+				<div class="flex flex-row items-start">
+					<div class="basis-3 self-center mr-2">
+						<h1 class="font-mono break-all">/ / S - T - A - T - S / /</h1>
+					</div>
+					<div id="stats" class="">
+						<div class="columns-2 gap-1 space-x-2">
+							<div class="flex flex-col space-y-2">
+								<div class="border-2 border-dashed w-32 aspect-square">
+									<h1 class="text-center font-mono lowercase">Build</h1>
+								</div>
+								<div class="border-2 border-dashed w-32 aspect-square">
+									<h1 class="text-center font-mono lowercase">Presence</h1>
+								</div>
+								<div class="border-2 border-dashed w-32 aspect-square">
+									<h1 class="text-center font-mono lowercase">Tilt</h1>
+								</div>
+							</div>
+							<div class="flex flex-col space-y-2">
+								<div class="border-2 border-dashed w-32 aspect-square">
+									<h1 class="text-center font-mono lowercase">Meta</h1>
+								</div>
+								<div class="border-2 border-dashed w-32 aspect-square">
+									<h1 class="text-center font-mono lowercase">Hands</h1>
+								</div>
+								<div class="border-2 border-dashed w-32 aspect-square">
+									<h1 class="text-center font-mono lowercase">RNG</h1>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="sync" class="">
+						<div class="flex flex-row items-start">
+							<div class="basis-3 self-center mx-2">
+								<h1 class="font-mono break-all">/ / S - Y - N - C / /</h1>
+							</div>
+							<div class="space-y-2">
+								<div class="border-2 border-dashed w-12 leading-10 aspect-square text-center">
+									<p title="rest//return">100</p>
+								</div>
+								<div class="border-2 border-dashed w-12 leading-10 aspect-square text-center">
+									<p title="rest">80</p>
+								</div>
+								<div class="border-2 border-dashed w-12 leading-10 aspect-square text-center">
+									<p title="rest//return">60</p>
+								</div>
+								<div class="border-2 border-dashed w-12 leading-10 aspect-square text-center">
+									<p title="rest">40</p>
+								</div>
+								<div class="border-2 border-dashed w-12 leading-10 aspect-square text-center">
+									<p title="game over">0</p>
+								</div>
+								<div class="border-2 border-dashed w-12 leading-10 aspect-square text-center">
+									<p title="respawns">3</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="skills" class="flex flex-row">
+						<div class="basis-3 self-center mx-2">
+							<h1 class="font-mono break-all">/ / S - K - I - L - L - S / /</h1>
+						</div>
+						<div class="columns-2 gap-1 space-x-2">
+							<div class="">
+								<div class="border-2 border-dashed aspect-square p-2 mb-2">
+									<h1 class="text-center font-mono uppercase">Build</h1>
+									<ul>
+										<li class="break-keep">Defense [ ][ ]</li>
+										<li class="break-keep">Magic [ ][ ]</li>
+										<li class="break-keep">Melee [ ][ ]</li>
+										<li class="break-keep">Platforming [ ][ ]</li>
+										<li class="break-keep">Strength [ ][ ]</li>
+									</ul>
+								</div>
+								<div class="border-2 border-dashed aspect-square p-2">
+									<h1 class="text-center font-mono uppercase">Presence</h1>
+									<ul>
+										<li class="break-keep">Animal Handling [ ][ ]</li>
+										<li class="break-keep">Perception [ ][ ]</li>
+										<li class="break-keep">Sneak [ ][ ]</li>
+										<li class="break-keep">Speech [ ][ ]</li>
+										<li class="break-keep">Vibes [ ][ ]</li>
+									</ul>
+								</div>
+							</div>
+							<div class="">
+								<div class="border-2 border-dashed aspect-square p-2 mb-2">
+									<h1 class="text-center font-mono uppercase">Meta</h1>
+									<ul>
+										<li class="break-keep">Alchemy [ ][ ]</li>
+										<li class="break-keep">Acranum [ ][ ]</li>
+										<li class="break-keep">Dreams [ ][ ]</li>
+										<li class="break-keep">Lore [ ][ ]</li>
+										<li class="break-keep">Navigation [ ][ ]</li>
+									</ul>
+								</div>
+								<div class="border-2 border-dashed aspect-square p-2">
+									<h1 class="text-center font-mono uppercase">Hands</h1>
+									<ul>
+										<li class="break-keep">Accuracy [ ][ ]</li>
+										<li class="break-keep">Crafting [ ][ ]</li>
+										<li class="break-keep">Engineering [ ][ ]</li>
+										<li class="break-keep">Explosives [ ][ ]</li>
+										<li class="break-keep">Piloting [ ][ ]</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>

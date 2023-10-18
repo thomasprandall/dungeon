@@ -1,0 +1,24 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TableWindow from '../../components/TableWindow.astro';
+
+import * as data from '../../data/tables/weather.json';
+
+const weatherData = data.weather;
+---
+
+<!-- 
+    TODO
+    Collapsible windows
+-->
+<Layout title="Appendix: Statuses">
+  <section class="clear-both flex flex-wrap justify-around">
+    <TableWindow title="Weather: Roll 2d6" tableData={weatherData} />
+  </section>
+</Layout>
+
+<script>
+    import * as data from '../../data/tables/weather.json';
+
+    console.log(data.weather);
+</script>
