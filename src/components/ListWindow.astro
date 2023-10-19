@@ -1,20 +1,14 @@
 ---
+import Window from "../layouts/Window.astro";
 // Component Script (JavaScript)
-const { title, listData } = Astro.props;
+const { title, listData, columns } = Astro.props;
 ---
 
 <!-- Component Template (HTML + JS Expressions) -->
-<div class="window md:basis-2/5 hover:resize">
-    <div class="title-bar"> 
-        <button aria-label="Close" class="close"></button>
-        <h1 class="title">{ title }</h1>
-        <button aria-label="Resize" class="resize-btn"></button>
-    </div>
-    <div class="separator"></div>
-    
+<Window title={title} classes="md:basis-2/5">
     <div class="window-pane">
-        <ul class="text-sm columns-2">
-            {listData.map((item) => <li class="w-32">{item}</li>)}
+        <ul class:list={['text-sm ', columns && 'columns-' + columns]}>
+            {listData.map((item) => <li>{item}</li>)}
         </ul>
     </div>
-</div>
+</Window>

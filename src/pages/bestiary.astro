@@ -15,10 +15,10 @@ const { monsters } = bestiary;
   <section class="clear-both relative">
     <div class="hidden md:block md:w-36 fixed left-0 top-12 pl-2">
         <ul>
-            {monsters.map((monster) => <li><a href={"#"+monster.name.replaceAll(' ','')}>{monster.name}</a></li>)}
+            {monsters.map((monster) => <li><a href={"#"+monster.name.replaceAll(/\W?/g,'')}>{monster.name}</a></li>)}
         </ul>
     </div>
-    <div class="flex flex-wrap justify-center md:ml-36">
+    <div class="flex items-start flex-wrap justify-center md:ml-36">
         <!-- <InfoWindow title="Magic" listData={[{"name": "Introduction", "effect": [introduction]}, {"name": "Learning Spells", "effect": [learning]}, {"name": "Accessibility", "effect": [accessibility]}]} classes="" /> -->
         {monsters.map((monster) => <MonsterWindow monster={monster} />)}
     </div>

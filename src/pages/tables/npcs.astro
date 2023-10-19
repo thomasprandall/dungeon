@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Window from '../../layouts/Window.astro';
 import ListWindow from '../../components/ListWindow.astro';
 
 import * as data from '../../data/npcs.json';
@@ -18,29 +19,22 @@ const personalities = data.personality;
 
 <Layout title="NPC Appendix">
     <section class="flex flex-wrap sm:basis-1/12 justify-center md:justify-around">
-        <div class="window flex-shrink hover:resize">
-            <div class="title-bar align-middle"> 
-                <button aria-label="Close" class="close"></button>
-                <h1 class="title">Generate</h1>
-                <button aria-label="Resize" class="resize-btn"></button>
-            </div>
-            <div class="separator"></div>
-            
+        <Window title="Generate" classes="flex-shrink">
             <div class="window-pane text-center">
                 <button class="btn large" id="generate-npc">Generate NPC</button>
             </div>
-        </div>
+        </Window>
         <div class="md:basis-2/5 flex-shrink standard-dialog center mx-2">
-            <h1 class="dialog-text">Generated NPC Details <button class="btn text-xs float-right mx-2">View NPC History</button></h1>
+            <!-- <h1 class="dialog-text">Generated NPC Details <button class="btn text-xs float-right mx-2">View NPC History</button></h1> -->
             <p class="dialog-text">Name: <span id="npc-name"></span></p>
             <p class="dialog-text">Personality Traits: <span id="npc-personality"></span></p>
             <p class="dialog-text">Type: <span id="npc-type"></span></p>
             <p class="dialog-text"><span id="npc-type-description"></span></p>
         </div>
     </section>
-    <section class="clear-both flex flex-wrap justify-around">
-        <ListWindow title="Names" listData = {names} />
-        <ListWindow title="Personalities (Roll Twice)" listData={personalities} />
+    <section class="clear-both flex  items-start flex-wrap justify-around">
+        <ListWindow title="Names" listData = {names} columns="3" />
+        <ListWindow title="Personalities" listData={personalities} columns="2" />
     </section>
 </Layout>
 

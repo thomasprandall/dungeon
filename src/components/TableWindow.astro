@@ -1,17 +1,11 @@
 ---
+import Window from "../layouts/Window.astro";
 // Component Script (JavaScript)
 const { title, tableData } = Astro.props;
 ---
 
 <!-- Component Template (HTML + JS Expressions) -->
-<div class="window md:basis-4/5 hover:resize">
-  <div class="title-bar">
-    <button aria-label="Close" class="close"></button>
-    <h1 class="title">{title}</h1>
-    <button aria-label="Resize" class="resize-btn"></button>
-  </div>
-  <div class="separator"></div>
-
+<Window title="Weather" classes="window md:basis-4/5">
   <div class="window-pane">
     <table class="table-auto">
         <thead>
@@ -26,4 +20,4 @@ const { title, tableData } = Astro.props;
         </tbody>
     </table>
   </div>
-</div>
+</Window>

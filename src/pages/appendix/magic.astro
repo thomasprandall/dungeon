@@ -17,15 +17,15 @@ const {learning, introduction, accessibility, spells, terms} = data;
   <div class="hidden md:block md:w-56 fixed left-0 top-12 pl-2">
       <ul>
           <li class="uppercase font-bold">Spells</li>
-          {spells.map((spell) => <li><a href={"#"+spell.name.replaceAll(' ','')}>{spell.name}</a></li>)}
+          {spells.map((spell) => <li><a href={"#"+spell.name.replaceAll(/\W?/g,'')}>{spell.name}</a></li>)}
       </ul>
   </div>
-  <section class="clear-both flex flex-wrap justify-around md:ml-56">
+  <section class="clear-both flex flex-wrap items-start justify-around md:ml-56">
     <InfoWindow title="Magic" listData={[{"name": "Introduction", "effect": [introduction]}, {"name": "Learning Spells", "effect": [learning]}, {"name": "Accessibility", "effect": [accessibility]}]} classes="md:w-5/12" />
     <TermWindow title="Terms" listData={terms} classes="md:w-5/12" />
   </section>
-  <section class="flex flex-wrap justify-around">
-    <div class="flex flex-wrap justify-center md:ml-36">
+  <section>
+    <div class="flex items-start flex-wrap justify-center md:ml-36">
         {spells.map((spell) => <SpellWindow title={spell.name} spell={ spell } />)}
     </div>
   </section>

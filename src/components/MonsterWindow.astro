@@ -1,27 +1,18 @@
 ---
+import Window from "../layouts/Window.astro";
 // Component Script (JavaScript)
 const { title, monster } = Astro.props;
 const {name, description, number, dice, bonus, initiative, morale, immune, weakness, special, drops, tags } = monster;
 
 const specialNames = [];
 special.map((ability) => specialNames.push(ability.name));
-const specialEffect = [];
-special.map((ability) => specialEffect.push(ability.effect));
 
 let dropNames = [];
 drops.map((drop) => dropNames.push(drop.name));
-const dropEffects = [];
-drops.map((drop) => dropEffects.push(drop.effect));
 ---
 
 <!-- Component Template (HTML + JS Expressions) -->
-<div class:list={['window hover:resize md:basis-1/5']}>
-  <div class="title-bar">
-    <button aria-label="Close" class="close"></button>
-    <h1 class="title" id={name.replaceAll(' ','')}>{name}</h1>
-    <button aria-label="Resize" class="resize-btn"></button>
-  </div>
-  <div class="separator"></div>
+<Window title={monster.name} classes="md:basis-1/5">
   <div class="details-bar text-xs text-right">tags: {tags.toString()||"-"}</div>
   <div class="window-pane">
     <p class="text-sm">{description}</p>
@@ -42,7 +33,7 @@ drops.map((drop) => dropEffects.push(drop.effect));
         {special.map((ability) => ability.effect && <p><span class="font-bold uppercase mr-1">{ability.name}</span> {ability.effect}</p>)}
     </div>
     <div class="text-sm">
-        {drops.map((drop) => drops.effect && <p><span class="font-bold uppercase mr-1">{drop.name}</span> {drop.effect}</p>)}
+        {drops.map((drop) => drop.effect && <p><span class="font-bold uppercase mr-1">{drop.name}</span> {drop.effect}</p>)}
     </div>
   </div>
-</div>
+</Window>

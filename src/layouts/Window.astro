@@ -1,0 +1,34 @@
+---
+// Component Script (JavaScript)
+const { title, classes } = Astro.props;
+
+const titleID = title.replaceAll(/\W?/g,'');
+---
+<!-- InfoWindow classes - md:basis-2/5 -->
+<!-- Component Template (HTML + JS Expressions) -->
+<div class:list={['window hover:resize ', classes]}>
+    <div class="title-bar">
+        <button aria-label="Close" class="close"></button>
+        <h1 class="title" id={titleID}>{title}</h1>
+        <button aria-label="Resize" class="resize-btn"></button>
+    </div>
+    <div class="separator"></div>
+    <slot />
+</div>
+
+<script>
+    console.log('Window loaded');
+
+    document.querySelectorAll("button.close").forEach(function(btn, i, el){
+        
+        btn.addEventListener("click", () => {
+            let windowPane = btn.closest(".window").getElementsByClassName("window-pane")[0];
+            if(windowPane.classList.contains("collapse")){
+                windowPane.classList.remove("collapse","h-0");
+            } else {
+                windowPane.classList.add("collapse","h-0");
+            }
+            
+        });
+    });
+</script>
