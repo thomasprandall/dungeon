@@ -51,12 +51,12 @@ const { screennames, aesthetic, trait, ideal, secret, reason } = data;
     function generatePUG() {
         random.unshift(
             [
-                Math.floor(Math.random() * screennames.length+1),
-                Math.floor(Math.random() * aesthetic.length+1),
-                Math.floor(Math.random() * trait.length+1),
-                Math.floor(Math.random() * ideal.length+1),
-                Math.floor(Math.random() * secret.length+1),
-                Math.floor(Math.random() * reason.length+1)
+                Math.floor(Math.random() * screennames.length),
+                Math.floor(Math.random() * aesthetic.length),
+                Math.floor(Math.random() * trait.length),
+                Math.floor(Math.random() * ideal.length),
+                Math.floor(Math.random() * secret.length),
+                Math.floor(Math.random() * reason.length)
             ]
         );
 
