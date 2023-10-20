@@ -22,8 +22,13 @@ const { screennames, aesthetic, trait, ideal, secret, reason } = data;
           </div>
       </Window>
       <div class="md:basis-2/5 flex-shrink standard-dialog center mx-2" id="rolled-weather">
-          <h1></h1>
-          <p>Click Roll PUG to... roll for a PUG</p>
+          <!-- <h1 class="dialog-text">Generated NPC Details <button class="btn text-xs float-right mx-2">View NPC History</button></h1> -->
+            <p class="dialog-text">Screenname: <span id="pug-screenname"></span></p>
+            <p class="dialog-text">Aesthetic: <span id="pug-aesthetic"></span></p>
+            <p class="dialog-text">Trait: <span id="pug-trait"></span></p>
+            <p class="dialog-text">Ideal: <span id="pug-ideal"></span></p>
+            <p class="dialog-text">Secret: <span id="pug-secret"></span></p>
+            <p class="dialog-text">Reason: <span id="pug-reason"></span></p>
       </div>
   </section>
   <section class="clear-both flex items-start flex-wrap justify-around">
@@ -37,17 +42,42 @@ const { screennames, aesthetic, trait, ideal, secret, reason } = data;
 </Layout>
 
 <script>
-    // import * as data from '../../data/tables/weather.json';
+    import * as data from '../../data/pugs.json';
 
-    // const weather = data.weather;
+    const { screennames, aesthetic, trait, ideal, secret, reason } = data;
 
-    // function rollWeather() {
-    //   let result = weather[Math.floor(Math.random() * 11)];
-    //   document.getElementById("rolled-weather").querySelector('h1').innerText = result.result + ": " + result.name;
-    //   document.getElementById("rolled-weather").querySelector('p').innerText = result.description;
-    // }
+    let random = [];
 
-    // document.getElementById("generate-weather").addEventListener("click", () => {
-    //     rollWeather();
-    // });
+    function generatePUG() {
+        random.unshift(
+            [
+                Math.floor(Math.random() * screennames.length+1),
+                Math.floor(Math.random() * aesthetic.length+1),
+                Math.floor(Math.random() * trait.length+1),
+                Math.floor(Math.random() * ideal.length+1),
+                Math.floor(Math.random() * secret.length+1),
+                Math.floor(Math.random() * reason.length+1)
+            ]
+        );
+
+        let generated = {
+            screenname: screennames[random[0][0]],
+            aesthetic: aesthetic[random[0][1]],
+            trait: trait[random[0][2]],
+            ideal: ideal[random[0][3]],
+            secret: secret[random[0][4]],
+            reason: reason[random[0][5]],
+        }
+
+        document.getElementById("pug-screenname").innerText = generated.screenname;
+        document.getElementById("pug-aesthetic").innerText = generated.aesthetic;
+        document.getElementById("pug-trait").innerText = generated.trait;
+        document.getElementById("pug-ideal").innerText = generated.ideal;
+        document.getElementById("pug-secret").innerText = generated.secret;
+        document.getElementById("pug-reason").innerText = generated.reason;
+    }
+
+    document.getElementById("generate-pug").addEventListener("click", () => {
+        generatePUG();
+    });
 </script>
