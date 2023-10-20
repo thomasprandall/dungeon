@@ -1,0 +1,53 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TableWindow from '../../components/TableWindow.astro';
+import ListWindow from '../../components/ListWindow.astro';
+import Window from '../../layouts/Window.astro';
+
+import * as data from '../../data/pugs.json';
+
+const { screennames, aesthetic, trait, ideal, secret, reason } = data;
+
+---
+
+<!-- 
+    TODO
+    Collapsible windows
+-->
+<Layout title="PUGs">
+  <section class="container mx-auto flex flex-wrap sm:basis-1/12 justify-center md:justify-between">
+      <Window title="RNG" classes="flex-shrink ml-0">
+          <div class="window-pane text-center">
+              <button class="btn large" id="generate-pug">Roll PUG</button>
+          </div>
+      </Window>
+      <div class="md:basis-2/5 flex-shrink standard-dialog center mx-2" id="rolled-weather">
+          <h1></h1>
+          <p>Click Roll PUG to... roll for a PUG</p>
+      </div>
+  </section>
+  <section class="clear-both flex items-start flex-wrap justify-around">
+    <ListWindow title="Screen Names" listData={screennames} classes="md:basis-2/12" columns=2 listClasses="list-decimal ml-2 columns-2 gap-10" />
+    <ListWindow title="Aesthetic" listData={aesthetic} classes="md:basis-2/12" listClasses="list-decimal ml-2" />
+    <ListWindow title="Trait" listData={trait} classes="md:basis-2/12" listClasses="list-decimal ml-2" />
+    <ListWindow title="Ideal" listData={ideal} classes="md:basis-2/12" listClasses="list-decimal ml-2" />
+    <ListWindow title="Secret" listData={secret} classes="md:basis-2/12" listClasses="list-decimal ml-2" />
+    <ListWindow title="Reason" listData={reason} classes="md:basis-2/12" listClasses="list-decimal ml-2" />
+  </section>
+</Layout>
+
+<script>
+    // import * as data from '../../data/tables/weather.json';
+
+    // const weather = data.weather;
+
+    // function rollWeather() {
+    //   let result = weather[Math.floor(Math.random() * 11)];
+    //   document.getElementById("rolled-weather").querySelector('h1').innerText = result.result + ": " + result.name;
+    //   document.getElementById("rolled-weather").querySelector('p').innerText = result.description;
+    // }
+
+    // document.getElementById("generate-weather").addEventListener("click", () => {
+    //     rollWeather();
+    // });
+</script>

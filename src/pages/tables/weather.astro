@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import TableWindow from '../../components/TableWindow.astro';
+import Window from '../../layouts/Window.astro';
 
 import * as data from '../../data/tables/weather.json';
 
@@ -12,13 +13,34 @@ const weatherData = data.weather;
     Collapsible windows
 -->
 <Layout title="Appendix: Statuses">
+  <section class="container mx-auto flex flex-wrap sm:basis-1/12 justify-center md:justify-between">
+      <Window title="RNG" classes="flex-shrink ml-0">
+          <div class="window-pane text-center">
+              <button class="btn large" id="generate-weather">Roll Weather</button>
+          </div>
+      </Window>
+      <div class="md:basis-2/5 flex-shrink standard-dialog center mx-2" id="rolled-weather">
+          <h1></h1>
+          <p>Click Roll Weather to... roll for weather</p>
+      </div>
+  </section>
   <section class="clear-both flex flex-wrap justify-around">
-    <TableWindow title="Weather: Roll 2d6" tableData={weatherData} />
+    <TableWindow title="Weather: Roll 2d6" tableData={weatherData} tableLabels={["#","Weather","Effect"]} />
   </section>
 </Layout>
 
 <script>
     import * as data from '../../data/tables/weather.json';
 
-    console.log(data.weather);
+    const weather = data.weather;
+
+    function rollWeather() {
+      let result = weather[Math.floor(Math.random() * 11)];
+      document.getElementById("rolled-weather").querySelector('h1').innerText = result.result + ": " + result.name;
+      document.getElementById("rolled-weather").querySelector('p').innerText = result.description;
+    }
+
+    document.getElementById("generate-weather").addEventListener("click", () => {
+        rollWeather();
+    });
 </script>

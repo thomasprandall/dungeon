@@ -1,0 +1,6 @@
+---
+const { rowData } = Astro.props;
+---
+<tr class="border-b-2 border-dashed even:bg-slate-100 hover:bg-yellow-50">
+    {rowData.map((data) => <td class="p-2">{data}</td>)}
+</tr>

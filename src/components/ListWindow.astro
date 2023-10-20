@@ -1,12 +1,12 @@
 ---
 import Window from "../layouts/Window.astro";
 // Component Script (JavaScript)
-const { title, listData, listClasses } = Astro.props;
+const { title, listData, classes, listClasses } = Astro.props;
 ---
 
 <!-- Component Template (HTML + JS Expressions) -->
-<Window title={title} classes="md:basis-2/5">
-    <div class="window-pane">
+<Window title={title} classes={ classes + "md:basis-2/5"}>
+    <div class:list={['window-pane']}>
         <ul class:list={['text-sm', listClasses]}>
             {listData.map((item) => <li>{item}</li>)}
         </ul>
