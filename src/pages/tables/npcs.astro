@@ -18,24 +18,26 @@ const personalities = data.personality;
 -->
 
 <Layout title="NPC Appendix">
-    <section class="flex flex-wrap sm:basis-1/12 justify-center md:justify-around">
-        <Window title="Generate" classes="flex-shrink">
-            <div class="window-pane text-center">
-                <button class="btn large" id="generate-npc">Generate NPC</button>
+    <div class="container mx-auto">
+        <section class="flex flex-wrap sm:basis-1/12 items-start justify-center md:justify-between">
+            <Window title="Generate" classes="flex-shrink">
+                <div class="window-pane text-center">
+                    <button class="btn large" id="generate-npc">Generate NPC</button>
+                </div>
+            </Window>
+            <div class="md:basis-2/5 flex-shrink standard-dialog center mx-2">
+                <!-- <h1 class="dialog-text">Generated NPC Details <button class="btn text-xs float-right mx-2">View NPC History</button></h1> -->
+                <p class="dialog-text">Name: <span id="npc-name"></span></p>
+                <p class="dialog-text">Personality Traits: <span id="npc-personality"></span></p>
+                <p class="dialog-text">Type: <span id="npc-type"></span></p>
+                <p class="dialog-text"><span id="npc-type-description"></span></p>
             </div>
-        </Window>
-        <div class="md:basis-2/5 flex-shrink standard-dialog center mx-2">
-            <!-- <h1 class="dialog-text">Generated NPC Details <button class="btn text-xs float-right mx-2">View NPC History</button></h1> -->
-            <p class="dialog-text">Name: <span id="npc-name"></span></p>
-            <p class="dialog-text">Personality Traits: <span id="npc-personality"></span></p>
-            <p class="dialog-text">Type: <span id="npc-type"></span></p>
-            <p class="dialog-text"><span id="npc-type-description"></span></p>
-        </div>
-    </section>
-    <section class="clear-both flex  items-start flex-wrap justify-around">
-        <ListWindow title="Names" listData = {names} listClasses="columns-3" />
-        <ListWindow title="Personalities" listData={personalities} listClasses="columns-2" />
-    </section>
+        </section>
+        <section class="clear-both flex items-start flex-wrap justify-center md:justify-between">
+            <ListWindow title="Names" listData = {names} listClasses="columns-2 md:columns-5" />
+            <ListWindow title="Personalities" listData={personalities} listClasses="columns-2 md:columns-3 lg:columns-5" />
+        </section>
+    </div>
 </Layout>
 
 <script>
@@ -47,19 +49,17 @@ const personalities = data.personality;
     let random = [];
 
     function generateNPC() {
-        random.unshift(
-            [
-                Math.floor(Math.random() * names.length+1),
-                Math.floor(Math.random() * personalities.length+1),
-                Math.floor(Math.random() * personalities.length+1),
-                Math.floor(Math.random() * types.length)
-            ]
-        );
+        random = [
+            Math.floor(Math.random() * names.length+1),
+            Math.floor(Math.random() * personalities.length+1),
+            Math.floor(Math.random() * personalities.length+1),
+            Math.floor(Math.random() * types.length)
+        ];
 
         let generated = {
-            name: names[random[0][0]],
-            personality: personalities[random[0][1]] + ', ' + personalities[random[0][2]],
-            type: types[random[0][3]]
+            name: names[random[0]],
+            personality: personalities[random[1]] + ', ' + personalities[random[2]],
+            type: types[random[3]]
         }
 
         document.getElementById("npc-name").innerText = generated.name;

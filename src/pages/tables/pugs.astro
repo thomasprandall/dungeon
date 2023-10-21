@@ -6,33 +6,36 @@ import Window from '../../layouts/Window.astro';
 
 import * as data from '../../data/pugs.json';
 
-const { screennames, aesthetic, trait, ideal, secret, reason } = data;
+const { screenname, aesthetic, trait, ideal, secret, reason } = data;
 
 ---
 
 <!-- 
     TODO
-    Collapsible windows
 -->
 <Layout title="PUGs">
-  <section class="container mx-auto flex flex-wrap sm:basis-1/12 justify-center md:justify-between">
-      <Window title="RNG" classes="flex-shrink ml-0">
+  <section class="container mx-auto flex flex-wrap sm:basis-1/12 items-start justify-center md:justify-between">
+      <Window title="RNG" classes="md:flex-shrink ml-0">
           <div class="window-pane text-center">
               <button class="btn large" id="generate-pug">Roll PUG</button>
           </div>
       </Window>
-      <div class="md:basis-2/5 flex-shrink standard-dialog center mx-2" id="rolled-weather">
+      <div class="md:basis-2/5 md:flex-shrink standard-dialog center mx-2 relative" id="rolled-weather">
           <!-- <h1 class="dialog-text">Generated NPC Details <button class="btn text-xs float-right mx-2">View NPC History</button></h1> -->
-            <p class="dialog-text">Screenname: <span id="pug-screenname"></span></p>
-            <p class="dialog-text">Aesthetic: <span id="pug-aesthetic"></span></p>
-            <p class="dialog-text">Trait: <span id="pug-trait"></span></p>
-            <p class="dialog-text">Ideal: <span id="pug-ideal"></span></p>
-            <p class="dialog-text">Secret: <span id="pug-secret"></span></p>
-            <p class="dialog-text">Reason: <span id="pug-reason"></span></p>
+            <p class="dialog-text">Screen Name: <span id="pug-screenname"></span></p>
+            <p class="dialog-text hover:font-bold" data-field="aesthetic">Aesthetic: <span id="pug-aesthetic"></span></p>
+            <p class="dialog-text hover:font-bold" data-field="trait">Trait: <span id="pug-trait"></span></p>
+            <p class="dialog-text hover:font-bold" data-field="ideal">Ideal: <span id="pug-ideal"></span></p>
+            <p class="dialog-text hover:font-bold" data-field="secret">Secret: <span id="pug-secret"></span></p>
+            <p class="dialog-text hover:font-bold" data-field="reason">Reason: <span id="pug-reason"></span></p>
+            <!-- Hint Modal -->
+            <div class="standard-dialog center scale-down hidden z-10 w-full text-sm" id="hint-modal">
+                <p></p>
+            </div>
       </div>
   </section>
   <section class="clear-both flex items-start flex-wrap justify-around">
-    <ListWindow title="Screen Names" listData={screennames} classes="md:basis-2/12" columns=2 listClasses="list-decimal ml-2 columns-2 gap-10" />
+    <ListWindow title="Screen Names" listData={screenname} classes="md:basis-2/12" columns=2 listClasses="list-decimal ml-2 columns-2 gap-10" />
     <ListWindow title="Aesthetic" listData={aesthetic} classes="md:basis-2/12" listClasses="list-decimal ml-2" />
     <ListWindow title="Trait" listData={trait} classes="md:basis-2/12" listClasses="list-decimal ml-2" />
     <ListWindow title="Ideal" listData={ideal} classes="md:basis-2/12" listClasses="list-decimal ml-2" />
@@ -44,29 +47,28 @@ const { screennames, aesthetic, trait, ideal, secret, reason } = data;
 <script>
     import * as data from '../../data/pugs.json';
 
-    const { screennames, aesthetic, trait, ideal, secret, reason } = data;
+    const { screenname, aesthetic, trait, ideal, secret, reason, hints } = data;
 
     let random = [];
 
     function generatePUG() {
-        random.unshift(
-            [
-                Math.floor(Math.random() * screennames.length),
-                Math.floor(Math.random() * aesthetic.length),
-                Math.floor(Math.random() * trait.length),
-                Math.floor(Math.random() * ideal.length),
-                Math.floor(Math.random() * secret.length),
-                Math.floor(Math.random() * reason.length)
-            ]
-        );
+        random = [
+            Math.floor(Math.random() * screenname.length),
+            Math.floor(Math.random() * aesthetic.length),
+            Math.floor(Math.random() * trait.length),
+            Math.floor(Math.random() * ideal.length),
+            Math.floor(Math.random() * ideal.length),
+            Math.floor(Math.random() * secret.length),
+            Math.floor(Math.random() * reason.length)
+        ];
 
         let generated = {
-            screenname: screennames[random[0][0]],
-            aesthetic: aesthetic[random[0][1]],
-            trait: trait[random[0][2]],
-            ideal: ideal[random[0][3]],
-            secret: secret[random[0][4]],
-            reason: reason[random[0][5]],
+            screenname: screenname[random[0]],
+            aesthetic: aesthetic[random[1]],
+            trait: trait[random[2]] + ", " + trait[random[3]],
+            ideal: ideal[random[4]],
+            secret: secret[random[5]],
+            reason: reason[random[6]],
         }
 
         document.getElementById("pug-screenname").innerText = generated.screenname;
@@ -80,4 +82,20 @@ const { screennames, aesthetic, trait, ideal, secret, reason } = data;
     document.getElementById("generate-pug").addEventListener("click", () => {
         generatePUG();
     });
+
+    document.querySelectorAll("p.dialog-text[data-field]").forEach(function(elem){
+        elem.addEventListener("mouseover", () => {
+            if(elem instanceof HTMLElement){
+                document.querySelector("#hint-modal").classList.remove("hidden");
+                document.querySelector("#hint-modal p").innerHTML = hints[elem.dataset.field];
+            }
+        });
+
+        elem.addEventListener("mouseout", () => {
+            document.querySelector("#hint-modal").classList.add("hidden");
+            document.querySelector("#hint-modal p").innerHTML = "";
+        });
+    })
+
+    const idealHint = "";
 </script>

@@ -1,5 +1,5 @@
 {
-    "screennames": [
+    "screenname": [
         "XxImportantFoxxX",
         "Zirconium Zucchini",
         "wreckyoung",
@@ -160,5 +160,12 @@
         "Recent bout of insomnia has them clinging to old hobbies.",
         "Using the game to hold onto their waning youth.",
         "They've found a way to turn it into a job that barely pays the bills."
-    ]
+    ],
+    "hints": {
+        "aesthetic": "Roll for their avatar's aesthetic, gear, and vibes.",
+        "trait": "This is what they wear on their sleeve, the most obvious things about them and how they act, how they present themself. It's all the things they want you to think about them. Roll for two or three traits to roleplay (you can also use the NPC tables).",
+        "ideal": "This is the subtext of the person's actions. What they believe, what they desire, fear, or more often what they want. It's all the things that influence them but are, more often than not, left unsaid. Roll for an ideal that they live by or are trying to live by. Use your own definitions of these words to expand on how this person feels about it.",
+        "secret": "This is their secret, the one they keep close to the chest. Sometimes they don't even know that they're hiding it. This is their past, their regrets. It's all the things they don't realize about themself. Roll for a deep insecurity or subconscious thought that they have that affects their life. This could be something they hope to change or something that they will learn to live with. There are no wrong answers",
+        "reason": "Everyone in the game has a reason to escape into a fantasy world. These are not inherently tragic, but they are part of their personhood. This reason is part of their life at this moment and gives them Sync, just like you. Each PUG starts with d100 Sync and a reason to be online."
+    }
 }
