@@ -1,0 +1,64 @@
+{
+    "weapons": [
+        {
+            "name": "Simple",
+            "cost": 2,
+            "damage type": "Slash/Pierce/Smash",
+            "description": "One-handed swords, folding knives, gauntlets, brass knuckles, walking sticks, and other such weapons. You can use anything as your weapon since damage is determined by your skills."
+        },
+        {
+            "name": "Greater",
+            "cost": 4,
+            "damage type": "Slash/Pierce/Smash",
+            "description": "Buster swords, katanas, scythes, big pairs of scissors, double sided blades, and other such weapons. You can use any large item as your weapon since damage is determined by your skills."
+        },
+        {
+            "name": "Ranged",
+            "cost": 4,
+            "damage type": "Pierce",
+            "description": "Crossbows, longbows, blow darts, throwing stars, and other such ranged weaponry. Uses quivers. You can use anything shootable or throwable as your ranged weapon since damage is determined by your skills. You cannot use a ranged weapon while in melee with another combatant."
+        },
+        {
+            "name": "Quiver",
+            "cost": 1,
+            "damage type": null,
+            "description": "Anything that can carry ranged ammunition. If used, they are depleted at the end of every session and must be replenished."
+        },
+        {
+            "name": "Simple Guns",
+            "cost": 5,
+            "damage type": "Gun",
+            "description": "Mostly hand-cannons, but includes any one- handed ranged weapon. Your gun can have any aesthetic since damage is determined by your skills. Uses mags."
+        },
+        {
+            "name": "Greater Guns",
+            "cost": 7,
+            "damage type": "Gun",
+            "description": "Assault weapons, long-barrel weapons, and other such guns. Your gun can have any aesthetic since damage is determined by your skills. Uses mags."
+        },
+        {
+            "name": "Mags",
+            "cost": 1,
+            "damage type": null,
+            "description": "Every type of clip, magazine, and firearm ammunition. If used, they are depleted at the end of the encounter and must be replaced."
+        },
+        {
+            "name": "Neon Weapons",
+            "cost": 10,
+            "damage type": "Neon",
+            "description": "Laser swords, blaster rifles, and any other sci-fi weaponry. You can use any neon weapon aesthetically since damage is determined by your skills. Uses cells. Requires Arcanum skill."
+        },
+        {
+            "name": "Cell",
+            "cost": "1 (for 3)",
+            "damage type": null,
+            "description": "All types of plasma, energy, and sci-fi ammunition. If used, they are depleted at the end of the round and must be replaced."
+        },
+        {
+            "name": "Scope",
+            "cost": null,
+            "damage type": null,
+            "description": "Can be affixed to any ranged weapon, allowing it to be fired from two movements away."
+        }
+    ]
+}

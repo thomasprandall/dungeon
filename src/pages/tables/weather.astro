@@ -13,7 +13,7 @@ const weatherData = data.weather;
     Collapsible windows
 -->
 <Layout title="Appendix: Statuses">
-  <section class="container mx-auto flex flex-wrap sm:basis-1/12 justify-center md:justify-between">
+  <section class="container mx-auto flex flex-wrap sm:basis-1/12 items-start justify-center md:justify-between">
       <Window title="RNG" classes="flex-shrink ml-0">
           <div class="window-pane text-center">
               <button class="btn large" id="generate-weather">Roll Weather</button>
@@ -24,7 +24,7 @@ const weatherData = data.weather;
           <p>Click Roll Weather to... roll for weather</p>
       </div>
   </section>
-  <section class="clear-both flex flex-wrap justify-around">
+  <section class="container mx-auto">
     <TableWindow title="Weather: Roll 2d6" tableData={weatherData} tableLabels={["#","Weather","Effect"]} />
   </section>
 </Layout>

@@ -1,0 +1,60 @@
+{
+    "foils": [
+        {
+            "name": "Arya's Foil",
+            "cost": 4,
+            "description": "Heals your statuses",
+            "flavor": "Insert into yourself or any other target to heal all statuses."
+        },
+        {
+            "name": "Card Pack",
+            "cost": 1,
+            "description": "RNG chance to get a random foil",
+            "flavor": "Pack of 5 random cards. Roll RNG 4+ to pull a Foil, and roll for type."
+        },
+        {
+            "name": "Drury's Foil",
+            "cost": 10,
+            "description": "Revives 1 ally before they respawn",
+            "flavor": "Insert into a freshly tilted ally to revive them before they respawn elsewhere."
+        },
+        {
+            "name": "Dungeon Foil",
+            "cost": 3,
+            "description": "Removes you & 1 ally from a dungeon or encounter",
+            "flavor": "Insert into the ground to remove yourself and one ally from a dungeon or encounter, taking you back to the nearest settlement."
+        },
+        {
+            "name": "Hafgan's Foil",
+            "cost": 10,
+            "description": "Heals all statuses for you & allies",
+            "flavor": "Insert into yourself to heal all statuses afflicting you and your allies."
+        },
+        {
+            "name": "Healing Foil",
+            "cost": 5,
+            "description": "Heals d6 Sync",
+            "flavor": "Insert into yourself or any other target to automatically heal d6 Sync."
+        },
+        {
+            "name": "Lucky Foil",
+            "cost": 4,
+            "description": "Reroll 1 RNG roll",
+            "flavor": "Insert into yourself to reroll one RNG roll."
+        },
+        {
+            "name": "Shadow Foil",
+            "cost": 4,
+            "description": "Imbue weapon with Shadow",
+            "flavor": "Insert into your weapon to imbue it with shadow damage. Insert it into your armor to negate the next shadow damage you take."
+        },
+        {
+            "name": "Solar Foil",
+            "cost": 4,
+            "description": "Imbue weapon with Solar",
+            "flavor": "Insert into your weapon to imbue it with solar damage. Insert it into your armor to negate the next solar damage you take."
+        }
+    ],
+    "description": "There's a sect of players obsessed with .dungeon's pseudo-collectible card game. Card packs have a small chance of containing Foils, holographic cards that act as one-use magic items in place of potions and other consumables. The game's true card-heads believe there's a connection between Aspect cards and the collectible card game."
+
+}

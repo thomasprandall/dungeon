@@ -1,0 +1,19 @@
+{
+    "services": [
+        {
+            "name": "Adventure Companion",
+            "cost": "1 Byte/day",
+            "description": "These PUGs hire themselves out to go on adventures with other online players. They grant a +2 to dice rolls they can help with."
+        },
+        {
+            "name": "Text Message Partner",
+            "cost": "1 Byte/day",
+            "description": "These PUGs offer company to folks who want someone to talk to. Texting with them grants you a +1 to all Presence rolls for the day."
+        },
+        {
+            "name": "Kinky Dungeon Friend",
+            "cost": "2 Bytes/Dungeon floor",
+            "description": "These sex workers are PUGs with high-level avatars who offer a unique experience. It's part dungeon crawl assistance and part kinky fun. It's not for everyone, but .dungeon devs haven't shied away from creating a safe space for sex workers to offer their brand of entertainment. They grant a +2 to all rolls."
+        }
+    ]
+}

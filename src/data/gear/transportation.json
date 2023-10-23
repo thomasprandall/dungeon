@@ -1,0 +1,137 @@
+{
+    "transports": [
+        {
+            "name": "Skateboard",
+            "1 trip": null,
+            "own": 2,
+            "upkeep": null,
+            "description": "Besides doing sick tricks and stunts, these vehicles allow you to move twice as far during combat encounters."
+        },
+        {
+            "name": "Rollerblades",
+            "1 trip": null,
+            "own": 2,
+            "upkeep": null,
+            "description": "Besides doing sick tricks and stunts, these vehicles allow you to move twice as far during combat encounters."
+        },
+        {
+            "name": "Glider",
+            "1 trip": null,
+            "own": 4,
+            "upkeep": null,
+            "description": "The glider is the biggest transport that can be kept in your inventory. It allows you to fall from great heights and cross into an adjacent hex without taking a random encounter."
+        },
+        {
+            "name": "Wingsuit",
+            "1 trip": null,
+            "own": 7,
+            "upkeep": 1,
+            "description": "When purchased, your clothes and armor are altered to fit the wingsuit. It grants the same benefits as a glider while also letting you perform airborne stunts in combat."
+        },
+        {
+            "name": "Horse",
+            "1 trip": 5,
+            "own": 10,
+            "upkeep": 3,
+            "description": "A beautiful horse of a random breed. Enjoys carrots and horseplay. Can carry 5 additional inventory slots."
+        },
+        {
+            "name": "Giant Lizard",
+            "1 trip": 5,
+            "own": 12,
+            "upkeep": 3,
+            "description": "A big, colorful lizard of a random breed. Enjoys eating big bugs and prefers desert terrain. Allows you to climb even unclimbable mountains."
+        },
+        {
+            "name": "Spider Envoy",
+            "1 trip": 5,
+            "own": 12,
+            "upkeep": 3,
+            "description": "Eight-legged princesses of Luna, the spider queen. These envoys are found in forest terrain and enjoy scritches. Can carry two players at once."
+        },
+        {
+            "name": "Tamed Dreg",
+            "1 trip": 7,
+            "own": 15,
+            "upkeep": 5,
+            "description": "Raptor-like creatures covered in multicolored feathers, which use their large beaks to break their prey. They are the fastest creatures in .dungeon, reducing random encounter checks to every 2nd hex."
+        },
+        {
+            "name": "87 Chevalier Antelope",
+            "1 trip": null,
+            "own": 30,
+            "upkeep": 10,
+            "description": "Two-door, matte colors. 10 extra storage slots. Travel freely across Annwn as long as you can afford the upkeep."
+        },
+        {
+            "name": "Toy Troll AE86",
+            "1 trip": null,
+            "own": 30,
+            "upkeep": 10,
+            "description": "Two-door, silver and black, speedster. Travel freely across Annwn as long as you can afford the upkeep."
+        },
+        {
+            "name": "Python SR1",
+            "1 trip": null,
+            "own": 45,
+            "upkeep": 12,
+            "description": "Two-door sports car, gloss colors. Travel freely across Annwn as long as you can afford the upkeep."
+        },
+        {
+            "name": "Lamb Martini Miura",
+            "1 trip": null,
+            "own": 50,
+            "upkeep": 12,
+            "description": "Two-door sports car, gloss colors. Travel freely across Annwn as long as you can afford the upkeep."
+        },
+        {
+            "name": "91 Fjord Adventurer",
+            "1 trip": null,
+            "own": 30,
+            "upkeep": 10,
+            "description": "Four-door SUV, bland colors. 15 extra storage slots. Travel freely across Annwn as long as you can afford the upkeep."
+        },
+        {
+            "name": "Sublue Sandbar",
+            "1 trip": null,
+            "own": 25,
+            "upkeep": 5,
+            "description": "Two-door flatbed pickup, white. 25 extra storage slots. Travel freely across Annwn as long as you can afford the upkeep."
+        },
+        {
+            "name": "UW Scarab",
+            "1 trip": null,
+            "own": 35,
+            "upkeep": 12,
+            "description": "Two-door round car, yellow. 5 extra storage slots. Travel freely across Annwn as long as you can afford the upkeep."
+        },
+        {
+            "name": "Train",
+            "1 trip": 5,
+            "own": 250,
+            "upkeep": 25,
+            "description": "Various train tracks criss-cross Annwn's surface and underground. One ticket buys you near-instant transport between any two connected settlements. Buying a train means building your own track between two settlements. After construction, you receive an extra 2 Bytes every time you log on, from people using the track."
+        },
+        {
+            "name": "Teleportation Circle",
+            "1 trip": 15,
+            "own": 300,
+            "upkeep": 1,
+            "description": "Large circle of marble and granite, carved with intricate hand signs which facilitate magical transportation. Unlike trains, all teleportation circles are linked to each other. As long as they are both powered, you can use one to travel any distance to any other teleportation circle.\nBuying a circle means buying an unused or unpowered one, or building a new one within a new settlement or guildhall. These do not get you any extra Bytes, but they help to interconnect Annwn"
+        },
+        {
+            "name": "Simple Airship",
+            "1 trip": 15,
+            "own": 500,
+            "upkeep": 25,
+            "description": "Two to four seats. 10 storage slots. Can travel freely over the server with no risk of random encounters. Buying one trip means paying an NPC or Player Character to pick you up and take you to a destination. The price does not include a ride back. Buying your own simple airship means you get to design it. Upkeep includes storing it in a settlement."
+        },
+        {
+            "name": "Greater Airship",
+            "1 trip": 25,
+            "own": 1000,
+            "upkeep": 30,
+            "description": "Larger, commercial vessels. 50 storage slots. Buying one trip means getting a ticket between two settlements. The flight lasts ten minutes of game time and allows for the guests to mingle. Certain NPCs only spawn on airships, including unique merchants.\n Buying your own greater airship means you get to design it. Upkeep includes storing it in a settlement."
+        }
+    ]
+}

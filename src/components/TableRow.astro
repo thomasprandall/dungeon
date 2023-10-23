@@ -1,6 +1,6 @@
 ---
 const { rowData } = Astro.props;
 ---
-<tr class="border-b-2 border-dashed even:bg-slate-100 hover:bg-yellow-50">
-    {rowData.map((data) => <td class="p-2">{data}</td>)}
+<tr class="border-b-2 border-dashed even:bg-slate-100 hover:bg-yellow-50 text-sm">
+    {rowData.map((data) => <td class:list={["p-2 border-r-2 border-dashed"]}>{data && data||"--"}</td>)}
 </tr>

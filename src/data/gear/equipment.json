@@ -1,0 +1,118 @@
+{
+    "equipment": [
+        {
+            "name": "Binoculars",
+            "cost": 2,
+            "description": "See into next hex",
+            "effect": "Three-level zoom in to scout the surrounding area. +2 to navigation."
+        },
+        {
+            "name": "Chalk",
+            "cost": "1 F. Mat.",
+            "description": "For drawing",
+            "effect": "Stick of white chalk for drawing. Dye is required for other colors."
+        },
+        {
+            "name": "Climbing Gear",
+            "cost": 1,
+            "description": "Bonus to platforming",
+            "effect": "Can be used for stunts (includes rope & pitons) and allows you to climb all climbable surfaces without a roll."
+        },
+        {
+            "name": "Clothes",
+            "cost": 1,
+            "description": "Any you'd like",
+            "effect": "Any clothes you'd like to buy can be bought after character creation."
+        },
+        {
+            "name": "Compass",
+            "cost": 2,
+            "description": "Points North or to the next settlement",
+            "effect": "Small, silver compass. Points due north or to the nearest settlement, depending on how you set it."
+        },
+        {
+            "name": "Crowbar",
+            "cost": 2,
+            "description": "Bonus to strength",
+            "effect": "A simple weapon that allows you to open chests or jammed doors without a roll."
+        },
+        {
+            "name": "Dream Jar",
+            "cost": 10,
+            "description": "Used to catch Dream Slimes",
+            "effect": "A black and purple orb used to capture Dream Jellies. Use your action to throw it during an encounter. Roll RNG + Dreams over the Jelly's Morale to capture. Once captured they can be named, played with, and cared for. The process of raising a Dream Jelly into a unique pet will be detailed in a future supplement."
+        },
+        {
+            "name": "Fashion Materials",
+            "cost": 5,
+            "description":"(F. Mat.)",
+            "effect": "A resource used to craft dyes and buy decorations. Fashion Materials can be acquired through rare mob drops, found in dungeon chests, or traded for at the Auction House."
+        },
+        {
+            "name": "Fishing Rod",
+            "cost": 4,
+            "description": "Used to catch food",
+            "effect": "Allows players and NPCs to spend time fishing."
+        },
+        {
+            "name": "Instrument",
+            "cost": "2 F. Mat.",
+            "description": "Play hidden OST",
+            "effect": "Guitars, keyboards, synths, drums, and all other instruments. Each avatar starts with the ability to play one of the OST's twelve hidden songs, and everyone can learn them by watching another player perform them. Some dungeon doors are locked behind the songs, and a dungeon in Hawthorne's wastes will only reveal itself if you play all twelve songs on the same instrument."
+        },
+        {
+            "name": "Ladder",
+            "cost": 2,
+            "description": "For climbing/crossing",
+            "effect": "A 20' ladder that can be used to climb, bridge gaps, or platform without a dice roll."
+        },
+        {
+            "name": "Lightsource",
+            "cost": 2,
+            "description": "Lasts 1 hour",
+            "effect": "Flashlights, lanterns, floating orbs. Each lasts for one hour of in-game time after being lit. Sheds bright light, allowing you to see in the dark. If used in dungeons, random encounter ranges are increased by 1."
+        },
+        {
+            "name": "Lockpicks",
+            "cost": 1,
+            "description": "Roll RNG to open lock",
+            "effect": "Allows you to unlock doors, chests, or other locks without a roll."
+        },
+        {
+            "name": "Materials",
+            "cost": 5,
+            "description": null,
+            "effect": "A resource used to craft items, vehicles, and buildings. Materials are dropped from mobs, collected from the world (by destroying trees, rocks, etc.), and found in chests. To build an item from scratch requires the same number of Materials as it costs to buy."
+        },
+        {
+            "name": "Momento",
+            "cost": 1,
+            "description": "Takes a photo of your last adventure",
+            "effect": "Creates a photograph of you and your party members on the last adventure you went on. The game's scrapbook does not take up an inventory slot."
+        },
+        {
+            "name": "Noisemaker",
+            "cost": 2,
+            "description": "Calls a random encounter",
+            "effect": "A strange crank horn that makes the most annoying sound imaginable (a sharp note sampled from a kid's cat keyboard). Automatically calls a random encounter based on your location."
+        },
+        {
+            "name": "Satchel",
+            "cost": 5,
+            "description": "3 extra storage slots",
+            "effect": "A cute tote or sling bag. Has 3 extra storage slots."
+        },
+        {
+            "name": "Spray Can",
+            "cost": "1 F. Mat.",
+            "description": "Used to leave your tag",
+            "effect": "Three uses per can. Spray your unique tag on dungeon walls to show how far you made it."
+        },
+        {
+            "name": "Supplies",
+            "cost": "1 (for 3)",
+            "description": null,
+            "effect": "A resource used to travel between hexes and upkeep different pieces of gear. If something says you need “X supplies,” it means it costs that many supplies each time you use it. Supplies are expensive to buy, but are commonly dropped by most mobs."
+        }
+    ]
+}

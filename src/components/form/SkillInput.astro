@@ -1,0 +1,9 @@
+---
+const { name } = Astro.props
+---
+
+<li class="text-right">
+  <label class="mr-2">{name}</label>
+  <input type="checkbox" class="mr-2" name={name + '_01'} />
+  <input type="checkbox" class="mr-2" name={name + '_02'} />
+</li>

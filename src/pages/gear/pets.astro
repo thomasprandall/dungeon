@@ -1,0 +1,26 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import TableWindow from '../../components/TableWindow.astro';
+
+import * as data from '../../data/gear/pets.json';
+
+const { pets, description } = data;
+---
+
+<!-- 
+    TODO
+    
+-->
+<Layout title="Gear: Pets">
+  <section class="">
+    <TableWindow
+      title="Pets"
+      tableData={pets}
+      tableLabels={['Pet', 'Cost', 'Upkeep', 'Description', '--']}
+      tableClasses="md:w-full"
+      pretext={[description]}
+    />
+  </section>
+</Layout>
+
+<script></script>

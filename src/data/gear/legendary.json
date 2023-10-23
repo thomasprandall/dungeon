@@ -1,0 +1,52 @@
+{
+    "items": [
+        {
+            "name": "Arawn's Mirrow",
+            "description": "A glass hand-mirror with thin veins of blood pumping around the frame in off-beat rhythms. The holder can gaze into the mirror to create a duplicate of themself. The holder can control the duplicate while staring into the mirror, which shows what the duplicate can see. When not looking into the mirror, the duplicate acts of its own volition as any other NPC might."
+        },
+        {
+            "name": "Black Rose",
+            "description": "A handcannon of black metal and gold that shoots blooming, ruby bullets. Every attack with a rose bullet adds +d6 to the contest. The Black Rose starts with a rose bullet for every flower/plant in the player’s IRL playing area."
+        },
+        {
+            "name": "Dog Whistle",
+            "description": "A bone whistle carved with a hundred, snarling, hound fangs. When blown, a war dog is summoned in-game for every dog in your IRL house."
+        },
+        {
+            "name": "Nirvana",
+            "description": "A glorious staff topped with a golden phoenix, once held by Hafgan himself. Once per session you can spread the phoenix’s wings, causing all party members’ attacks to do +3 solar damage for the encounter."
+        },
+        {
+            "name": "Scapegoat",
+            "description": "A cute, fluffy sheep doll that rests neatly on any backpack. Always smiling. You can put any number of Bytes into it each day. The scapegoat can negate an amount of damage equal to the Bytes put into it. Each point of damage removes a Byte. When it runs out of Bytes, it frowns."
+        },
+        {
+            "name": "Team Special",
+            "description": "A baseball bat of twisted wood, branded as an “Annwn Slugger.” Functions as a simple weapon. Once per encounter, you can perform a combo attack with another party member, adding both of your attack rolls together to make one, combined Contest."
+        },
+        {
+            "name": "The Horn of Dragoon",
+            "description": "Carved from the tooth of Annwn. This spiral horn, with its three separate openings, charms all Dragons who hear it. While charmed they will do as commanded, but they do not do it kindly."
+        },
+        {
+            "name": "The Ring of Melancholy",
+            "description": "A one of a kind ring, carved from the sadness of Annwn. Once per day, the wearer can tell a sad story which inflicts a special condition called “Sadness” to all within earshot. Sadness makes their avatar cry uncontrollably for 10 minutes, leaving them motionless."
+        },
+        {
+            "name": "Tome of Dreams",
+            "description": "The obsidian-bound text that acted as the foundation of the Abrellian Academy. When opened, all entities in the vicinity, excluding the opener, fall asleep and must fight their “inner demon” in a liminal dream space to wake up.",
+            "mob": {
+                "name": "Inner Demon",
+                "dice": ["2d6","2d6"],
+                "init": 8,
+                "morale": null,
+                "drops": ["2x Dream Materials"]
+            }
+        },
+        {
+            "name": "Winter Cloak",
+            "description": "A cloak of white fog and ice that blows with its own wind. During the winter months, the wearer can cross any source of water, as their footsteps freeze and leave behind small lilypads of ice."
+        }
+    ],
+    "description": "These are unique and powerful items that often bleed IRL into the virtual world. They are found in the most dangerous dungeons, at the end of long and complicated quest chains, or as rewards for hidden world events."
+}

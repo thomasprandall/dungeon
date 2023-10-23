@@ -1,0 +1,54 @@
+{
+    "pets": [
+        {
+            "name": "Dungeon Car",
+            "cost": 5,
+            "upkeep": 1,
+            "description": "Sits on cursed objects, pees on traps",
+            "flavor": "Pretty kitty of a random breed. Loves scratching things, sleeping in rays of sun, and eating fish. Sits on cursed objects and pees on traps."
+        },
+        {
+            "name": "Lizard",
+            "cost": 3,
+            "upkeep": 1,
+            "description": "Love Magic and Bytes",
+            "flavor": "A palm-sized lizard of a random breed. Loves eating bugs and laying on hot rocks. Easily distracted by any source of magic and any number of Bytes."
+        },
+        {
+            "name": "Pup",
+            "cost": 3,
+            "upkeep": 1,
+            "description": "Barks when hostile mobs are near",
+            "flavor": "Cute dog of a random breed. Loves meat, pets, and playing fetch. Barks when hostile mobs are nearby. If left to roam all night, has a 5% chance of digging up d4 Bytes."
+        },
+        {
+            "name": "Snake",
+            "cost": 4,
+            "upkeep": 1,
+            "description": "Can be fed any item, 1/month",
+            "flavor": "Several feet of reptilian length. Loves cuddling. Can eat and digest any item you give it, over the course of a week. Eats once a month."
+        },
+        {
+            "name": "Songbird",
+            "cost": 3,
+            "upkeep": 1,
+            "description": "Has a unique song",
+            "flavor": "Tiny, beautiful birds with expressive faces. Each is generated with their own unique, single-bar melody."
+        },
+        {
+            "name": "Turtle Priest",
+            "cost": 4,
+            "upkeep": 2,
+            "description": "Eats spell texts to gain their power",
+            "flavor": "Shin-high turtles, each generated with their own unique hat. Can eat any scroll or spell tome to gain its power. If they eat 20 spells they become a Fortle."
+        },
+        {
+            "name": "War Dog",
+            "cost": 5,
+            "upkeep": 2,
+            "description": "Can smell PVPers",
+            "flavor": "Big dog of a random breed. Loves big plates of pasta and ridiculously-sized bones. Growls when PvPers are nearby and can track their scent. Grants +1 to Melee."
+        }
+    ],
+    "description": "Some friendly mobs can be purchased or taken on as pets, but they will require your care and attention. Each one is stored in a glassy, softball-sized Pet Jar, and only one can be released at a time. While released they will follow you and perform their tasks to the best of their abilities."
+}

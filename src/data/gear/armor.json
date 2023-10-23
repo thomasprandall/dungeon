@@ -1,0 +1,22 @@
+{
+    "armor": [
+        {
+            "name": "Helmet/Hairdo",
+            "cost": "1 F. Mat.",
+            "description": "Sacrifice to negate Sync damage",
+            "flavor": "A stylish hat, helmet, or hairdo is more than just an aesthetic—it might save your life. Sacrifice it to negate the Sync damage of a single attack against you."
+        },
+        {
+            "name": "Pocket Lovebook",
+            "cost": 4,
+            "description": "Absorbs in 1 Gun attack",
+            "flavor": "Annwn had many lovers, as she was a very loving (if sad) god. This little book is held right over one's heart in a chest pocket. It can be sacrificed to negate the Sync damage from one Gun attack."
+        },
+        {
+            "name": "Shield",
+            "cost": 3,
+            "description": "-1 to Sync damage",
+            "flavor": "Shields can only be wielded alongside simple weapons and increase your Defense by 1."
+        }
+    ]
+}

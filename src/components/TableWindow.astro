@@ -1,14 +1,16 @@
 ---
 import Window from "../layouts/Window.astro";
 import TableRow from "../components/TableRow.astro";
+import { map } from "astro/zod";
 // Component Script (JavaScript)
-const { title, tableData, tableLabels } = Astro.props;
+const { title, tableData, tableLabels, tableClasses, pretext } = Astro.props;
 ---
 
 <!-- Component Template (HTML + JS Expressions) -->
-<Window title="Weather" classes="window md:basis-4/5">
+<Window title={title} classes="window">
   <div class="window-pane">
-    <table class="table-auto">
+    { pretext && <div class="flex flex-1">{pretext.map((text) => <div class="standard-dialog text-sm mb-4">{pretext}</div>)}</div>}
+    <table class:list={["table-auto", tableClasses]}>
       <thead>
         <tr class="bg-slate-200">
           {tableLabels.map((label) => <th>{label}</th>)}

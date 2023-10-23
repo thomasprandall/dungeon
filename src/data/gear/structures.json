@@ -1,0 +1,84 @@
+{
+    "structures": [
+        {
+            "name": "Personal Room",
+            "1 night": 1,
+            "own": 25,
+            "upkeep": null,
+            "construction": "1 Day",
+            "description": ""
+        },
+        {
+            "name": "Job Board",
+            "1 night": null,
+            "own": 25,
+            "upkeep": null,
+            "construction": "1 Day",
+            "description": ""
+        },
+        {
+            "name": "Defense Tower",
+            "1 night": null,
+            "own": 100,
+            "upkeep": 1,
+            "construction": "3 Days",
+            "description": ""
+        },
+        {
+            "name": "Lesser House",
+            "1 night": null,
+            "own": 125,
+            "upkeep": 5,
+            "construction": "1 Week",
+            "description": ""
+        },
+        {
+            "name": "Arena",
+            "1 night": 1,
+            "own": 150,
+            "upkeep": 5,
+            "construction": "1 Week",
+            "description": "A beautiful horse of a random breed. Enjoys carrots and horseplay. Can carry 5 additional inventory slots."
+        },
+        {
+            "name": "Guildhall",
+            "1 night": null,
+            "own": 150,
+            "upkeep": 5,
+            "construction": "3 Days",
+            "description": ""
+        },
+        {
+            "name": "Market",
+            "1 night": null,
+            "own": 150,
+            "upkeep": 5,
+            "construction": "3 Days",
+            "description": ""
+        },
+        {
+            "name": "Greater House",
+            "1 night": null,
+            "own": 200,
+            "upkeep": 10,
+            "construction": "1 Week",
+            "description": ""
+        },
+        {
+            "name": "Inn",
+            "1 night": 1,
+            "own": 225,
+            "upkeep": 7,
+            "construction": "1 Week",
+            "description": ""
+        },
+        {
+            "name": "Tavern",
+            "1 night": "1 (3 Drinks)",
+            "own": 225,
+            "upkeep": 7,
+            "construction": "1 Week",
+            "description": ""
+        }
+    ]
+}

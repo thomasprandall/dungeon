@@ -1,0 +1,39 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Window from '../../layouts/Window.astro';
+
+import * as legendary from '../../data/gear/legendary.json';
+
+const { items } = legendary;
+---
+
+<!-- 
+    TODO
+    Finish Inner Demon
+-->
+<Layout title="Gear: Legendary Items">
+  <section class="clear-both relative">
+    <div class="hidden md:block md:w-36 fixed left-0 top-12 pl-2">
+      <li class="uppercase font-bold">Legendary Items</li>
+      <ul>
+        {
+          items.map((item) => (
+            <li>
+              <a href={'#' + item.name.replaceAll(/\W?/g, '')}>
+                {item.name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div class="flex items-start flex-wrap justify-center md:ml-36">
+    <div class="standard-dialog container mx-auto">
+        <p>These are unique and powerful items that often bleed IRL into the virtual world. They are found in the most dangerous dungeons, at the end of long and complicated quest chains, or as rewards for hidden world events.</p>
+    </div>
+      {items.map((item) => <div class="md:basis-2/6"><Window title={item.name}><div class="window-pane"><p class="text-sm">{item.description}</p></div>{ item.mob ? item.mob.name:''}</Window></div>)}
+    </div>
+  </section>
+</Layout>
+
+<script></script>

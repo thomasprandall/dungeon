@@ -1,0 +1,42 @@
+input[type="range"][orient="vertical"] {
+    writing-mode: bt-lr;
+    appearance: slider-vertical;
+    transform: rotateY(180deg);
+}
+
+datalist {
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    
+}
+/* input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    box-sizing: content-box;
+    background-color: var(--primary);
+    border: 2px solid var(--secondary);
+    border-image: linear-gradient(90deg, var(--_c) 50%, #ababab 0) 1/0 100vw/0 100vw;
+} */
+
+textarea{
+    background-attachment: local;
+        background-image:
+            linear-gradient(to right, white 10px, transparent 10px),
+            linear-gradient(to left, white 10px, transparent 10px),
+            repeating-linear-gradient(white, white 30px, #ccc 30px, #ccc 31px, white 31px);
+        line-height: 31px;
+        padding: 8px 10px;
+}
+
+textarea:focus {
+    background-image:
+        linear-gradient(to right, black 10px, transparent 10px),
+        linear-gradient(to left, black 10px, transparent 10px),
+        repeating-linear-gradient(black, black 30px, white 30px, white 31px, black 31px);
+}
+option[value="0"]{
+    background-color: red;
+    border: 1px solid red;
+}

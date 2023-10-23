@@ -1,0 +1,122 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Window from '../layouts/Window.astro';
+import StatInput from '../components/form/StatInput.astro';
+import SkillInput from '../components/form/SkillInput.astro';
+
+const stats = ["build","presence","tilt","meta","hands","rng"];
+const backpack = ["supplies","materials","quivers","mags","cells"];
+const backpackOptions = "<option value='0'>0</option><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option>";
+import * as data from '../data/appendix.json';
+
+const { skills } = data;
+---
+
+<!-- 
+    TODO
+    Look into restyling checkboxes now that they are functional
+-->
+<Layout title="Avatar Manager">
+  <section>
+    <div class="flex flex-wrap items-start justify-center">
+      <Window title="STATS" classes="basis-11/12 sm:basis-auto"> 
+        <div class="window-pane columns-2 gap-8 p-8">
+            {
+                stats.map((stat) => <StatInput name={stat} />)
+            }
+        </div>
+      </Window>
+      <Window title="SYNC" classes="basis-11/12 md:basis-auto">
+        <div class="window-pane columns-2 gap-0 h-64">
+            <div class="w-1/6">
+                <input type="range" min="0" max="100" class="" step="1" list="sync" value="100" orient="vertical" />
+            </div>
+            <datalist id="sync" class="w-full sm:-ml-24 md:-ml-12">
+                <option value="100" label="100 rest //return "></option>
+                <option value="80" label="80 rest"></option>
+                <option value="60" label="60 rest // return"></option>
+                <option value="40" label="40 rest"></option>
+                <option value="20" label="20 rest // return"></option>
+                <option value="0" label="00 game over"></option>
+                
+            </datalist>
+            <!-- <div class="h-full flex flex-col justify-between text-justify">
+                <h1 class="flex-item">100 rest//return</h1>
+                <h1 class="flex-item">80 rest</h1>
+                <h1 class="flex-item">60 rest//return</h1>
+                <h1 class="flex-item">40 rest</h1>
+                <h1 class="flex-item">20 rest//return</h1>
+                <h1 class="flex-item">0 game over</h1>
+            </div> -->
+        </div>
+      </Window>
+      <Window title="AVATAR" classes="basis-11/12 md:basis-auto">
+        <div class="window-pane">
+            <div>
+                <label for="name">// NAME: </label> <input type="text" name="name" id="name" />
+            </div>
+            <div class="field-row">
+                <span class="mr-2">Respawns</span>
+                <input type="checkbox" name="re-1">
+                <label>&nbsp;</label>
+            
+                <input id="checkbox2" type="checkbox" name="re-2">
+                <label for="checkbox2">&nbsp;</label>
+            
+                <input id="checkbox3" type="checkbox" name="re-3">
+                <label for="checkbox3">&nbsp;</label>
+            </div>
+        </div>
+      </Window>
+      <Window title="SKILLS" classes="basis-11/12 md:basis-auto">
+        <div class="window-pane md:columns-2 text-center">
+            <div class="mb-2">
+                <h1 class="uppercase">Build</h1>
+                <ol>
+                    {skills.build.map((skill) => <SkillInput name={skill.name} />)}
+                </ol>
+            </div>
+            <div class="mb-2">
+                <h1 class="uppercase">Presence</h1>
+                <ol>
+                    {skills.presence.map((skill) => <SkillInput name={skill.name} />)}
+                </ol>
+            </div>
+            <div class="mb-2">
+                <h1 class="uppercase">Meta</h1>
+                <ol>
+                    {skills.meta.map((skill) => <SkillInput name={skill.name} />)}
+                </ol>
+            </div>
+            <div class="mb-2">
+                <h1 class="uppercase">Hands</h1>
+                <ol>
+                    {skills.hands.map((skill) => <SkillInput name={skill.name} />)}
+                </ol>
+            </div>
+        </div>
+      </Window>
+      <Window title="Backpack">
+         <div class="m-2 text-sm">
+            <label class="mr-2" for="bytes">* bytes *</label> <input type="text" name="bytes" id="bytes" class="text-base" />
+        </div>
+        <div class="h-64">
+            <textarea name="Backapck" class="w-full h-full"></textarea>
+        </div>
+        <div class="m-2 text-sm text-right">
+            <label class="mr-2 text-xs" for="weapon">// weapon</label> <input type="text" name="weapon" id="weapon" size="10" class="text-base" />
+            <label class="text-xs" for="damage">*dmg type*[</label> <input type="text" name="damage" id="damage" size="5" class="text-base" />]
+        </div>
+        <div class="m-2 text-xs">
+            <ul class="list-none text-right">
+            {
+                backpack.map((supply) => <li>*{supply}* <select class="w-10" name={supply} set:html={backpackOptions}></select></li>)
+            }
+            </ul>
+        </div>
+      </Window>
+    </div>
+  </section>
+</Layout>
+
+<script></script>
