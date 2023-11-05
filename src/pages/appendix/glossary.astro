@@ -1,0 +1,20 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import InfoWindow from '../../components/InfoWindow.astro';
+
+import * as data from '../../data/appendix.json';
+
+const {glossary} = data;
+---
+
+<!-- 
+    TODO
+    Collapsible windows
+-->
+<Layout title="Appendix: Glossary">
+  <section class="clear-both flex flex-wrap justify-around">
+    <InfoWindow title="Glossary" listData={glossary} classes="md:w-11/12" />
+  </section>
+</Layout>
+
+<script></script>

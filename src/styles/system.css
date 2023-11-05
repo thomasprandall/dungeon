@@ -355,6 +355,16 @@ h2 {
     /*margin-bottom: 1rem;*/
 }
 
+.window-pane.cmd{
+    background-color: black;
+    cursor: text;
+    color: white;
+    /* line-height: 31px; */
+    padding: 3px 5px;
+    font-family: monospace;
+    font-weight:100;
+}
+
 .window-pane::-webkit-scrollbar {
     width: 22px;
     background-color: var(--primary);

@@ -1,0 +1,97 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import MonsterWindow from '../../components/MonsterWindow.astro';
+import Window from '../../layouts/Window.astro';
+
+import * as data from '../../data/tables/encounter.json';
+
+const { terrain } = data;
+let terrains = [];
+terrain.forEach((terrain) => terrains.push(terrain.name));
+---
+
+<!-- 
+    TODO
+-->
+<Layout title="Random Encounters">
+  <section class="container mx-auto flex flex-wrap sm:basis-1/12 items-start justify-center md:justify-between">
+    <Window title="RNG" classes="flex-shrink ml-0">
+      <div class="window-pane text-center">
+        <select name="terrain" id="terrain-selector">
+            <option value="any">Any</option>
+            { terrains.map((terrain, i) => <option value={i+1} class="capitalize">{terrain}</option>) }
+        </select>
+        <br />
+        <button class="btn large" id="generate-encounter">Roll Encounter</button>
+      </div>
+    </Window>
+    <div class="md:basis-2/5 flex-shrink standard-dialog center mx-2" id="rolled-encounter" >
+        <h1 id="encounter-label" class="uppercase text-center">Click Roll Encounter to... roll for a random encounter</h1>
+        <p id="encounter-mob" class="capitalize"></p>
+        <MonsterWindow title="Random Monster" monster={{}}/>
+    </div>
+    
+  </section>
+  <section class="container mx-auto">
+    
+  </section>
+</Layout>
+
+<script>
+    import * as data from '../../data/tables/encounter.json';
+    import * as bestiary from '../../data/bestiary.json';
+
+    const {terrain} = data;
+    const {monsters} = bestiary;
+
+    function rollEncounter() {
+        let rng = Math.floor(Math.random() * 12);
+        let encounter =  true; // rng > 9
+        
+        if(encounter){
+            let terrainIndex = document.getElementById('terrain-selector').querySelector('option:checked').index;
+            
+            if(terrainIndex == 0 ){
+                terrainIndex  = Math.floor(Math.random() * 6);
+            } else {
+                terrainIndex--;
+            }
+            console.log(terrainIndex);
+            let terrainLabel = terrain[terrainIndex].name;
+            let mobs = terrain[terrainIndex].mobs;
+            rng = Math.floor(Math.random() * 12);
+            let mob = mobs[rng];
+            console.log(terrainLabel, mob);
+            let mobBlock = monsters[monsters.findIndex(m => m.name.toLowerCase() == mob.toLowerCase())];
+
+            let specialNames = [];
+            mobBlock.special.map((ability) => specialNames.push(ability.name));
+
+            let dropNames = [];
+            mobBlock.drops.map((drop) => dropNames.push(drop.name));
+
+            document.getElementById('rolled-encounter').querySelector('h1').innerText = "Terrain: " + terrainLabel;
+            document.getElementById('RandomMonster').innerText = mob;
+            document.getElementById('monster-name').innerText = mob;
+            document.getElementById('monster-count').innerText = mobBlock.number.toString();
+            document.getElementById('monster-dice').innerText = mobBlock.dice.toString().replaceAll(',',', ');
+            document.getElementById('monster-bonus').innerText = mobBlock.bonus.toString();
+            document.getElementById('monster-initiative').innerText = mobBlock.initiative.toString();
+            document.getElementById('monster-immunities').innerText = mobBlock.immune.toString().replaceAll(',',', ') || "-";
+            document.getElementById('monster-weakness').innerText = mobBlock.weakness.toString().replaceAll(',',', ') || "-";
+            document.getElementById('monster-specials').innerText = specialNames.toString().replaceAll(',',', ') || "-";
+            document.getElementById('monster-drops').innerText = dropNames.toString().replaceAll(',',', ') || "-";
+
+            
+        } else {
+            // document.getElementById('rolled-weather').querySelector('h1').innerText = result.result + ': ' + result.name;
+            // document.getElementById('rolled-weather').querySelector('p').innerText = result.description;
+        }
+
+
+    }
+
+    document.getElementById('generate-encounter').addEventListener('click', () => {
+        rollEncounter();
+    });
+</script>

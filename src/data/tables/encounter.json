@@ -1,0 +1,106 @@
+{
+    "terrain": [
+        {
+            "name": "amplified",
+            "mobs": [
+                "Giant Bats",
+                "Giant Bats",
+                "Giant Bats",
+                "Giant Bats",
+                "Wall of Flesh",
+                "Brutalizers",
+                "Beam Lords",
+                "Princess",
+                "Manticores",
+                "PUG",
+                "PVP PUG",
+                "Dragons"
+            ]
+        },
+        {
+            "name": "astral",
+            "mobs": [
+                "Solar Jellies",
+                "Solar Jellies",
+                "Solar Jellies",
+                "Neon Jellies",
+                "Neon Jellies",
+                "Dream Jellies",
+                "Dream Jellies",
+                "Wall of Flesh",
+                "Sagas",
+                "Princess",
+                "Dreamer",
+                "PUG"
+            ]
+        },
+        {
+            "name": "jaded",
+            "mobs": [
+                "Skeletons",
+                "Skeletons",
+                "Skeletons",
+                "Zombies",
+                "Zombies",
+                "Zombies",
+                "Dregs",
+                "Dregs",
+                "Princess",
+                "Dreamer",
+                "Sagas",
+                "PUG"
+            ]
+        },
+        {
+            "name": "redlands",
+            "mobs": [
+                "Goblins",
+                "Dreamer",
+                "Constructs",
+                "Dregs",
+                "Giant Bats",
+                "Brutalizers",
+                "Vorths",
+                "Dreamer",
+                "Wall of Flesh",
+                "PUG",
+                "Brainwurms",
+                "PVP PUG"
+            ]
+        },
+        {
+            "name": "underworld",
+            "mobs": [
+                "Skeletons",
+                "Zombies",
+                "Goblins",
+                "Wall of Flesh",
+                "Brainwurms",
+                "PUG",
+                "Constructs",
+                "Sagas",
+                "Giant Bats",
+                "Vorths",
+                "Dreamer",
+                "Shadow Jellies"
+            ]
+        },
+        {
+            "name": "wodes",
+            "mobs": [
+                "Goblins",
+                "Skeletons",
+                "Zombies",
+                "Dregs",
+                "Beam Lords",
+                "Manticores",
+                "Spiders",
+                "Wolves",
+                "Snakes",
+                "PUG",
+                "Palims",
+                "Dragons"
+            ]
+        }
+    ]
+}

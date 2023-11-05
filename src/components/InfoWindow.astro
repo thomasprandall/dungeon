@@ -7,6 +7,6 @@ const { title, listData, classes } = Astro.props;
 <!-- Component Template (HTML + JS Expressions) -->
 <Window title={title} classes={classes}>
   <div class="window-pane">
-    {listData.map((item) => <div class=""><h1 id={item.name}>{item.name}</h1><p>{item.effect}</p></div>)}
+    {listData.map((item) => <div class=""><h1 id={item.name}>{item.name}</h1><p>{item.description}</p></div>)}
   </div>
 </Window>

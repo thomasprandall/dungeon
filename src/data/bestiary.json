@@ -524,7 +524,7 @@
             "tags": []
         },
         {
-            "name": "Princesses",
+            "name": "Princess",
             "description": "Weird, floating, Alice-in-Wonderland person. Always spins a parasol and giggles incessantly.",
             "number": "1",
             "dice": [
@@ -554,7 +554,7 @@
             "tags": []
         },
         {
-            "name": "PUG Template",
+            "name": "PUG",
             "description": "Players Unknown. The other people playing this game with you. Roll on the PUG tables to figure out who they are. Give them an aspect too!",
             "number": "1",
             "dice": [
@@ -616,7 +616,7 @@
             ]
         },
         {
-            "name": "PUG (PVP)",
+            "name": "PVP PUG",
             "description": "Players Unknown. The other people playing this game with you. Roll on the PUG tables to figure out who they are. Give them an aspect too!",
             "number": "1",
             "dice": [

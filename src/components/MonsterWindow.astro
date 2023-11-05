@@ -5,35 +5,39 @@ const { title, monster } = Astro.props;
 const {name, description, number, dice, bonus, initiative, morale, immune, weakness, special, drops, tags } = monster;
 
 const specialNames = [];
-special.map((ability) => specialNames.push(ability.name));
+if(special){
+  special.map((ability) => specialNames.push(ability.name));
+}
 
 let dropNames = [];
-drops.map((drop) => dropNames.push(drop.name));
+if(drops){
+  drops.map((drop) => dropNames.push(drop.name));
+}
 ---
 
 <!-- Component Template (HTML + JS Expressions) -->
-<Window title={monster.name} classes="md:basis-1/5">
-  <div class="details-bar text-xs text-right">tags: {tags.toString()||"-"}</div>
+<Window title={title || monster.name} classes="md:basis-1/5">
+  <div class="details-bar text-xs text-right">tags: {tags?.toString()||"-"}</div>
   <div class="window-pane">
     <p class="text-sm">{description}</p>
     <div class="uppercase my-2">
         [
-            {name} ({number}); 
-            D: {dice.toString().replaceAll(',',', ')}; 
-            B: {bonus||"-"}; 
-            I: {initiative}; 
-            IM: {immune.toString().replaceAll(',',', ')||"-"};
-            W: {weakness.toString().replaceAll(',',', ')||"-"}; 
-            SP: {specialNames.toString().replaceAll(',',', ')||"-"}; 
-            M: {morale}; 
-            DR: {dropNames.toString().replaceAll(',',', ')||"-"}
+            <span id="monster-name">{name}</span> (<span id="monster-count">{number}</span>); 
+            D: <span id="monster-dice">{dice?.toString().replaceAll(',',', ')}</span>; 
+            B: <span id="monster-bonus">{bonus||"-"}</span>; 
+            I: <span id="monster-initiative">{initiative}</span>; 
+            IM: <span id="monster-immunities">{immune?.toString().replaceAll(',',', ')||"-"}</span>;
+            W: <span id="monster-weakness">{weakness?.toString().replaceAll(',',', ')||"-"}</span>; 
+            SP: <span id="monster-specials">{specialNames?.toString().replaceAll(',',', ')||"-"}</span>; 
+            M: <span id="monster-morale">{morale}</span>; 
+            DR: <span id="monster-drops">{dropNames?.toString().replaceAll(',',', ')||"-"}</span>
         ]
     </div>
     <div class="text-sm">
-        {special.map((ability) => ability.effect && <p><span class="font-bold uppercase mr-1">{ability.name}</span> {ability.effect}</p>)}
+        {special && special.map((ability) => ability.effect && <p><span class="font-bold uppercase mr-1">{ability.name}</span> {ability.effect}</p>)}
     </div>
     <div class="text-sm">
-        {drops.map((drop) => drop.effect && <p><span class="font-bold uppercase mr-1">{drop.name}</span> {drop.effect}</p>)}
+        {drops && drops.map((drop) => drop.effect && <p><span class="font-bold uppercase mr-1">{drop.name}</span> {drop.effect}</p>)}
     </div>
   </div>
 </Window>

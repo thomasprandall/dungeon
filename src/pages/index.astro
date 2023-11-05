@@ -1,16 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Window from "../layouts/Window.astro";
 ---
 <Layout title=".d/rr home">
-	<section class="container mx-auto">
-		<div class:list={['window ']}>
-			<div class="title-bar">
-				<button aria-label="Close" class="close"></button>
-				<h1 class="title">WELCOME</h1>
-				<button aria-label="Resize" class="resize-btn"></button>
-			</div>
-			<div class="separator"></div>
-
+	<section class="container mx-auto flex justify-center items-start">
+		<Window title="Welcome" classes="md:basis-5/12">
 			<div class="window-pane">
 				<p>Welcome to the .dungeon//remastered BETA avatar manager and SRD.</p>
 				<p>Some quick links to pages that probably mostly work most of the time.</p>
@@ -31,11 +25,30 @@ import Layout from "../layouts/Layout.astro";
 					<li><a href="/appendix/magic">Appendix: Magic</a></li>
 					<li><a href="/appendix/skills">Appendix: Skills</a></li>
 					<li><a href="/appendix/statuses">Appendix: Statuses</a></li>
+					<li><a href="/appendix/statuses">Appendix: Glossary</a></li>
 				</ul>
 				<p>Some of these pages have gotten relatively little love and may be re-organized. Quality of life improvements will be made as time allows and generally after all items are feature complete.
-				<p class="text-sm">TODO: Avatar Generator next steps (aspects, roles, pets, transports, spells), Tables (dungeons, settlements, encounters), Browser and Responsive testing</p>
-				
+				<p class="text-sm">TODO: Avatar Generator next steps (aspects, roles, pets, transports, spells), Tables (dungeons? settlements?), Browser and Responsive testing</p>
 			</div>
-		</div>
+		</Window>
+		<Window title="Ozark's Forum Rules" classes="md:basis-5/12">
+			<div class="window-pane">
+				<ol class="list-decimal ml-10">
+					<li>No bigots. No tolerance for the intolerant.</li>
+					<li>Racism is an auto-ban. No one cares if you're “just joking.”</li>
+					<li>Trans rights are human rights.</li>
+					<li>We are strictly anti-facist.</li>
+					<li>No bootlickers.</li>
+					<li>Auto-ban for anyone who willingly invades the safe spaces we have set up for a variety of marginalized identities.</li>
+					<li>If you're questioning whether or not to spoiler-warning something, just do it. This includes images and possibly triggering material.</li>
+					<li>Forum moderators are not special or given unique privileges. They are the garbage collectors of the site. They clean up messes and help enforce bans. We cycle through moderators every few months.</li>
+					<li>Similarly, devs are not given special privileges within the community. This is your space. We have our own spaces just for us elsewhere.</li>
+					<li>We are liberal with the ban button. No one's got time for that.</li>
+				</ol>
+				<div class="standard-dialog mt-4">
+					These rules were originally written by clarence ozark for the .dungeon discussion boards, and have been edited slightly over the years.
+				</div>
+			</div>
+		</Window>
 	</section>
 </Layout>
