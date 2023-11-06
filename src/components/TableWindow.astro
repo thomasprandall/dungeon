@@ -11,13 +11,13 @@ const { title, tableData, tableLabels, tableClasses, pretext } = Astro.props;
   <div class="window-pane">
     { pretext && <div class="flex flex-1">{pretext.map((text) => <div class="standard-dialog text-sm mb-4">{pretext}</div>)}</div>}
     <table class:list={["table-auto", tableClasses]}>
-      <thead>
+      <thead class="hidden md:table-header-group">
         <tr class="bg-slate-200">
           {tableLabels.map((label) => <th>{label}</th>)}
         </tr>
       </thead>
         <tbody>
-          {tableData.map((row) => <TableRow rowData={Object.values(row)} />)} 
+          {tableData.map((row) => <TableRow rowData={Object.values(row)} labels={tableLabels} />)} 
         </tbody>
     </table>
   </div>
