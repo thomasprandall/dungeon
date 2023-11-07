@@ -3,7 +3,7 @@ const { name, value } = Astro.props;
 ---
 <div class="mb-2">
     <h1 class="text-center uppercase">{name}</h1>
-    <div class="border-black border-2 border-dashed aspect-square mx-auto">
-        <input type="number" name={name} size="2" class="[appearance:textfield] aspect-square border-0 w-full mx-auto text-4xl text-center p-0" value={value} />
+    <div class="border-black border-2 border-dashed aspect-square mx-auto field-wrapper">
+        <input type="number" name={name} size="2" id={"field-" + name} class="[appearance:textfield] aspect-square border-0 w-full mx-auto text-4xl text-center p-0 stat-field" value={value} />
     </div>
 </div>

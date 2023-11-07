@@ -7,6 +7,7 @@ import SkillInput from '../components/form/SkillInput.astro';
 const stats = ["build","presence","tilt","meta","hands","rng"];
 const backpack = ["supplies","materials","quivers","mags","cells"];
 const backpackOptions = "<option value='0'>0</option><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option>";
+
 import * as data from '../data/appendix.json';
 
 const { skills } = data;
@@ -15,45 +16,48 @@ const { skills } = data;
 <!-- 
     TODO
     Look into restyling checkboxes now that they are functional
+    Add validation to Stat boxes to restrict to dice values and not allow duplicates (d20, d12, d10, d8, d6, and d4)
 -->
 <Layout title="Avatar Manager">
   <section>
     <div class="flex flex-wrap items-start justify-center">
       <Window title="STATS" classes="basis-11/12 sm:basis-auto"> 
+        20, 12, 10, 8, 6, 4
         <div class="window-pane columns-2 gap-8 p-8">
             {
-                stats.map((stat) => <StatInput name={stat} />)
+                stats.map((stat) => <StatInput name={stat}/>)
             }
         </div>
       </Window>
       <Window title="SYNC" classes="basis-11/12 md:basis-auto">
-        <div class="window-pane columns-2 gap-0 h-64">
-            <div class="w-1/6">
-                <input type="range" min="0" max="100" class="" step="1" list="sync" value="100" orient="vertical" />
+        <div class="window-pane">
+            <div class="columns-2 gap-0">
+                <div class="w-1/6 h-64">
+                    <input type="range" min="0" max="100" class="h-64" step="1" list="sync" value="100" orient="vertical" name="sync" id="sync-input" />
+                </div>
+                <datalist id="sync" class="w-full sm:-ml-24 md:-ml-12 h-64">
+                    <option value="100" label="100 rest //return "></option>
+                    <option value="80" label="80 rest"></option>
+                    <option value="60" label="60 rest // return"></option>
+                    <option value="40" label="40 rest"></option>
+                    <option value="20" label="20 rest // return"></option>
+                    <option value="0" label="00 game over"></option>
+                </datalist>
             </div>
-            <datalist id="sync" class="w-full sm:-ml-24 md:-ml-12">
-                <option value="100" label="100 rest //return "></option>
-                <option value="80" label="80 rest"></option>
-                <option value="60" label="60 rest // return"></option>
-                <option value="40" label="40 rest"></option>
-                <option value="20" label="20 rest // return"></option>
-                <option value="0" label="00 game over"></option>
-                
-            </datalist>
-            <!-- <div class="h-full flex flex-col justify-between text-justify">
-                <h1 class="flex-item">100 rest//return</h1>
-                <h1 class="flex-item">80 rest</h1>
-                <h1 class="flex-item">60 rest//return</h1>
-                <h1 class="flex-item">40 rest</h1>
-                <h1 class="flex-item">20 rest//return</h1>
-                <h1 class="flex-item">0 game over</h1>
-            </div> -->
+            <h1 id="sync-output" class="text-center"></h1>
+            <div class="text-center flex flex-wrap items-start justify-around">
+                <button class="btn large mr-2" id="rest">Rest (d20)</button>
+                <button class="btn large" id="healing-foil">Use Healing Foil (d6)</button>
+            </div>
         </div>
       </Window>
       <Window title="AVATAR" classes="basis-11/12 md:basis-auto">
         <div class="window-pane">
-            <div>
-                <label for="name">// NAME: </label> <input type="text" name="name" id="name" />
+            <div class="field-row">
+                <label for="name" class="w-20">// NAME: </label> <input type="text" name="name" id="name" />
+            </div>
+            <div  class="field-row">
+                <label for="name" class="w-20">// JOB: </label> <input type="text" name="job" id="job" />
             </div>
             <div class="field-row">
                 <span class="mr-2">Respawns</span>
@@ -119,4 +123,48 @@ const { skills } = data;
   </section>
 </Layout>
 
-<script></script>
+<script>
+    const heal = function(max){
+        let amt = Math.ceil(Math.random() * max);
+        let syncInput = document.getElementById('sync-input') as HTMLInputElement;
+        let syncTotal = (Number(syncInput.value) + Number(amt)).toString();
+        syncInput.value = syncTotal;
+        updateSyncLabel(syncTotal);
+    };
+
+    const updateSyncLabel = function(sync){
+        document.getElementById('sync-output').innerText = sync;
+    }
+
+    document.getElementById('sync-input').addEventListener('change', () => {
+        updateSyncLabel((document.getElementById('sync-input') as HTMLInputElement).value);
+    });
+
+    document.getElementById('rest').addEventListener('click', () => {
+        heal(20);
+    });
+
+    document.getElementById('healing-foil').addEventListener('click', () => {
+        heal(6);
+    });
+
+    const validValues = [4,6,8,10,12,20];
+    document
+    .querySelectorAll('input.stat-field')
+    .forEach(function (elem) {
+        let input = elem as HTMLInputElement;
+        input.addEventListener('change', function(){
+            if(!validValues.includes(Number(input.value))){
+                input.value = '';
+                input.setCustomValidity("Invalid Value");
+            } else {
+                input.setCustomValidity('');
+            }
+        });
+        if(!input.value){
+            input.setCustomValidity("Invalid Value");
+        }
+    });
+
+    updateSyncLabel((document.getElementById('sync-input') as HTMLInputElement).value);
+</script>

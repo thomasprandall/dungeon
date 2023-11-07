@@ -1,0 +1,110 @@
+{
+    "roles": [
+        {
+            "form": "Sword",
+            "role": "DPS",
+            "effect": "All combat rolls count as +1.",
+            "flavor": "“The power of the fighter. Brute strength."
+        },
+        {
+            "form": "Shield",
+            "role": "Tank",
+            "effect": "Once per encounter you can reduce incoming Sync damage to you or a party member by d6.",
+            "flavor": "“The protection of the companion. Calming presence."
+        },
+        {
+            "form": "Staff",
+            "role": "Support",
+            "effect": "All healing you do or take counts as +2. This counts for items, magical effects, and Rest Dice.",
+            "flavor": "The majesty of the spirit. Blessed healer."
+        }
+    ],
+    "aspects": [
+        {
+            "name": "Alchemist",
+            "effect": "Turn this card upright at the beginning of each day. While this card is upright, you can change a single word of a held item, warping its entire construction. Sword can become shield, for instance. Staff of Lightning can become Staff of Flying. After ten minutes, reverse this card. While reversed, the held item reverts to its original form."
+        },
+        {
+            "name": "Beast",
+            "effect": "Turn this card upright at the beginning of each day. While this card is upright you can take the shape of your pet, giving you an animal form. After ten minutes, reverse this card. While reversed, you cannot take animal form."
+        },
+        {
+            "name": "Berserker",
+            "effect": "Turn this card upright at the beginning of each day. While this card is upright, you can enter a berserk mode on your turn and make an additional attack for each piercing you have. Then reverse this card. While reversed, you cannot use this ability."
+        },
+        {
+            "name": "Knight",
+            "effect": "When you make a promise to an NPC, turn this upright. While upright you gain +2 to all rolls while acting for that promise. If the promise is broken, reverse this card. While reversed, you gain -2 to all rolls until the next session."
+        },
+        {
+            "name": "Magus",
+            "effect": "Turn this card upright at the beginning of each day. While this card is upright, you can take on a physical trait from any tattoo on your body. After ten minutes, reverse this card. While reversed you cannot use this ability."
+        },
+        {
+            "name": "Merchant",
+            "effect": "Turn this card upright at the beginning of each day. While this card is upright, you can take a single item within reach into the virtual world. After doing so, reverse this card. While reversed, the item disappears after a single use or at the end of the session."
+        }
+    ],
+    "gifts": [
+        {
+            "month": "January",
+            "name": "Horse",
+            "effect": "Emerald Pendant. Restore 1 Sync every time you log in."
+        },
+        {
+            "month": "February",
+            "name": "Bull",
+            "effect": "Healing Foil (3). Each card heals d6 Sync, but tears after use."
+        },
+        {
+            "month": "March",
+            "name": "Crow",
+            "effect": "Skeleton Foil. Unlocks any one lock. Tears after use."
+        },
+        {
+            "month": "April",
+            "name": "Hound",
+            "effect": "Death Foil. Stops your first respawn. Tears after use."
+        },
+        {
+            "month": "May",
+            "name": "Frog",
+            "effect": "Fire Foil. Insert into a weapon to deal +3 fire damage for the encounter."
+        },
+        {
+            "month": "June",
+            "name": "Elephant",
+            "effect": "Light Foil. Gain a guiding light to safety. Tears after use."
+        },
+        {
+            "month": "July",
+            "name": "Wolf",
+            "effect": "Dungeon Foil. Removes you and one ally from a dungeon or encounter. Tears after use."
+        },
+        {
+            "month": "August",
+            "name": "Cub",
+            "effect": "Hafgan's Foil. Heals all statuses for you and all allies. Tears after use."
+        },
+        {
+            "month": "September",
+            "name": "Butterfly",
+            "effect": "Lon. A floating orb creature that can hold one item for you."
+        },
+        {
+            "month": "October",
+            "name": "Goose",
+            "effect": "Firebombs (3). Each bomb destroys 3 d4's from an encounter when used."
+        },
+        {
+            "month": "November",
+            "name": "Fox",
+            "effect": "Lucky Foil. Reroll one RNG roll. Tears after use."
+        },
+        {
+            "month": "December",
+            "name": "Snake",
+            "effect": "Bag of Wealth. Start with 3 extra Bytes."
+        }
+    ]
+}

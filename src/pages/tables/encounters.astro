@@ -17,11 +17,11 @@ terrain.forEach((terrain) => terrains.push(terrain.name));
   <section class="container mx-auto flex flex-wrap sm:basis-1/12 items-start justify-center md:justify-between">
     <Window title="RNG" classes="flex-shrink ml-0">
       <div class="window-pane text-center">
-        <select name="terrain" id="terrain-selector">
+        <select name="terrain" id="terrain-selector" class="mr-2">
             <option value="any">Any</option>
             { terrains.map((terrain, i) => <option value={i+1} class="capitalize">{terrain}</option>) }
         </select>
-        <br />
+         
         <button class="btn large" id="generate-encounter">Roll Encounter</button>
       </div>
     </Window>

@@ -40,3 +40,17 @@ option[value="0"]{
     background-color: red;
     border: 1px solid red;
 }
+div.field-wrapper:has(> input.stat-field:invalid) {
+    border-color: red;
+}
+
+input.stat-field:invalid{
+    background: linear-gradient(
+            45deg,
+            transparent,
+            transparent 45%,
+            red 45%,
+            red 55%,
+            transparent 55%,
+            transparent 100%);
+}

@@ -1,6 +1,17 @@
 ---
 const { rowData, labels } = Astro.props;
 ---
+<!-- 
+    TODO
+    Align columns based on data type?
+-->
 <tr class="border-b-2 border-dashed even:bg-slate-100 hover:bg-yellow-50 text-sm block md:table-row">
-    {rowData.map((data,i) => <td class:list={["p-2 md:border-r-2 border-dashed block md:table-cell"]}><span class="md:hidden font-bold">{labels[i] !== "--" && labels[i] + ": "}</span>{data && data||"--"}</td>)}
+    {
+        rowData.map((data,i) => 
+            <td class:list={["p-2 md:border-r-2 border-dashed block md:table-cell"]}>
+                <span class:list={["font-bold md:hidden"]}>{labels[i]}: </span>
+                { data && data || "--"}
+            </td>
+        )
+    }
 </tr>

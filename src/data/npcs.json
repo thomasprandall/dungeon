@@ -330,7 +330,7 @@
         },
         {
             "name": "Spirit Warden",
-            "benefit": "Will only stay in town if there's a card shop in the settlement. Offers tarot readings once a week. Roll d6 to see your fortune: <br /> 1-2. Castle - “You will defend yourself against all odds.” +1 to your Defense for the week.<br /> 3-4. Spider - “You will go where you please, even where you aren't wanted.” +2 to Stealth for the week.<br />5-6. Joker - “There is great fortune in your near future.” Gain twice as many Bytes for the rest of the day."
+            "benefit": "Will only stay in town if there's a card shop in the settlement. Offers tarot readings once a week.\n Roll d6 to see your fortune: \n 1-2. Castle - “You will defend yourself against all odds.” +1 to your Defense for the week.\n 3-4. Spider - “You will go where you please, even where you aren't wanted.” +2 to Stealth for the week.\n5-6. Joker - “There is great fortune in your near future.” Gain twice as many Bytes for the rest of the day."
         },
         {
             "name": "Stormlord",
