@@ -225,8 +225,10 @@ const { spells } = magicData;
     .querySelectorAll('select.spell-select')
     .forEach(function (elem) {
         elem.addEventListener('change', function(){
-            let cost = elem.options[elem.selectedIndex].dataset.cost;
-            elem.parentNode.childNodes[3].value = cost;
+            let select = elem as HTMLSelectElement;
+            let cost = select.options[select.selectedIndex].dataset.cost;
+            let selectedOption = select.parentNode.childNodes[3] as HTMLInputElement;
+            selectedOption.value = cost;
         });
     });
 </script>
