@@ -9,8 +9,10 @@ const backpack = ["supplies","materials","quivers","mags","cells"];
 const backpackOptions = "<option value='0'>0</option><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option>";
 
 import * as data from '../data/appendix.json';
+import * as magicData from '../data/magic.json';
 
 const { skills } = data;
+const { spells } = magicData;
 ---
 
 <!-- 
@@ -22,7 +24,6 @@ const { skills } = data;
   <section>
     <div class="flex flex-wrap items-start justify-center">
       <Window title="STATS" classes="basis-11/12 sm:basis-auto"> 
-        20, 12, 10, 8, 6, 4
         <div class="window-pane columns-2 gap-8 p-8">
             {
                 stats.map((stat) => <StatInput name={stat}/>)
@@ -100,12 +101,12 @@ const { skills } = data;
             </div>
         </div>
       </Window>
-      <Window title="Backpack">
+      <Window title="Backpack" classes="basis-11/12 md:basis-auto">
          <div class="m-2 text-sm">
             <label class="mr-2" for="bytes">* bytes *</label> <input type="text" name="bytes" id="bytes" class="text-base" />
         </div>
         <div class="h-64">
-            <textarea name="Backapck" class="w-full h-full"></textarea>
+            <textarea name="Backpack" class="w-full h-full"></textarea>
         </div>
         <div class="m-2 text-sm text-right">
             <label class="mr-2 text-xs" for="weapon">// weapon</label> <input type="text" name="weapon" id="weapon" size="10" class="text-base" />
@@ -119,6 +120,57 @@ const { skills } = data;
             </ul>
         </div>
       </Window>
+      <Window title="ROLES" classes="basis-11/12 md:basis-auto"> 
+        <div class="window-pane">
+            <div class="columns-2">
+                <div>
+                    <textarea name="role-1" class="w-48 aspect-square resize-none text-sm"></textarea>
+                </div>
+                <div>
+                    <textarea name="role-2" class="w-48 aspect-square resize-none text-sm"></textarea>
+                </div>
+                <div>
+                    <textarea name="role-3" class="w-48 aspect-square resize-none text-sm"></textarea>
+                </div>
+                <div>
+                    <textarea name="role-4" class="w-48 aspect-square resize-none text-sm"></textarea>
+                </div>
+            </div>
+        </div>
+      </Window>
+      <div class="basis-11/12 md:basis-auto">
+        <Window title="PET" classes=""> 
+            <div class="window-pane">
+                <div class="m-2 text-sm text-right">
+                    <label class="mr-2" for="weapon">// name</label> <input type="text" name="pet-name" id="pet-name" size="10" class="text-base" />
+                    <label class="ml-2" for="damage">*upkeep*[</label> <input type="text" name="pet-upkeep" id="pet-upkeep" size="5" class="text-base" />]
+                </div>
+                <div>
+                    <textarea name="pet-notes" class="resize-none text-sm w-full"></textarea>
+                </div>
+            </div>
+        </Window>
+        <Window title="TRANSPORT"> 
+            <div class="window-pane">
+                <div class="m-2 text-sm text-right">
+                    <label class="mr-2" for="weapon">// type</label> <input type="text" name="transport-type" id="transport-type" size="10" class="text-base" />
+                    <label class="ml-2" for="damage">*upkeep*[</label> <input type="text" name="transport-upkeep" id="transport-upkeep" size="5" class="text-base" />]
+                </div>
+                <div>
+                    <textarea name="transport-notes" class="resize-none text-sm w-full"></textarea>
+                </div>
+            </div>
+        </Window>
+        </div>
+        <Window title="SPELLS" classes="basis-11/12 md:basis-auto"> 
+            <div class="window-pane">
+                <ul class="list-none">
+                    <li class="mb-2">|name: <select class="spell-select" name="spell-1">{ spells.map((spell) => <option value={spell.name} data-cost={spell.cost}>{spell.name}</option>) }</select> [<input name="spell-cost-1" class="w-10 text-center" disabled />]</li>
+                    <li class="mb-2">|name: <select class="spell-select" name="spell-2">{ spells.map((spell) => <option value={spell.name} data-cost={spell.cost}>{spell.name}</option>) }</select> [<input name="spell-cost-1" class="w-10 text-center" disabled />]</li>
+                    <li class="mb-2">|name: <select class="spell-select" name="spell-3">{ spells.map((spell) => <option value={spell.name} data-cost={spell.cost}>{spell.name}</option>) }</select> [<input name="spell-cost-1" class="w-10 text-center" disabled />]</li>
+                </ul>
+            </div>
+        </Window>
     </div>
   </section>
 </Layout>
@@ -149,6 +201,7 @@ const { skills } = data;
     });
 
     const validValues = [4,6,8,10,12,20];
+
     document
     .querySelectorAll('input.stat-field')
     .forEach(function (elem) {
@@ -167,4 +220,13 @@ const { skills } = data;
     });
 
     updateSyncLabel((document.getElementById('sync-input') as HTMLInputElement).value);
+
+    document
+    .querySelectorAll('select.spell-select')
+    .forEach(function (elem) {
+        elem.addEventListener('change', function(){
+            let cost = elem.options[elem.selectedIndex].dataset.cost;
+            elem.parentNode.childNodes[3].value = cost;
+        });
+    });
 </script>

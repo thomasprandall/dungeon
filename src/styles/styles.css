@@ -29,6 +29,13 @@ textarea{
         line-height: 31px;
         padding: 8px 10px;
 }
+textarea.text-sm{
+    background-image:
+            linear-gradient(to right, white 5px, transparent 5px),
+            linear-gradient(to left, white 5px, transparent 5px),
+            repeating-linear-gradient(white, white 26px, #ccc 27px, #ccc 27px, white 27px);
+    line-height:27px;
+}
 
 textarea:focus {
     background-image:
@@ -36,6 +43,14 @@ textarea:focus {
         linear-gradient(to left, black 10px, transparent 10px),
         repeating-linear-gradient(black, black 30px, white 30px, white 31px, black 31px);
 }
+
+textarea.text-sm:focus{
+    background-image:
+        linear-gradient(to right, black 5px, transparent 5px),
+        linear-gradient(to left, black 5px, transparent 5px),
+        repeating-linear-gradient(black, black 26px, white 27px, white 27px, black 27px);
+}
+
 option[value="0"]{
     background-color: red;
     border: 1px solid red;
