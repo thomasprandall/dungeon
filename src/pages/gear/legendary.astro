@@ -28,7 +28,7 @@ const { items } = legendary;
       </ul>
     </div>
     <div class="flex items-start flex-wrap justify-center md:ml-36">
-    <div class="standard-dialog container mx-auto">
+    <div class="standard-dialog container mx-2">
         <p>These are unique and powerful items that often bleed IRL into the virtual world. They are found in the most dangerous dungeons, at the end of long and complicated quest chains, or as rewards for hidden world events.</p>
     </div>
       {items.map((item) => <div class="md:basis-2/6"><Window title={item.name}><div class="window-pane"><p class="text-sm">{item.description}</p></div>{ item.mob ? item.mob.name:''}</Window></div>)}

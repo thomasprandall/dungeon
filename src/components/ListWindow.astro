@@ -5,7 +5,7 @@ const { title, listData, classes, listClasses } = Astro.props;
 ---
 
 <!-- Component Template (HTML + JS Expressions) -->
-<Window title={title} classes={ classes + "md:basis-2/5"}>
+<Window title={title} classes={"basis-full md:basis-2/5 " + classes}>
     <div class:list={['window-pane']}>
         <ul class:list={['text-sm', listClasses]}>
             {listData.map((item) => <li>{item}</li>)}

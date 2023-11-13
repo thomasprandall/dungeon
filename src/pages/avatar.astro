@@ -24,14 +24,14 @@ const { spells } = magicData;
   <section>
     <form id="avatar-form">
         <div class="flex flex-wrap items-start justify-center">
-        <Window title="STATS" classes="basis-11/12 sm:basis-auto"> 
+        <Window title="STATS" classes="basis-full sm:basis-auto"> 
             <div class="window-pane columns-2 gap-8 p-8">
                 {
                     stats.map((stat) => <StatInput name={stat}/>)
                 }
             </div>
         </Window>
-        <Window title="SYNC" classes="basis-11/12 md:basis-auto">
+        <Window title="SYNC" classes="basis-full md:basis-auto">
             <div class="window-pane">
                 <div class="columns-2 gap-0">
                     <div class="w-1/6 h-64">
@@ -53,7 +53,7 @@ const { spells } = magicData;
                 </div>
             </div>
         </Window>
-        <Window title="AVATAR" classes="basis-11/12 md:basis-auto">
+        <Window title="AVATAR" classes="basis-full md:basis-auto">
             <div class="window-pane">
                 <div class="field-row">
                     <label for="name" class="w-20">// NAME: </label> <input type="text" name="name" id="name" />
@@ -74,7 +74,7 @@ const { spells } = magicData;
                 </div>
             </div>
         </Window>
-        <Window title="SKILLS" classes="basis-11/12 md:basis-auto">
+        <Window title="SKILLS" classes="basis-full md:basis-auto">
             <div class="window-pane md:columns-2 text-center">
                 <div class="mb-2">
                     <h1 class="uppercase">Build</h1>
@@ -102,7 +102,7 @@ const { spells } = magicData;
                 </div>
             </div>
         </Window>
-        <Window title="Backpack" classes="basis-11/12 md:basis-auto">
+        <Window title="Backpack" classes="basis-full md:basis-auto">
             <div class="m-2 text-sm">
                 <label class="mr-2" for="bytes">* bytes *</label> <input type="text" name="bytes" id="bytes" class="text-base" />
             </div>
@@ -121,7 +121,7 @@ const { spells } = magicData;
                 </ul>
             </div>
         </Window>
-        <Window title="ROLES" classes="basis-11/12 md:basis-auto"> 
+        <Window title="ROLES" classes="basis-full md:basis-auto"> 
             <div class="window-pane">
                 <div class="columns-2">
                     <div>
@@ -139,7 +139,7 @@ const { spells } = magicData;
                 </div>
             </div>
         </Window>
-        <div class="basis-11/12 md:basis-auto">
+        <div class="basis-full md:basis-auto">
             <Window title="PET" classes=""> 
                 <div class="window-pane">
                     <div class="m-2 text-sm text-right">
@@ -163,7 +163,7 @@ const { spells } = magicData;
                 </div>
             </Window>
             </div>
-            <Window title="SPELLS" classes="basis-11/12 md:basis-auto"> 
+            <Window title="SPELLS" classes="basis-full md:basis-auto"> 
                 <div class="window-pane">
                     <ul class="list-none">
                         <li class="mb-2">|name: <select class="spell-select" name="spell-1">{ spells.map((spell) => <option value={spell.name} data-cost={spell.cost}>{spell.name}</option>) }</select> [<input name="spell-cost-1" class="w-10 text-center" disabled />]</li>

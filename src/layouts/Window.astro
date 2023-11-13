@@ -7,7 +7,7 @@ const titleID = title.replaceAll(/\W?/g,'');
 <div class:list={['window ', classes]}>
     <div class="title-bar">
         <button aria-label="Close" class="close"></button>
-        <h1 class="title" id={titleID}>// {title} //</h1>
+        <h1 class="title text-xl sm:text-2xl" id={titleID}><span class="hidden lg:inline">//</span> {title} <span class="hidden lg:inline">//</span></h1>
         <span class="mr-10"></span>
         <!-- <button aria-label="Resize" class="resize-btn"></button> -->
     </div>
