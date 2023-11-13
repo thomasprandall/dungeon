@@ -241,7 +241,7 @@ h2 {
 .title-bar .title {
     padding: 0 0.5em;
     margin: 0 auto;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     font-weight: bold;
     line-height: 1.1;
     text-align: center;
