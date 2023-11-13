@@ -648,6 +648,10 @@ select {
     box-shadow: 2px 2px 0 -1px var(--secondary);
 }
 
+nav{
+    background: var(--primary);
+}
+
 /* menu-bar */
 ul.menu-bar, ul.menu {
     margin: 0;
