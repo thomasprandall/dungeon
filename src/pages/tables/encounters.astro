@@ -56,12 +56,13 @@ terrain.forEach((terrain) => terrains.push(terrain.name));
             } else {
                 terrainIndex--;
             }
-            console.log(terrainIndex);
+            
             let terrainLabel = terrain[terrainIndex].name;
             let mobs = terrain[terrainIndex].mobs;
+
             rng = Math.floor(Math.random() * 12);
+            
             let mob = mobs[rng];
-            console.log(terrainLabel, mob);
             let mobBlock = monsters[monsters.findIndex(m => m.name.toLowerCase() == mob.toLowerCase())];
 
             let specialNames = [];

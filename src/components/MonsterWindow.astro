@@ -13,11 +13,13 @@ let dropNames = [];
 if(drops){
   drops.map((drop) => dropNames.push(drop.name));
 }
+
+const showTags = tags && tags.length;
 ---
 
 <!-- Component Template (HTML + JS Expressions) -->
 <Window title={title || monster.name} classes="md:basis-1/5">
-  <div class="details-bar text-xs text-right">tags: {tags?.toString()||"-"}</div>
+  { showTags ? <div class="details-bar text-xs text-right">tags: {tags.toString()}</div>:'' }
   <div class="window-pane">
     <p class="text-sm">{description}</p>
     <div class="uppercase my-2">

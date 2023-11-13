@@ -55,9 +55,6 @@ option[value="0"]{
     background-color: red;
     border: 1px solid red;
 }
-div.field-wrapper:has(> input.stat-field:invalid) {
-    border-color: red;
-}
 
 input.stat-field:invalid{
     background: linear-gradient(

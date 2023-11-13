@@ -22,156 +22,158 @@ const { spells } = magicData;
 -->
 <Layout title="Avatar Manager">
   <section>
-    <div class="flex flex-wrap items-start justify-center">
-      <Window title="STATS" classes="basis-11/12 sm:basis-auto"> 
-        <div class="window-pane columns-2 gap-8 p-8">
-            {
-                stats.map((stat) => <StatInput name={stat}/>)
-            }
-        </div>
-      </Window>
-      <Window title="SYNC" classes="basis-11/12 md:basis-auto">
-        <div class="window-pane">
-            <div class="columns-2 gap-0">
-                <div class="w-1/6 h-64">
-                    <input type="range" min="0" max="100" class="h-64" step="1" list="sync" value="100" orient="vertical" name="sync" id="sync-input" />
-                </div>
-                <datalist id="sync" class="w-full sm:-ml-24 md:-ml-12 h-64">
-                    <option value="100" label="100 rest //return "></option>
-                    <option value="80" label="80 rest"></option>
-                    <option value="60" label="60 rest // return"></option>
-                    <option value="40" label="40 rest"></option>
-                    <option value="20" label="20 rest // return"></option>
-                    <option value="0" label="00 game over"></option>
-                </datalist>
+    <form id="avatar-form">
+        <div class="flex flex-wrap items-start justify-center">
+        <Window title="STATS" classes="basis-11/12 sm:basis-auto"> 
+            <div class="window-pane columns-2 gap-8 p-8">
+                {
+                    stats.map((stat) => <StatInput name={stat}/>)
+                }
             </div>
-            <h1 id="sync-output" class="text-center"></h1>
-            <div class="text-center flex flex-wrap items-start justify-around">
-                <button class="btn large mr-2" id="rest">Rest (d20)</button>
-                <button class="btn large" id="healing-foil">Use Healing Foil (d6)</button>
-            </div>
-        </div>
-      </Window>
-      <Window title="AVATAR" classes="basis-11/12 md:basis-auto">
-        <div class="window-pane">
-            <div class="field-row">
-                <label for="name" class="w-20">// NAME: </label> <input type="text" name="name" id="name" />
-            </div>
-            <div  class="field-row">
-                <label for="name" class="w-20">// JOB: </label> <input type="text" name="job" id="job" />
-            </div>
-            <div class="field-row">
-                <span class="mr-2">Respawns</span>
-                <input type="checkbox" name="re-1">
-                <label>&nbsp;</label>
-            
-                <input id="checkbox2" type="checkbox" name="re-2">
-                <label for="checkbox2">&nbsp;</label>
-            
-                <input id="checkbox3" type="checkbox" name="re-3">
-                <label for="checkbox3">&nbsp;</label>
-            </div>
-        </div>
-      </Window>
-      <Window title="SKILLS" classes="basis-11/12 md:basis-auto">
-        <div class="window-pane md:columns-2 text-center">
-            <div class="mb-2">
-                <h1 class="uppercase">Build</h1>
-                <ol>
-                    {skills.build.map((skill) => <SkillInput name={skill.name} />)}
-                </ol>
-            </div>
-            <div class="mb-2">
-                <h1 class="uppercase">Presence</h1>
-                <ol>
-                    {skills.presence.map((skill) => <SkillInput name={skill.name} />)}
-                </ol>
-            </div>
-            <div class="mb-2">
-                <h1 class="uppercase">Meta</h1>
-                <ol>
-                    {skills.meta.map((skill) => <SkillInput name={skill.name} />)}
-                </ol>
-            </div>
-            <div class="mb-2">
-                <h1 class="uppercase">Hands</h1>
-                <ol>
-                    {skills.hands.map((skill) => <SkillInput name={skill.name} />)}
-                </ol>
-            </div>
-        </div>
-      </Window>
-      <Window title="Backpack" classes="basis-11/12 md:basis-auto">
-         <div class="m-2 text-sm">
-            <label class="mr-2" for="bytes">* bytes *</label> <input type="text" name="bytes" id="bytes" class="text-base" />
-        </div>
-        <div class="h-64">
-            <textarea name="Backpack" class="w-full h-full"></textarea>
-        </div>
-        <div class="m-2 text-sm text-right">
-            <label class="mr-2 text-xs" for="weapon">// weapon</label> <input type="text" name="weapon" id="weapon" size="10" class="text-base" />
-            <label class="text-xs" for="damage">*dmg type*[</label> <input type="text" name="damage" id="damage" size="5" class="text-base" />]
-        </div>
-        <div class="m-2 text-xs">
-            <ul class="list-none text-right">
-            {
-                backpack.map((supply) => <li>*{supply}* <select class="w-10" name={supply} set:html={backpackOptions}></select></li>)
-            }
-            </ul>
-        </div>
-      </Window>
-      <Window title="ROLES" classes="basis-11/12 md:basis-auto"> 
-        <div class="window-pane">
-            <div class="columns-2">
-                <div>
-                    <textarea name="role-1" class="w-48 aspect-square resize-none text-sm"></textarea>
-                </div>
-                <div>
-                    <textarea name="role-2" class="w-48 aspect-square resize-none text-sm"></textarea>
-                </div>
-                <div>
-                    <textarea name="role-3" class="w-48 aspect-square resize-none text-sm"></textarea>
-                </div>
-                <div>
-                    <textarea name="role-4" class="w-48 aspect-square resize-none text-sm"></textarea>
-                </div>
-            </div>
-        </div>
-      </Window>
-      <div class="basis-11/12 md:basis-auto">
-        <Window title="PET" classes=""> 
+        </Window>
+        <Window title="SYNC" classes="basis-11/12 md:basis-auto">
             <div class="window-pane">
-                <div class="m-2 text-sm text-right">
-                    <label class="mr-2" for="weapon">// name</label> <input type="text" name="pet-name" id="pet-name" size="10" class="text-base" />
-                    <label class="ml-2" for="damage">*upkeep*[</label> <input type="text" name="pet-upkeep" id="pet-upkeep" size="5" class="text-base" />]
+                <div class="columns-2 gap-0">
+                    <div class="w-1/6 h-64">
+                        <input type="range" min="0" max="100" class="h-64" step="1" list="sync" value="100" orient="vertical" name="sync" id="sync-input" />
+                    </div>
+                    <datalist id="sync" class="w-full sm:-ml-24 md:-ml-12 h-64">
+                        <option value="100" label="100 rest //return "></option>
+                        <option value="80" label="80 rest"></option>
+                        <option value="60" label="60 rest // return"></option>
+                        <option value="40" label="40 rest"></option>
+                        <option value="20" label="20 rest // return"></option>
+                        <option value="0" label="00 game over"></option>
+                    </datalist>
                 </div>
-                <div>
-                    <textarea name="pet-notes" class="resize-none text-sm w-full"></textarea>
+                <h1 id="sync-output" class="text-center"></h1>
+                <div class="text-center flex flex-wrap items-start justify-around">
+                    <button class="btn large mr-2" id="rest">Rest (d20)</button>
+                    <button class="btn large" id="healing-foil">Use Healing Foil (d6)</button>
                 </div>
             </div>
         </Window>
-        <Window title="TRANSPORT"> 
+        <Window title="AVATAR" classes="basis-11/12 md:basis-auto">
             <div class="window-pane">
-                <div class="m-2 text-sm text-right">
-                    <label class="mr-2" for="weapon">// type</label> <input type="text" name="transport-type" id="transport-type" size="10" class="text-base" />
-                    <label class="ml-2" for="damage">*upkeep*[</label> <input type="text" name="transport-upkeep" id="transport-upkeep" size="5" class="text-base" />]
+                <div class="field-row">
+                    <label for="name" class="w-20">// NAME: </label> <input type="text" name="name" id="name" />
                 </div>
-                <div>
-                    <textarea name="transport-notes" class="resize-none text-sm w-full"></textarea>
+                <div  class="field-row">
+                    <label for="name" class="w-20">// JOB: </label> <input type="text" name="job" id="job" />
+                </div>
+                <div class="field-row">
+                    <span class="mr-2">Respawns</span>
+                    <input type="checkbox" name="re-1">
+                    <label>&nbsp;</label>
+                
+                    <input id="checkbox2" type="checkbox" name="re-2">
+                    <label for="checkbox2">&nbsp;</label>
+                
+                    <input id="checkbox3" type="checkbox" name="re-3">
+                    <label for="checkbox3">&nbsp;</label>
                 </div>
             </div>
         </Window>
-        </div>
-        <Window title="SPELLS" classes="basis-11/12 md:basis-auto"> 
-            <div class="window-pane">
-                <ul class="list-none">
-                    <li class="mb-2">|name: <select class="spell-select" name="spell-1">{ spells.map((spell) => <option value={spell.name} data-cost={spell.cost}>{spell.name}</option>) }</select> [<input name="spell-cost-1" class="w-10 text-center" disabled />]</li>
-                    <li class="mb-2">|name: <select class="spell-select" name="spell-2">{ spells.map((spell) => <option value={spell.name} data-cost={spell.cost}>{spell.name}</option>) }</select> [<input name="spell-cost-1" class="w-10 text-center" disabled />]</li>
-                    <li class="mb-2">|name: <select class="spell-select" name="spell-3">{ spells.map((spell) => <option value={spell.name} data-cost={spell.cost}>{spell.name}</option>) }</select> [<input name="spell-cost-1" class="w-10 text-center" disabled />]</li>
+        <Window title="SKILLS" classes="basis-11/12 md:basis-auto">
+            <div class="window-pane md:columns-2 text-center">
+                <div class="mb-2">
+                    <h1 class="uppercase">Build</h1>
+                    <ol>
+                        {skills.build.map((skill) => <SkillInput name={skill.name} />)}
+                    </ol>
+                </div>
+                <div class="mb-2">
+                    <h1 class="uppercase">Presence</h1>
+                    <ol>
+                        {skills.presence.map((skill) => <SkillInput name={skill.name} />)}
+                    </ol>
+                </div>
+                <div class="mb-2">
+                    <h1 class="uppercase">Meta</h1>
+                    <ol>
+                        {skills.meta.map((skill) => <SkillInput name={skill.name} />)}
+                    </ol>
+                </div>
+                <div class="mb-2">
+                    <h1 class="uppercase">Hands</h1>
+                    <ol>
+                        {skills.hands.map((skill) => <SkillInput name={skill.name} />)}
+                    </ol>
+                </div>
+            </div>
+        </Window>
+        <Window title="Backpack" classes="basis-11/12 md:basis-auto">
+            <div class="m-2 text-sm">
+                <label class="mr-2" for="bytes">* bytes *</label> <input type="text" name="bytes" id="bytes" class="text-base" />
+            </div>
+            <div class="h-64">
+                <textarea name="Backpack" class="w-full h-full"></textarea>
+            </div>
+            <div class="m-2 text-sm text-right">
+                <label class="mr-2 text-xs" for="weapon">// weapon</label> <input type="text" name="weapon" id="weapon" size="10" class="text-base" />
+                <label class="text-xs" for="damage">*dmg type*[</label> <input type="text" name="damage" id="damage" size="5" class="text-base" />]
+            </div>
+            <div class="m-2 text-xs">
+                <ul class="list-none text-right">
+                {
+                    backpack.map((supply) => <li>*{supply}* <select class="w-10" name={supply} set:html={backpackOptions}></select></li>)
+                }
                 </ul>
             </div>
         </Window>
-    </div>
+        <Window title="ROLES" classes="basis-11/12 md:basis-auto"> 
+            <div class="window-pane">
+                <div class="columns-2">
+                    <div>
+                        <textarea name="role-1" class="w-48 aspect-square resize-none text-sm"></textarea>
+                    </div>
+                    <div>
+                        <textarea name="role-2" class="w-48 aspect-square resize-none text-sm"></textarea>
+                    </div>
+                    <div>
+                        <textarea name="role-3" class="w-48 aspect-square resize-none text-sm"></textarea>
+                    </div>
+                    <div>
+                        <textarea name="role-4" class="w-48 aspect-square resize-none text-sm"></textarea>
+                    </div>
+                </div>
+            </div>
+        </Window>
+        <div class="basis-11/12 md:basis-auto">
+            <Window title="PET" classes=""> 
+                <div class="window-pane">
+                    <div class="m-2 text-sm text-right">
+                        <label class="mr-2" for="weapon">// name</label> <input type="text" name="pet-name" id="pet-name" size="10" class="text-base" />
+                        <label class="ml-2" for="damage">*upkeep*[</label> <input type="text" name="pet-upkeep" id="pet-upkeep" size="5" class="text-base" />]
+                    </div>
+                    <div>
+                        <textarea name="pet-notes" class="resize-none text-sm w-full"></textarea>
+                    </div>
+                </div>
+            </Window>
+            <Window title="TRANSPORT"> 
+                <div class="window-pane">
+                    <div class="m-2 text-sm text-right">
+                        <label class="mr-2" for="weapon">// type</label> <input type="text" name="transport-type" id="transport-type" size="10" class="text-base" />
+                        <label class="ml-2" for="damage">*upkeep*[</label> <input type="text" name="transport-upkeep" id="transport-upkeep" size="5" class="text-base" />]
+                    </div>
+                    <div>
+                        <textarea name="transport-notes" class="resize-none text-sm w-full"></textarea>
+                    </div>
+                </div>
+            </Window>
+            </div>
+            <Window title="SPELLS" classes="basis-11/12 md:basis-auto"> 
+                <div class="window-pane">
+                    <ul class="list-none">
+                        <li class="mb-2">|name: <select class="spell-select" name="spell-1">{ spells.map((spell) => <option value={spell.name} data-cost={spell.cost}>{spell.name}</option>) }</select> [<input name="spell-cost-1" class="w-10 text-center" disabled />]</li>
+                        <li class="mb-2">|name: <select class="spell-select" name="spell-2">{ spells.map((spell) => <option value={spell.name} data-cost={spell.cost}>{spell.name}</option>) }</select> [<input name="spell-cost-1" class="w-10 text-center" disabled />]</li>
+                        <li class="mb-2">|name: <select class="spell-select" name="spell-3">{ spells.map((spell) => <option value={spell.name} data-cost={spell.cost}>{spell.name}</option>) }</select> [<input name="spell-cost-1" class="w-10 text-center" disabled />]</li>
+                    </ul>
+                </div>
+            </Window>
+        </div>
+    </form>
   </section>
 </Layout>
 
@@ -230,5 +232,9 @@ const { spells } = magicData;
             let selectedOption = select.parentNode.childNodes[3] as HTMLInputElement;
             selectedOption.value = cost;
         });
+    });
+
+    document.getElementById('avatar-form').addEventListener('submit', function(e){
+        e.preventDefault();
     });
 </script>
