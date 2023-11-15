@@ -84,6 +84,9 @@ const { spells } = magicData;
                     <input id="checkbox3" type="checkbox" name="re-3">
                     <label for="checkbox3">&nbsp;</label>
                 </div>
+                <div  class="field-row">
+                    <button type="button" id="save">Save Avatar</button>
+                </div>
             </div>
         </Window>
         <Window title="SKILLS" classes="basis-full md:basis-auto">
@@ -246,7 +249,60 @@ const { spells } = magicData;
         });
     });
 
-    document.getElementById('avatar-form').addEventListener('submit', function(e){
+    let avatarForm = document.getElementById('avatar-form');
+
+    const saveAvatarByName = function(data){
+        let avatars = JSON.parse(localStorage.getItem('avatars'))||{};
+        let updateLinks = Object.keys(avatars).length == 0 || !(data.name.replaceAll(',',', ').toLowerCase() in avatars);
+
+        avatars[data.name.replaceAll(',',', ').toLowerCase()] = data;
+        localStorage.setItem('avatars', JSON.stringify(avatars));
+
+        if(updateLinks){
+            addAvatarMenuLink(data.name);
+        }
+        
+    };
+
+    const addAvatarMenuLink = function(name){
+        let avatarUL = document.getElementById('avatar-menu');
+        let baseNode = document.createElement("li");
+        baseNode.classList.add('menu-item');
+        baseNode.role = "menuitem";
+
+        avatarUL.appendChild(baseNode).innerHTML = "<a href='/avatar?a=" + name.replaceAll(',',', ').toLowerCase() + "'>" + name + "</a>";
+    }
+
+    document.getElementById('save').addEventListener('click', function(e){
+        const formData = new FormData(avatarForm as HTMLFormElement);
+        let data = {};
+        for (const [key, value] of formData) {
+            data[key] = value;
+        }
+
+        saveAvatarByName(data);
+    });
+
+    const loadAvatarByName = function(name){
+        let avatars = JSON.parse(localStorage.getItem('avatars'));
+
+        if(avatars && Object.keys(avatars[name]).length){
+            const { elements } = document.querySelector('form')
+
+            for (const [ key, value ] of Object.entries(avatars[name]) ) {
+                const field = elements.namedItem(key);
+                field.value = value;
+            }
+        }
+    };
+
+    avatarForm.addEventListener('submit', function(e){
         e.preventDefault();
     });
+
+    const loadAvatar = new URLSearchParams(window.location.search).get("a")||false;
+
+    if(loadAvatar){
+        loadAvatarByName(loadAvatar);
+    }
 </script>

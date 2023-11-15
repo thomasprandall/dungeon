@@ -16,13 +16,12 @@
                     <li role="menuitem" class="menu-item"><a href="/credits">Credits</a></li>
                 </ul>
             </li>
-            <!-- <li role="menuitem" class="menu-item" tabindex="0" aria-haspopup="true">
-                Edit
-                <ul role="menu" class="menu">
-                    <li role="menuitem" class="menu-item"><a href="#menu">Johnny</a></li>
-                    <li role="menuitem" class="menu-item"><a href="#menu">Marcus</a></li>
+            <li role="menuitem" class="menu-item hidden md:inline-flex" tabindex="3" aria-haspopup="true">
+                Avatars
+                <ul role="menu" class="menu" id="avatar-menu">
+                    <li role="menuitem" class="menu-item"><a href="/avatar">New Character</a></li>
                 </ul>
-            </li> -->
+            </li>
             <li role="menuitem" class="menu-item hidden md:inline-flex" tabindex="1" aria-haspopup="true">
                 Gear
                 <ul role="menu" class="menu">
@@ -41,8 +40,6 @@
                 Tables
                 <ul role="menu" class="menu">
                     <li role="menuitem" class="menu-item"><a href="/tables/weather">Weather</a></li>
-                    <!-- <li role="menuitem" class="menu-item"><a href="/tables/dungeon">Dungeon</a></li>
-                    <li role="menuitem" class="menu-item"><a href="/tables/settlements">Settlements</a></li> -->
                     <li role="menuitem" class="menu-item"><a href="/tables/npcs">NPCs</a></li>
                     <li role="menuitem" class="menu-item"><a href="/tables/pugs">PUGs</a></li>
                     <li role="menuitem" class="menu-item"><a href="/tables/encounters">Random Encounters</a></li>
@@ -50,10 +47,6 @@
             </li>
             <li role="menuitem" class="menu-item hidden md:inline-flex" tabindex="3" aria-haspopup="false">
                 <a href="/bestiary">Bestiary</a>
-                <!-- <ul role="menu" class="menu">
-                    <li role="menuitem" class="menu-item"><a href="/bestiary">Reading Stats</a></li>
-                    <li role="menuitem" class="menu-item"><a href="/bestiary">Mobs</a></li>
-                </ul> -->
             </li>
             <li role="menuitem" class="menu-item hidden md:inline-flex" tabindex="4" aria-haspopup="true">
                 Appendices
@@ -96,4 +89,19 @@
     document.getElementById('toggle-nav').addEventListener('click', () => {
         toggleNav();
     });
+
+    let loadedAvatars = JSON.parse(localStorage.getItem('avatars'));
+
+    if (loadedAvatars && Object.keys(loadedAvatars).length) {
+        let avatarUL = document.getElementById('avatar-menu');
+        let avatarNames = Object.keys(loadedAvatars);
+        let baseNode = document.createElement("li");
+        baseNode.classList.add('menu-item');
+        baseNode.role = "menuitem";
+
+        avatarNames.forEach(name => {
+            avatarUL.appendChild(baseNode).innerHTML = "<a href='/avatar?a=" + name.replaceAll(',',', ').toLowerCase() + "'>" + name.toLocaleUpperCase() + "</a>";
+            console.log(name);
+        });       
+    }
 </script>
