@@ -270,7 +270,7 @@ const { spells } = magicData;
         baseNode.classList.add('menu-item');
         baseNode.role = "menuitem";
 
-        avatarUL.appendChild(baseNode).innerHTML = "<a href='/avatar?a=" + name.replaceAll(',',', ').toLowerCase() + "'>" + name + "</a>";
+        avatarUL.appendChild(baseNode).innerHTML = "<a href='/avatar?a=" + name.replaceAll(',',', ').toLowerCase() + "'>" + name.toLocaleUpperCase() + "</a>";
     }
 
     document.getElementById('save').addEventListener('click', function(e){
