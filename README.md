@@ -1,47 +1,17 @@
-# Astro Starter Kit: Minimal
+# .dungon//remastered SRD + Avatar Manager based on Astro Starter Kit: Minimal
 
 ```sh
 npm create astro@latest -- --template minimal
 ```
+# Another Random Project
+One of the most reliable things to light a spark of development interest for me is a new TTRPG coming into my grasp.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+I set aside a project I am working on for Mothership to focus on this reference site and character creator for the recently released .dungeon//remastered by Snow.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+I chose Astro for this project because I love how quickly I can get a static site up and out there but still maintain flexibility to add features over time.
 
-## 🚀 Project Structure
+Long term this project will likely include some React but for now it is all astro and vanilla JS.
 
-Inside of your Astro project, you'll see the following folders and files:
+I have utilized (and made some modifications to) the tremendous work of Sakun Archarige, the author of System.css and their usage of the Chicago 12pt and Geneva 9pt fonts by @blogmywiki (twitter).
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+I will add more information here when the project is complete, hopefully.
