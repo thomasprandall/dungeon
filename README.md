@@ -15,3 +15,5 @@ Long term this project will likely include some React but for now it is all astr
 I have utilized (and made some modifications to) the tremendous work of Sakun Archarige, the author of System.css and their usage of the Chicago 12pt and Geneva 9pt fonts by @blogmywiki (twitter).
 
 I will add more information here when the project is complete, hopefully.
+
+<https://dotdungeon.netlify.app> as temporary online home
