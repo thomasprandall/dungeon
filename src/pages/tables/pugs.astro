@@ -13,88 +13,86 @@ const { screenname, aesthetic, trait, ideal, secret, reason } = data;
     TODO
 -->
 <Layout title="PUGs">
-  <section class="container mx-auto flex flex-wrap items-start justify-center">
-    <Window title="Players Unknown" classes="basis-full">
-        <div class="window-pane flex flex-wrap justify-around items-start">
-            <div class="md:basis-2/5">
-                <p class="text-sm mb-1 indent-4">
-                    Players Unknown (PUGs) are real people in the server who are also playing .dungeon. Interacting with them is different than interacting with anything else in the game. They don’t have to listen to the party, give them information, or do as the party asks (like NPCs do). Stats and dice do not work on them unless you are engaged in combat. Each PC has their own internal and external wants and needs that they are in this game to accomplish.
-                </p>
-                <p class="text-sm mb-1 indent-4">
-                    They have Sync, roles, aspects, and memories of the game. They are just as complicated and multi-faceted as you or I. Their only limitations are the internal mechanisms of the game. PUGs can be cruel and helpful. They can be streamers or roleplayers. They can have abilities from a previous patch, and gear that you can't even get in the game anymore. They are trolls, friends, rivals, and your companions in this dead MMO.
-                </p>
-                <p class="text-sm indent-4">
-                    Below are a few tables to help you flesh out a PUG, but there is no shortcut to this. This is roleplay. It’s up to you to take these disparate results and find the complexity of a real person
-                </p>
-            </div>
-      </div>
-    </Window>
-  </section>
-  <section>
-    <div class="basis-full md:basis-1/2 md:flex-shrink standard-dialog center mx-2 relative text-center" id="rolled-weather">
-        <button class="btn large" id="generate-pug">Roll PUG</button>
-        <div class="text-left">
-            <p class="dialog-text font-bold p-2 hover:bg-yellow-50">
-                Screen Name: <span id="pug-screenname" class="font-normal"></span>
-            </p>
-            <p class="dialog-text font-bold p-2 hover:bg-yellow-50 bg-gray-100" data-field="aesthetic">
-                Aesthetic: <span id="pug-aesthetic" class="font-normal"></span>
-            </p>
-            <p class="dialog-text font-bold p-2 hover:bg-yellow-50" data-field="trait">
-                Trait: <span id="pug-trait" class="font-normal"></span>
-            </p>
-            <p class="dialog-text font-bold p-2 hover:bg-yellow-50 bg-gray-100" data-field="ideal">
-                Ideal: <span id="pug-ideal" class="font-normal"></span>
-            </p>
-            <p class="dialog-text font-bold p-2 hover:bg-yellow-50" data-field="secret">
-                Secret: <span id="pug-secret" class="font-normal"></span>
-            </p>
-            <p class="dialog-text font-bold p-2 hover:bg-yellow-50 bg-gray-100" data-field="reason">
-                Reason: <span id="pug-reason" class="font-normal"></span>
-            </p>
-            <div class="standard-dialog center scale-down hidden z-10 w-full text-sm" id="hint-modal"><p></p></div>
+  <div class="container mx-auto">
+    <section class="container mx-auto flex flex-wrap align-start items-start justify-center gap-2">
+      <Window title="Players Unknown" classes="basis-full md:basis-5/12">
+          <div class="window-pane">
+              <p class="text-sm mb-1 indent-4">
+                  Players Unknown (PUGs) are real people in the server who are also playing .dungeon. Interacting with them is different than interacting with anything else in the game. They don’t have to listen to the party, give them information, or do as the party asks (like NPCs do). Stats and dice do not work on them unless you are engaged in combat. Each PC has their own internal and external wants and needs that they are in this game to accomplish.
+              </p>
+              <p class="text-sm mb-1 indent-4">
+                  They have Sync, roles, aspects, and memories of the game. They are just as complicated and multi-faceted as you or I. Their only limitations are the internal mechanisms of the game. PUGs can be cruel and helpful. They can be streamers or roleplayers. They can have abilities from a previous patch, and gear that you can't even get in the game anymore. They are trolls, friends, rivals, and your companions in this dead MMO.
+              </p>
+              <p class="text-sm indent-4">
+                  Below are a few tables to help you flesh out a PUG, but there is no shortcut to this. This is roleplay. It’s up to you to take these disparate results and find the complexity of a real person
+              </p>
         </div>
-    </div>
-  </section>
-  <section class="clear-both flex items-start flex-wrap justify-center">
-    <ListWindow
-      title="Screen Names"
-      listData={screenname}
-      classes="md:basis-2/12"
-      columns="2"
-      listClasses="list-decimal ml-2 columns-2 gap-10"
-    />
-    <ListWindow
-      title="Aesthetic"
-      listData={aesthetic}
-      classes="md:basis-2/12"
-      listClasses="list-decimal ml-2"
-    />
-    <ListWindow
-      title="Trait"
-      listData={trait}
-      classes="md:basis-2/12"
-      listClasses="list-decimal ml-2"
-    />
-    <ListWindow
-      title="Ideal"
-      listData={ideal}
-      classes="md:basis-2/12"
-      listClasses="list-decimal ml-2"
-    />
-    <ListWindow
-      title="Secret"
-      listData={secret}
-      classes="md:basis-2/12"
-      listClasses="list-decimal ml-2"
-    />
-    <ListWindow
-      title="Reason"
-      listData={reason}
-      classes="md:basis-2/12"
-      listClasses="list-decimal ml-2"
-    />
-  </section>
+      </Window>
+      <div class="standard-dialog relative text-center mt-4 basis-full md:basis-5/12" id="rolled-weather">
+          <button class="btn large" id="generate-pug">Roll PUG</button>
+          <div class="text-left">
+              <p class="dialog-text font-bold p-2 hover:bg-yellow-50">
+                  Screen Name: <span id="pug-screenname" class="font-normal"></span>
+              </p>
+              <p class="dialog-text font-bold p-2 hover:bg-yellow-50 bg-gray-100" data-field="aesthetic">
+                  Aesthetic: <span id="pug-aesthetic" class="font-normal"></span>
+              </p>
+              <p class="dialog-text font-bold p-2 hover:bg-yellow-50" data-field="trait">
+                  Trait: <span id="pug-trait" class="font-normal"></span>
+              </p>
+              <p class="dialog-text font-bold p-2 hover:bg-yellow-50 bg-gray-100" data-field="ideal">
+                  Ideal: <span id="pug-ideal" class="font-normal"></span>
+              </p>
+              <p class="dialog-text font-bold p-2 hover:bg-yellow-50" data-field="secret">
+                  Secret: <span id="pug-secret" class="font-normal"></span>
+              </p>
+              <p class="dialog-text font-bold p-2 hover:bg-yellow-50 bg-gray-100" data-field="reason">
+                  Reason: <span id="pug-reason" class="font-normal"></span>
+              </p>
+              <div class="standard-dialog center scale-down hidden z-10 w-full text-sm" id="hint-modal"><p></p></div>
+          </div>
+      </div>
+    </section>
+    <section class="clear-both flex items-start flex-wrap justify-center gap-2">
+      <ListWindow
+        title="Screen Names"
+        listData={screenname}
+        classes="md:basis-2/12"
+        columns="2"
+        listClasses="list-decimal ml-2 columns-2 gap-10"
+      />
+      <ListWindow
+        title="Aesthetic"
+        listData={aesthetic}
+        classes="md:basis-2/12"
+        listClasses="list-decimal ml-2"
+      />
+      <ListWindow
+        title="Trait"
+        listData={trait}
+        classes="md:basis-2/12"
+        listClasses="list-decimal ml-2"
+      />
+      <ListWindow
+        title="Ideal"
+        listData={ideal}
+        classes="md:basis-2/12"
+        listClasses="list-decimal ml-2"
+      />
+      <ListWindow
+        title="Secret"
+        listData={secret}
+        classes="md:basis-2/12"
+        listClasses="list-decimal ml-2"
+      />
+      <ListWindow
+        title="Reason"
+        listData={reason}
+        classes="md:basis-2/12"
+        listClasses="list-decimal ml-2"
+      />
+    </section>
+  </div>
 </Layout>
 
 <script>
