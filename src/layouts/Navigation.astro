@@ -44,6 +44,7 @@
                     <li role="menuitem" class="menu-item"><a href="/tables/npcs">NPCs</a></li>
                     <li role="menuitem" class="menu-item"><a href="/tables/pugs">PUGs</a></li>
                     <li role="menuitem" class="menu-item"><a href="/tables/encounters">Random Encounters</a></li>
+                    <li role="menuitem" class="menu-item"><a href="/dungeon">Dungeon Generator</a></li>
                 </ul>
             </li>
             <li role="menuitem" class="menu-item hidden md:inline-flex" tabindex="3" aria-haspopup="false">
@@ -103,7 +104,6 @@
         avatarNames.forEach(name => {
             let customNode = baseNode.cloneNode() as HTMLElement;
             avatarUL.appendChild(customNode).innerHTML = "<a href='/avatar?a=" + name.replaceAll(',',', ').toLowerCase() + "'>" + name.toLocaleUpperCase() + "</a>";
-            console.log(name);
         });       
     }
 </script>

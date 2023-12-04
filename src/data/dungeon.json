@@ -1,0 +1,105 @@
+{
+    "encounters": ["Skeletons","Zombies","Constructs","Sagas","Giant Bats","Vorths","Brutalizers","Beam Lords","Princes","Manticore","PUGs","Dragon"],
+    "traps": [
+        {
+            "name": "Rolling Boulder",
+            "effect": "Roll Stat + Skill against d20 to avoid, stop, or otherwise save yourself."
+        },
+        {
+            "name": "Pit Trap",
+            "effect": "Roll Build + Platforming against d6 to avoid."
+        },
+        {
+            "name": "Swinging Axes",
+            "effect": "Roll Stat + Skill against d8 to avoid, stop, or otherwise save yourself."
+        },
+        {
+            "name": "Moving Platforms",
+            "effect": "Roll Build + Platforming against d10 to traverse."
+        },
+        {
+            "name": "Falling Platforms",
+            "effect": "Roll Build + Platforming against d12 to traverse."
+        },
+        {
+            "name": "Closing Walls Trap",
+            "effect": "Walls close together at the end of three rounds."
+        },
+        {
+            "name": "Flooding Trap",
+            "effect": "Room becomes flooded at the end of two rounds."
+        },
+        {
+            "name": "Arrow Trap",
+            "effect": "Roll Stat + Skill against d10 to avoid, stop, or otherwise save yourself."
+        },
+        {
+            "name": "Poison Arrow Trap",
+            "effect": "Roll Stat + Skill against d20 to avoid, stop, or otherwise save yourself."
+        }
+    ],
+    "rooms": {
+        "entrance": {
+            "1-10": "square1",
+            "encounter": false,
+            "trap": false,
+            "name": "Empty"
+        },
+        "square1": {
+            "1-4": "square1",
+            "5-7": "circle1",
+            "6-10": "square2",
+            "encounter": false,
+            "trap": false,
+            "name": "Empty"
+        },
+        "circle1": {
+            "1-4": "circle1",
+            "5-10": "square2",
+            "encounter": true,
+            "trap": false,
+            "name": "Encounter!"
+        },
+        "square2": {
+            "1-4": "circle2",
+            "5-8": "square2",
+            "9-10": "stairs",
+            "encounter": true,
+            "trap": false,
+            "name": "Encounter!"
+        },
+        "circle2": {
+            "1-6": "circle3",
+            "7-8": "circle2",
+            "9-10": "square3",
+            "encounter": true,
+            "trap": true,
+            "name": "Encounter! Trap!"
+        },
+        "circle3": {
+            "1-3": "circle3",
+            "4-10": "square1",
+            "encounter": true,
+            "trap": false,
+            "name": "Encounter!"
+        },
+        "square3": {
+            "1-10": "circle3",
+            "encounter": false,
+            "trap": true,
+            "name": "Trap!"
+        },
+        "stairs": {
+            "1-10": "stairs",
+            "encounter": false,
+            "trap": false,
+            "name": "Stairs"
+        }
+    },
+    "themes": {
+        "classic": {
+            "baseName": "The [X] of [Y]",
+            "firstValue": ["Castle"]
+        }
+    }
+}

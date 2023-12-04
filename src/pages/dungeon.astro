@@ -1,0 +1,150 @@
+---
+    import Layout from '../layouts/Layout.astro';
+    import Window from '../layouts/Window.astro';
+    import ListWindow from '../components/ListWindow.astro';
+
+    import * as data from '../data/dungeon.json';
+
+    const {encounters, traps} = data;
+---
+
+<Layout title="Schrödinger's Dungeon">
+    <div class="container mx-auto">
+        <div class="basis-full flex-shrink standard-dialog center mx-2">
+            <div class="p-4 text-center md:flex md:flex-row md:flex-wrap md:gap-2 md:justify-between md:items-center border-2 border-black mb-2">
+                <h1>Current Room</h1>
+                <p id="room-name" class="capitalize">
+                    Entrance
+                </p>
+                <h1>Encounter</h1>
+                <p id="encounter" class="capitalize">None</p>
+                <h1>Trap</h1>
+                <p id="trap" class="capitalize">None</p>
+                <button class="btn block md:flex text-center" id="roll-room">NEXT ROOM</button>
+            </div>
+            <div id="dungeon-wrapper" class="flex flex-wrap gap-2 justify-center md:justify-normal">
+                <div class="room aspect-square w-28 border-2 border-solid p-2 text-center">
+                    <h3>Entrance</h3>
+                </div>
+            </div>
+        </div>
+        <Window title="Schrödinger's Dungeon">
+            <div class="window-pane">
+                <p class="">The silver rule of .dungeon's world is that if you look for a dungeon, there will be one. In alleyways, in abandoned settlements, beneath taverns, in the middle of the wilderness. If you need a dungeon, there will be one there. And there's one here.</p>
+                <div class="flex flex-wrap justify-between items-start">
+                    <ListWindow
+                        title="Encounters"
+                        listData={encounters}
+                        classes="md:basis-5/12"
+                        columns="2"
+                        listClasses="list-decimal ml-2 columns-2 gap-10"
+                    />
+                    <ListWindow
+                        title="Traps"
+                        listData={traps}
+                        classes="md:basis-5/12"
+                        columns="2"
+                        listClasses="list-decimal ml-2 columns-2 gap-10"
+                    />
+                </div>
+                <div>
+                    <img src="/img/dungeon.jpg" class="object-contain md:max-w-4xl mx-auto" />
+                </div>
+            </div>
+        </Window>
+        
+    </div>
+</Layout>
+<script>
+    const blankRoomNode = document.createElement("div");
+    blankRoomNode.classList.add("room", "aspect-square", "w-28", "p-2", "border-2", "border-solid", "text-center", "text-sm");
+
+    import dungeon from '../data/dungeon.json';
+    const { rooms, traps, encounters } = dungeon;
+
+    let roomHistory = [{"room": "entrance", "encounter":"none", "trap":"none", "roll": 0, "roomName": "Entrance"}];
+    let currentRoom = "entrance";
+
+    const roller = function(max){
+        return Math.floor(Math.random()*max);
+    }
+
+    const nextRoom = function(){
+        if(currentRoom !== "stairs"){
+            let nextRoom = "";
+            let room = rooms[currentRoom];
+            let roomKeys = Object.keys(room);
+            let encounterName = "";
+            let trapName = "";
+            let roomName = "";
+
+            let roomNode = blankRoomNode.cloneNode() as HTMLElement;
+            let random = roller(10);
+
+            for(let key in roomKeys){
+                let keyName = roomKeys[key];
+                if (keyName.includes("-")){
+                    let keyRange = keyName.split("-");
+                    let low = +keyRange[0]-1;
+                    let high = +keyRange[1]-1;
+
+                    if(random >= low && random <= high){
+                        nextRoom = rooms[currentRoom][keyName];
+                        
+                        let hasEncounter = rooms[nextRoom].encounter;
+                        let hasTrap = rooms[nextRoom].trap;
+
+                        if (hasEncounter) {
+                            roomNode.classList.add("bg-red-400");
+                            encounterName = encounters[roller(12)];
+                        }
+
+                        if (hasTrap) {
+                            roomNode.classList.remove("border-solid");
+                            roomNode.classList.add("border-dashed");
+                            trapName = traps[roller(9)].name;
+                        }
+
+                        if(hasTrap && hasEncounter){
+                            roomNode.classList.add("text-xs");
+                        }
+
+                        if(nextRoom.search("circle")){
+                            roomNode.classList.add("rounded-full","pt-5","-pb-3");
+                        }
+
+                        if(nextRoom.toLowerCase() == 'stairs'){
+                            roomNode.classList.add("bg-green-300");
+                        }
+
+                        roomName = rooms[nextRoom].name;
+
+                        roomHistory.push({"room": nextRoom.toString(), "encounter": hasEncounter ? encounterName:null, "trap": hasTrap ? trapName:null, "roll": random, "roomName": roomName});
+                        break;
+                    }
+                }
+            };
+            
+            currentRoom = nextRoom;
+
+            let newRoom = roomNode.cloneNode() as HTMLElement;
+            newRoom.innerHTML = "<h3>" + roomName + "</h3>" + (encounterName.length ? "<p>" + encounterName + "</p>":"") + (trapName.length ? "<p>" + trapName + "</p>":"");            
+
+            if(roomName.toLowerCase() == "stairs"){
+                encounterName = "Climb Stairs";
+                trapName = "Dont' Fall Down the Stairs"
+                document.getElementById("roll-room").classList.add("hidden","md:hidden");
+            }
+
+            document.getElementById("room-name").innerText = roomName;
+            document.getElementById("encounter").innerText = encounterName||"None";
+            document.getElementById("trap").innerText = trapName||"None";
+
+            document.getElementById('dungeon-wrapper').appendChild(newRoom);
+        }
+    }
+
+    document.getElementById("roll-room").addEventListener("click", () => {
+        nextRoom();
+    });
+</script>

@@ -312,6 +312,40 @@
             "tags": []
         },
         {
+            "name": "Giant Corpse",
+            "description": "The corpses of Annwn's largest creations, fallen from the debris belt, or slain by players long logged-out. If 100 Dream Materials are gathered, you can enter the corpse's memories and fight the beast yourself. Or talk to it. It's lonely.",
+            "number": "1",
+            "dice": [
+                "3d10",
+                "3d10",
+                "3d10",
+                "3d10",
+                "3d10",
+                "3d10",
+                "3d10",
+                "3d10"
+            ],
+            "bonus": 5,
+            "initiative": 6,
+            "morale": 1,
+            "immune": [],
+            "weakness": [],
+            "special": [
+                {
+                    "name": "Resurrection",
+                    "effect": "If a player respawns, the Giant Corpse resurrects their shadow to fight on the giant’s side. The shadow is linked to the party’s Sync and uses the same stats as the player. When the Giant is defeated, all shadows vanish."
+                }
+
+            ],
+            "drops": [
+                {
+                    "name": "Summoning Foil",
+                    "effect": "Allows you to summon the Giant Corpse once"
+                }
+            ],
+            "tags": []
+        },
+        {
             "name": "Goblins",
             "description": "Little critters. Mischievous folks. Dastardly pals.",
             "number": "2d6",
@@ -465,6 +499,31 @@
                 "solar",
                 "jelly"
             ]
+        },
+        {
+            "name": "Living Mountain",
+            "description": "It has stats and will try to hurt you. Defeating it turns it into a normal mountain until the next day.",
+            "number": "1",
+            "dice": [
+                "d100"
+            ],
+            "bonus": 0,
+            "initiative": 10,
+            "morale": 1,
+            "immune": [
+                "all but:"
+            ],
+            "weakness": [
+                "smashing"
+            ],
+            "special": [],
+            "drops": [
+                {
+                    "name": "D100 Materials",
+                    "effect": ""
+                }
+            ],
+            "tags": []
         },
         {
             "name": "Manticores",

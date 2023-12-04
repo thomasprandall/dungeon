@@ -8,7 +8,7 @@ const { title, listData, classes, listClasses } = Astro.props;
 <Window title={title} classes={"basis-full md:basis-2/5 " + classes}>
     <div class:list={['window-pane']}>
         <ul class:list={['text-sm', listClasses]}>
-            {listData.map((item) => <li>{item}</li>)}
+            {listData.map((item) => <li>{typeof item == "string" ? item:item.name}</li>)}
         </ul>
     </div>
 </Window>
